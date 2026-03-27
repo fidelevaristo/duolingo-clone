@@ -21,7 +21,7 @@ body {
 }
 
 /* btn-lang */
-.btn-lang {
+.header__btn-lang {
     border: none;
     background: transparent;
     cursor: pointer;
@@ -31,38 +31,46 @@ body {
 }
 
 /* Section 1 */
-.section-1 {
+.login-create {
     display: flex;
     align-items: center;
-    width: 800px;
+
     justify-content: center;
     margin: 0 auto;
+    box-sizing: border-box;
+    gap: 100px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+
 }
 
-.section-1-left img {
+.login-create__left img {
     width: 450px;
     height: 450px;
+    display: block;
 }
 
-.section-1-right {
+.login-create__right {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 35%;
 }
 
-.btn-initial {
+.login-create__btn-inizial {
     display: flex;
     align-items: center;
     margin-top: 20px;
     max-width: 400px;
     flex-direction: column;
-    gap: 10px;
-    width: 250px;
+    gap: 15px;
+    width: 330px;
 }
 
-.btn-initial button {
+.login-create__btn-inizial button {
     width: 100%;
+    height: 46px;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
@@ -70,34 +78,334 @@ body {
 
 }
 
-.btn-inizia {
+.login-create__btn-inizia {
     background: #58cc02;
     color: #ffff;
     box-shadow: 0 4px 4px 0 rgba(88, 167, 0);
-    border: none;
+    border: 1px solid rgba(88, 167, 0);
 
 }
 
-.btn-account {
+.login-create__btn-account {
     background: white;
     color: #1cb0f6;
-    box-shadow: 0 4px 4px 0 rgba(229, 229, 229);
-    border: 1px solid rgb(130, 127, 127);
+    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
+    border: 1px solid rgb(137, 136, 136);
 
 }
 
-.section-1-right h1 {
+.login-create__right h1 {
     color: #4b4b4b;
     font-family: "din-round sans-serif";
     font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.btn-inizia:hover {
+.login-create__btn-inizia:hover {
     background: #9fed62;
 
 }
 
-.btn-account:hover {
+.login-create__btn-account:hover {
     background: #afafaf;
 
 }
+
+/* section-2- languages */
+.lang-select__languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #ffff;
+
+}
+
+.lang-select__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: nowrap;
+
+}
+
+.lang-select__language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #777777;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+}
+
+.lang-select__language img {
+    width: 36px;
+    height: 27.77px;
+    object-fit: cover;
+    display: block;
+}
+
+.lang-select__arrow img {
+    width: 15px;
+    height: 15px;
+    color: #777777;
+}
+
+.lang-select__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+}
+
+/* section free-fun */
+.free-fun {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+
+
+}
+
+.free-fun img {
+    width: 400px;
+    height: 400px;
+    display: block;
+
+}
+
+.free-fun__left {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-right: 100px;
+}
+
+.free-fun__left h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.free-fun p {
+    color: #777777;
+}
+
+.free-fun__left-text {
+    color: #1cb0f6;
+    font-weight: bold;
+}
+
+/* section backed by science */
+.backed-science {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+}
+
+.backed-science img {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+.backed-science__right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 150px;
+
+}
+
+.backed-science h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+
+}
+
+.backed-science p {
+    color: #777777;
+}
+
+/* section stay motivated */
+.stay-motivated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+
+
+}
+
+.stay-motivated img {
+    width: 400px;
+    height: 400px;
+    display: block;
+
+}
+
+.stay-motivated__left {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-right: 100px;
+}
+
+.stay-motivated__left h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.stay-motivated p {
+    color: #777777;
+}
+
+/* section personalized learning */
+.personalized-learning {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+}
+
+.personalized-learning img {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+.personalized-learning__right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 150px;
+
+}
+
+.personalized-learning h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+
+}
+
+.personalized-learning p {
+    color: #777777;
+}
+
+
+/* Learn whenever you want */
+.learn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background: #b6dced;
+    flex-direction: column;
+    height: 1000px;
+}
+
+.learn__download-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    
+
+}
+
+.learn__download-app img {
+    width: 34px;
+    height: 34px;
+}
+
+.learn__title {
+    margin-top: 100px;
+    color: #042c60;
+    font-size: 35px;
+    font-weight: 500px;
+    width: 40%;
+
+}
+
+.learn__apple-store {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
+}
+
+.learn__apple-store:hover{
+    cursor: pointer;
+    background: rgb(209, 206, 206)
+}
+
+.learn__google-play {
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
+}
+.learn__google-play:hover{
+    cursor: pointer;
+    background: rgb(209, 206, 206);
+}
+
+.learn__text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #484848;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.learn__text-top{
+    font-size: 15px;
+
+}
+
+.learn__text-bottom{
+    font-size: 20px;
+}
+
+
