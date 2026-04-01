@@ -5,6 +5,12 @@
 
 }
 
+:root {
+    --font-h1: "Varela Round", sans-serif;
+    --font-weight-h1: 400;
+    --font-style-h1: normal;
+}
+
 body {
     width: 100%;
     background: white;
@@ -136,6 +142,7 @@ body {
 
 }
 
+/* section-2- languages (Languages names configs) */
 .lang-select__language {
     display: flex;
     align-items: center;
@@ -149,6 +156,7 @@ body {
 
 }
 
+/* section-2- languages (Flags and arrow configs) */
 .lang-select__language img {
     width: 36px;
     height: 27.77px;
@@ -170,6 +178,7 @@ body {
 }
 
 /* section free-fun */
+/* section free-fun(Background and items position) */
 .free-fun {
     display: flex;
     align-items: center;
@@ -187,8 +196,8 @@ body {
     width: 400px;
     height: 400px;
     display: block;
-
 }
+
 
 .free-fun__left {
     display: flex;
@@ -197,6 +206,7 @@ body {
     margin-right: 100px;
 }
 
+/* section free-fun (text configs) */
 .free-fun__left h1 {
     color: #58cc02;
     margin-bottom: 30px;
@@ -213,6 +223,8 @@ body {
 }
 
 /* section backed by science */
+
+/* section backed by science (Background and items position)*/
 .backed-science {
     display: flex;
     align-items: center;
@@ -238,6 +250,7 @@ body {
 
 }
 
+/* section backed by science (text configs)  */
 .backed-science h1 {
     color: #58cc02;
     margin-bottom: 30px;
@@ -249,7 +262,10 @@ body {
     color: #777777;
 }
 
+
 /* section stay motivated */
+
+/* section stay motivated (Background and items position) */
 .stay-motivated {
     display: flex;
     align-items: center;
@@ -277,10 +293,13 @@ body {
     margin-right: 100px;
 }
 
+
+/* section stay motivated (text configs) */
 .stay-motivated__left h1 {
     color: #58cc02;
     margin-bottom: 30px;
     font-size: 50px;
+
 }
 
 .stay-motivated p {
@@ -288,6 +307,8 @@ body {
 }
 
 /* section personalized learning */
+
+/* section personalized learning (Background and items position) */
 .personalized-learning {
     display: flex;
     align-items: center;
@@ -313,11 +334,11 @@ body {
 
 }
 
+/* section personalized learning (text configs) */
 .personalized-learning h1 {
     color: #58cc02;
     margin-bottom: 30px;
     font-size: 50px;
-
 }
 
 .personalized-learning p {
@@ -326,6 +347,8 @@ body {
 
 
 /* Learn whenever you want */
+
+/* Learn whenever you want (Section background and buttoons position configs) */
 .learn {
     display: flex;
     justify-content: flex-start;
@@ -341,7 +364,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-    
+
 
 }
 
@@ -359,6 +382,8 @@ body {
 
 }
 
+/* Learn whenever you want (buttons configurations) */
+
 .learn__apple-store {
     margin-right: 20px;
     display: flex;
@@ -370,7 +395,7 @@ body {
     box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
 }
 
-.learn__apple-store:hover{
+.learn__apple-store:hover {
     cursor: pointer;
     background: rgb(209, 206, 206)
 }
@@ -385,12 +410,14 @@ body {
     padding: 10px;
     box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
 }
-.learn__google-play:hover{
+
+.learn__google-play:hover {
     cursor: pointer;
     background: rgb(209, 206, 206);
 }
 
-.learn__text{
+/* Learn whenever you want (content inside the buttons) */
+.learn__text {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -399,13 +426,73 @@ body {
     text-align: justify;
 }
 
-.learn__text-top{
+.learn__text-top {
     font-size: 15px;
 
 }
 
-.learn__text-bottom{
+.learn__text-bottom {
     font-size: 20px;
 }
 
 
+/* Section prova gratis */
+.prova__gratis {
+    display: flex;
+    background: rgb(10, 10, 51);
+    display: flex;
+    height: 1000px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 30px;
+    
+
+}
+
+.prova__gratis-left img{
+    width: 630px;
+    height: 630px;
+    margin-left: 10px;
+    
+
+
+}
+
+.prova__gratis-right{
+    
+   
+    
+}
+
+
+
+.prova__gratis-right-text-up{
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    align-content: center;
+    align-items: center;
+    
+
+}
+.prova__gratis-right-text-bottom{
+    display: flex;
+color: greenyellow;
+font-size:xxx-large;
+font-weight: 400;
+font-style:oblique;
+}
+
+.prova__gratis-right-button{
+    display: flex;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 50px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
+
+}
