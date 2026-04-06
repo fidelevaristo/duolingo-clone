@@ -792,8 +792,8 @@ body {
 }
 
 .impara-lingua img {
-    width: 1634px;
-    height: 600px;
+    width: 100%;
+    height: 500px;
     display: block;
     margin-top: 20px;
 }
@@ -829,7 +829,7 @@ body {
 .impara-lingua__header-btn {
     width: 330px;
     height: 46px;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     border-radius: 10px;
     cursor: pointer;
     text-transform: uppercase;
