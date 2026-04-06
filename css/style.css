@@ -1,23 +1,71 @@
+:root {
+    /* ========================= */
+    /* FONT PRINCIPALI */
+    /* ========================= */
+    --font-primary: 'Varela Round', sans-serif;
+    --font-secondary: 'Orbitron', sans-serif;
+
+    /* ========================= */
+    /* PALETTE COLORI GENERALE */
+    /* ========================= */
+    --color-white: white;
+    --color-white-alt: #ffff;
+    --color-transparent: transparent;
+
+    --color-gray-light: #ddd;
+    --color-gray-medium: #afafaf;
+    --color-gray-text: #777777;
+    --color-gray-dark: #4b4b4b;
+    --color-gray-button-shadow: rgb(137, 136, 136);
+    --color-gray-hover: rgb(209, 206, 206);
+    --color-gray-text-dark: #484848;
+
+    --color-green-primary: #58cc02;
+    --color-green-light: #9fed62;
+    --color-green-shadow: rgba(88, 167, 0);
+
+    --color-blue-primary: #1cb0f6;
+    --color-blue-dark: #042c60;
+    --color-blue-deep: #0d1b3d;
+    --color-blue-bg-soft: #b6dced;
+
+    --color-purple-dark: #120e36;
+
+    --color-red-debug: red;
+
+    --color-shadow-white: rgba(255, 255, 255, 0.40);
+}
+
+
+
+
+
+/* ========================= */
+/* RESET GLOBALE */
+/* ========================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-:root {
-    --font-primary: 'Varela Round', sans-serif;
-    --font-secondary: 'Orbitron', sans-serif; 
-}
 
+
+/* ========================= */
+/* BODY / CORPO DELLA PAGINA */
+/* ========================= */
 body {
     width: 100%;
-    background: white;
-    font-family: var(--font-primary);
+
+    /* Sfondo principale della pagina */
+    background: var(--color-white);
 }
 
 
-/* header */
+
+/* ========================= */
+/* HEADER / INTESTAZIONE */
+/* ========================= */
 .header {
     display: flex;
     align-items: center;
@@ -27,36 +75,52 @@ body {
     margin: 0 auto;
 }
 
-/* btn-lang */
+
+
+/* ========================= */
+/* PULSANTE LINGUA DEL SITO */
+/* ========================= */
 .header__btn-lang {
     border: none;
-    background: transparent;
+
+    /* Sfondo trasparente */
+    background: var(--color-transparent);
+
     cursor: pointer;
     text-transform: uppercase;
-    color: #afafaf;
 
+    /* Colore del testo */
+    color: var(--color-gray-medium);
 }
 
-/* Section 1 */
+
+
+/* ========================= */
+/* SEZIONE 1 - LOGIN / CREAZIONE ACCOUNT */
+/* ========================= */
 .login-create {
     display: flex;
     align-items: center;
-
     justify-content: center;
     margin: 0 auto;
     box-sizing: border-box;
     gap: 100px;
     margin-top: 110px;
     margin-bottom: 140px;
-
 }
 
+
+
+/* Immagine introduttiva */
 .login-create__left img {
     width: 450px;
     height: 450px;
     display: block;
 }
 
+
+
+/* Contenitore testo e pulsanti */
 .login-create__right {
     display: flex;
     justify-content: center;
@@ -65,6 +129,9 @@ body {
     width: 35%;
 }
 
+
+
+/* Contenitore dei pulsanti iniziali */
 .login-create__btn-inizial {
     display: flex;
     align-items: center;
@@ -75,6 +142,9 @@ body {
     width: 330px;
 }
 
+
+
+/* Stile comune ai pulsanti */
 .login-create__btn-inizial button {
     width: 100%;
     height: 46px;
@@ -82,44 +152,58 @@ body {
     border-radius: 10px;
     cursor: pointer;
     text-transform: uppercase;
-
 }
 
+
+
+/* Pulsante "Inizia" */
 .login-create__btn-inizia {
-    background: #58cc02;
-    color: #ffff;
-    box-shadow: 0 4px 4px 0 rgba(88, 167, 0);
-    border: 1px solid rgba(88, 167, 0);
-
+    background: var(--color-green-primary);
+    color: var(--color-white-alt);
+    box-shadow: 0 4px 4px 0 var(--color-green-shadow);
+    border: 1px solid var(--color-green-shadow);
 }
 
+
+
+/* Pulsante "Ho già un account" */
 .login-create__btn-account {
-    background: white;
-    color: #1cb0f6;
-    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
-    border: 1px solid rgb(137, 136, 136);
-
+    background: var(--color-white);
+    color: var(--color-blue-primary);
+    box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
+    border: 1px solid var(--color-gray-button-shadow);
 }
 
+
+
+/* Titolo principale */
 .login-create__right h1 {
-    color: #4b4b4b;
+    color: var(--color-gray-dark);
     font-family: "din-round sans-serif";
     font-size: 32px;
     text-align: center;
     margin-bottom: 20px;
 }
 
+
+
+/* Hover pulsante inizia */
 .login-create__btn-inizia:hover {
-    background: #9fed62;
-
+    background: var(--color-green-light);
 }
 
+
+
+/* Hover pulsante account */
 .login-create__btn-account:hover {
-    background: #afafaf;
-
+    background: var(--color-gray-medium);
 }
 
-/* section-2- languages */
+
+
+/* ========================= */
+/* SEZIONE 2 - LINGUE */
+/* ========================= */
 .lang-select__languages {
     display: flex;
     align-items: center;
@@ -128,36 +212,42 @@ body {
     width: 100%;
     padding: 20px 30px;
     box-sizing: border-box;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    background: #ffff;
 
+    border-top: 1px solid var(--color-gray-light);
+    border-bottom: 1px solid var(--color-gray-light);
+
+    background: var(--color-white-alt);
 }
 
+
+
+/* Menu delle lingue */
 .lang-select__menu {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 28px;
     flex-wrap: nowrap;
-
 }
 
-/* section-2- languages (Languages names configs) */
+
+
+/* Configurazione link lingua */
 .lang-select__language {
     display: flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
-    color: #777777;
+    color: var(--color-gray-text);
     font-weight: 600;
     font-size: 15px;
     text-transform: uppercase;
     white-space: nowrap;
-
 }
 
-/* section-2- languages (Flags and arrow configs) */
+
+
+/* Configurazione bandiere */
 .lang-select__language img {
     width: 36px;
     height: 27.77px;
@@ -165,21 +255,29 @@ body {
     display: block;
 }
 
+
+
+/* Frecce di navigazione */
 .lang-select__arrow img {
     width: 15px;
     height: 15px;
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
+
+
+/* Pulsanti freccia */
 .lang-select__arrow {
     background: none;
     border: none;
     cursor: pointer;
-
 }
 
-/* section free-fun */
-/* section free-fun(Background and items position) */
+
+
+/* ========================= */
+/* SEZIONE FREE-FUN */
+/* ========================= */
 .free-fun {
     display: flex;
     align-items: center;
@@ -189,10 +287,11 @@ body {
     gap: 10px;
     margin-top: 110px;
     margin-bottom: 140px;
-
-
 }
 
+
+
+/* Immagine della sezione */
 .free-fun img {
     width: 400px;
     height: 400px;
@@ -200,6 +299,8 @@ body {
 }
 
 
+
+/* Blocco testo */
 .free-fun__left {
     display: flex;
     flex-direction: column;
@@ -207,25 +308,35 @@ body {
     margin-right: 100px;
 }
 
-/* section free-fun (text configs) */
-.free-fun__left h1 {
-    color: #58cc02;
+
+
+/* Titolo sezione */
+.free-fun__left h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
 }
 
+
+
+/* Paragrafo */
 .free-fun p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
+
+
+/* Testo evidenziato */
 .free-fun__left-text {
-    color: #1cb0f6;
+    color: var(--color-blue-primary);
     font-weight: bold;
 }
 
-/* section backed by science */
 
-/* section backed by science (Background and items position)*/
+
+/* ========================= */
+/* SEZIONE BACKED BY SCIENCE */
+/* ========================= */
 .backed-science {
     display: flex;
     align-items: center;
@@ -248,25 +359,23 @@ body {
     flex-direction: column;
     width: 30%;
     margin-left: 150px;
-
 }
 
-/* section backed by science (text configs)  */
-.backed-science h1 {
-    color: #58cc02;
+.backed-science h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
-
 }
 
 .backed-science p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
 
-/* section stay motivated */
 
-/* section stay motivated (Background and items position) */
+/* ========================= */
+/* SEZIONE STAY MOTIVATED */
+/* ========================= */
 .stay-motivated {
     display: flex;
     align-items: center;
@@ -276,15 +385,12 @@ body {
     gap: 10px;
     margin-top: 110px;
     margin-bottom: 140px;
-
-
 }
 
 .stay-motivated img {
     width: 400px;
     height: 400px;
     display: block;
-
 }
 
 .stay-motivated__left {
@@ -294,22 +400,21 @@ body {
     margin-right: 100px;
 }
 
-
-/* section stay motivated (text configs) */
-.stay-motivated__left h1 {
-    color: #58cc02;
+.stay-motivated__left h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
-
 }
 
 .stay-motivated p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
-/* section personalized learning */
 
-/* section personalized learning (Background and items position) */
+
+/* ========================= */
+/* SEZIONE PERSONALIZED LEARNING */
+/* ========================= */
 .personalized-learning {
     display: flex;
     align-items: center;
@@ -332,104 +437,119 @@ body {
     flex-direction: column;
     width: 30%;
     margin-left: 150px;
-
 }
 
-/* section personalized learning (text configs) */
-.personalized-learning h1 {
-    color: #58cc02;
+.personalized-learning h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
 }
 
 .personalized-learning p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
 
-/* Learn whenever you want */
 
-/* Learn whenever you want (Section background and buttoons position configs) */
+/* ========================= */
+/* SEZIONE LEARN WHENEVER YOU WANT */
+/* ========================= */
 .learn {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background: #b6dced;
+    background: var(--color-blue-bg-soft);
     flex-direction: column;
     height: 1000px;
+    width: 100%;
+    background-image: url("/assets/animations/impara-dove-vuoi.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+
+
+/* Contenitore pulsanti download */
 .learn__download-app {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-
-
 }
 
+
+
+/* Icone download */
 .learn__download-app img {
     width: 34px;
     height: 34px;
 }
 
+
+
+/* Titolo sezione */
 .learn__title {
     margin-top: 100px;
-    color: #042c60;
+    color: var(--color-blue-dark);
     font-size: 35px;
     font-weight: 500px;
     width: 40%;
-
 }
 
-/* Learn whenever you want (buttons configurations) */
 
+
+/* Pulsante App Store */
 .learn__apple-store {
     margin-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: var(--color-white);
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
+    box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
 }
 
 .learn__apple-store:hover {
     cursor: pointer;
-    background: rgb(209, 206, 206)
+    background: var(--color-gray-hover);
 }
 
+
+
+/* Pulsante Google Play */
 .learn__google-play {
     margin-right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: var(--color-white);
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
+    box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
 }
 
 .learn__google-play:hover {
     cursor: pointer;
-    background: rgb(209, 206, 206);
+    background: var(--color-gray-hover);
 }
 
-/* Learn whenever you want (content inside the buttons) */
+
+
+/* Testo interno dei pulsanti */
 .learn__text {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: #484848;
+    color: var(--color-gray-text-dark);
     font-weight: bold;
     text-align: justify;
 }
 
 .learn__text-top {
     font-size: 15px;
-
 }
 
 .learn__text-bottom {
@@ -437,73 +557,54 @@ body {
 }
 
 
-/* Section prova gratis */
-.prova__gratis {
+
+/* ========================= */
+/* SEZIONE PROVA GRATIS */
+/* ========================= */
+.prova-gratis {
     display: flex;
-    background:#120e36;
-    display: flex;
-    height: 1000px;
+    background: var(--color-purple-dark);
     align-items: center;
     justify-content: center;
-    width: 100%;
-    gap: 30px;
-    
-
+    height: 1000px;
 }
 
-.prova__gratis-left img{
-    width: 630px;
-    height: 630px;
+.prova-gratis__left img {
+    width: 530px;
+    height: 530px;
     margin-left: 10px;
-    
-
-
 }
 
-.prova__gratis-right-text{
-
-    align-items: center;
-    
-   
-    
-}
-
-
-
-.prova__gratis-right-text-up{
+.prova-gratis__right {
     display: flex;
-    color: white;
-    text-transform: uppercase;
-    align-content: center;
+    flex-direction: column;
     align-items: center;
-    font-family: var(--font-secondary);
-    
-
-}
-.prova__gratis-right-text-bottom{
-display: flex;
-color: greenyellow;
-font-size:xxx-large;
-font-weight: 400;
-font-style:oblique;
-font-family: var(--font-secondary);
+    justify-content: center;
 }
 
-.prova__gratis-right-button{
-    display: flex;
+.prova-gratis__right img {
+    width: 605px;
+    height: 87.84px;
+}
+
+.prova-gratis__button {
+    color: var(--color-blue-deep);
+    font-weight: 700px;
+    font-size: 16px;
+    letter-spacing: 1px;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    font-weight: 700;
+    box-shadow: 0px 4px 4px var(--color-shadow-white);
     margin-top: 50px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
-
 }
 
-/* section english test */
-/* section english test(Background and items position) */
+
+
+/* ========================= */
+/* SEZIONE ENGLISH TEST */
+/* ========================= */
 .english-test {
     display: flex;
     align-items: center;
@@ -511,10 +612,6 @@ font-family: var(--font-secondary);
     margin: 0 auto;
     box-sizing: border-box;
     gap: 10px;
-    margin-top: 120px;
-    margin-bottom: 120px;
-
-
 }
 
 .english-test img {
@@ -523,7 +620,6 @@ font-family: var(--font-secondary);
     display: block;
 }
 
-
 .english-test__left {
     display: flex;
     flex-direction: column;
@@ -531,34 +627,30 @@ font-family: var(--font-secondary);
     margin-right: 100px;
 }
 
-
-
-/* section english-test (text configs) */
-.english-test__left h1 {
-    color: #58cc02;
+.english-test__left h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
 }
 
 .english-test p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
 .english-test__left-text {
-    color: #1cb0f6;
+    color: var(--color-blue-primary);
     font-weight: bold;
 }
 
-.english-test__btn{
-    background: white;
-    color: #1cb0f6;
-    box-shadow: 0 4px 4px 4px rgb(137, 136, 136);
-    border: 1px solid rgb(137, 136, 136);
+.english-test__btn {
+    background: var(--color-white);
+    color: var(--color-blue-primary);
+    box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
+    border: 1px solid var(--color-gray-button-shadow);
     font-weight: bold;
-
 }
 
-.english-test__btn-certifica button{
+.english-test__btn-certifica button {
     width: 50%;
     height: 46px;
     padding: 10px;
@@ -570,9 +662,11 @@ font-family: var(--font-secondary);
     margin-top: 40px;
 }
 
-/* section duolingo for-schools */
 
-/* section duolingo for-schools (Background and items position)*/
+
+/* ========================= */
+/* SEZIONE DUOLINGO FOR SCHOOLS */
+/* ========================= */
 .for-schools {
     display: flex;
     align-items: center;
@@ -580,8 +674,7 @@ font-family: var(--font-secondary);
     margin: 0 auto;
     box-sizing: border-box;
     gap: 10px;
-    margin-top: 110px;
-    margin-bottom: 140px;
+    margin: 150px 150px;
 }
 
 .for-schools img {
@@ -595,31 +688,27 @@ font-family: var(--font-secondary);
     flex-direction: column;
     width: 30%;
     margin-left: 150px;
-
 }
 
-/* section for-schools (text configs)  */
-.for-schools h1 {
-    color: #58cc02;
+.for-schools h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
-
 }
 
 .for-schools p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
-.for-schools__btn{
-    background: white;
-    color: #1cb0f6;
-    box-shadow: 0 4px 4px 4px rgb(137, 136, 136);
-    border: 1px solid rgb(137, 136, 136);
+.for-schools__btn {
+    background: var(--color-white);
+    color: var(--color-blue-primary);
+    box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
+    border: 1px solid var(--color-gray-button-shadow);
     font-weight: bold;
-
 }
 
-.for-schools__btn-imposta button{
+.for-schools__btn-imposta button {
     width: 50%;
     height: 46px;
     padding: 10px;
@@ -632,19 +721,17 @@ font-family: var(--font-secondary);
 }
 
 
-/* section duolingo abc */
-/* section duolingo-abc(Background and items position) */
+
+/* ========================= */
+/* SEZIONE DUOLINGO ABC */
+/* ========================= */
 .duolingo-abc {
     display: flex;
-    align-items: center;
     justify-content: center;
     margin: 0 auto;
     box-sizing: border-box;
     gap: 10px;
-    margin-top: 110px;
-    margin-bottom: 140px;
-
-
+    height: 550px;
 }
 
 .duolingo-abc img {
@@ -653,7 +740,6 @@ font-family: var(--font-secondary);
     display: block;
 }
 
-
 .duolingo-abc__left {
     display: flex;
     flex-direction: column;
@@ -661,31 +747,30 @@ font-family: var(--font-secondary);
     margin-right: 100px;
 }
 
-/* section duolingo-abc (text configs) */
-.duolingo-abc__left h1 {
-    color: #58cc02;
+.duolingo-abc__left h2 {
+    color: var(--color-green-primary);
     margin-bottom: 30px;
     font-size: 50px;
 }
 
 .duolingo-abc p {
-    color: #777777;
+    color: var(--color-gray-text);
 }
 
 .duolingo-abc__left-text {
-    color: #1cb0f6;
+    color: var(--color-blue-primary);
     font-weight: bold;
 }
-.duolingo-abc__btn{
-    background: white;
-    color: #1cb0f6;
-    box-shadow: 0 4px 4px 4px rgb(137, 136, 136);
-    border: 1px solid rgb(137, 136, 136);
-    font-weight: bold;
 
+.duolingo-abc__btn {
+    background: var(--color-white);
+    color: var(--color-blue-primary);
+    box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
+    border: 1px solid var(--color-gray-button-shadow);
+    font-weight: bold;
 }
 
-.duolingo-abc__btn-abc button{
+.duolingo-abc__btn-abc button {
     width: 50%;
     height: 46px;
     padding: 10px;
@@ -695,4 +780,62 @@ font-family: var(--font-secondary);
     border: none;
     align-content: center;
     margin-top: 40px;
+}
+
+
+
+/* ========================= */
+/* SEZIONE FINALE - IMPARA UNA LINGUA */
+/* ========================= */
+.impara-lingua {
+    margin-bottom: -45px;
+}
+
+.impara-lingua img {
+    width: 1634px;
+    height: 600px;
+    display: block;
+    margin-top: 20px;
+}
+
+.impara-lingua__header {
+    position: relative;
+    margin-bottom: 200px;
+
+    /* Sfondo temporaneo / debug */
+    background: var(--color-red-debug);
+}
+
+.impara-lingua__title h2 {
+    color: var(--color-green-primary);
+    align-items: center;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.impara-lingua__title {
+    width: 750px;
+    left: 50%;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.impara-lingua__header-btn {
+    width: 330px;
+    height: 46px;
+    margin-bottom: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background: var(--color-green-primary);
+    color: var(--color-white-alt);
+    box-shadow: 0 4px 4px 0 var(--color-green-shadow);
+    border: 1px solid var(--color-green-shadow);
+    font-weight: bold;
 }

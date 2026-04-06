@@ -1,48 +1,198 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
 :root {
+    /* ========================= */
+    /* FONT PRINCIPALI */
+    /* ========================= */
     --font-primary: 'Varela Round', sans-serif;
-    --font-secondary: 'Orbitron', sans-serif; 
-}
-footer{
-    width: 100%;
-    background:#58cc02 ;
-}
-ul{
-    list-style: none;
+    --font-secondary: 'Orbitron', sans-serif;
+
+    /* ========================= */
+    /* PALETTE COLORI FOOTER */
+    /* ========================= */
+    --color-footer-bg: #58cc02;
+    --color-footer-title: #d7ffb8;
+    --color-footer-link: #a5ed6e;
+    --color-footer-text: white;
+    --color-footer-line: #e5e5e5;
 }
 
-/* Section footer up */
-.footer__main-up{
+
+
+
+
+/* ========================= */
+/* FOOTER PRINCIPALE */
+/* ========================= */
+.footer {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* Colore di sfondo principale del footer */
+    background-color: var(--color-footer-bg);
+
+    width: 100%;
+    margin: 40px auto 0;
+    height: 1000px;
 }
 
-.footer__main-up-collum-subtitle{
-    color: #d7ffb8;
+
+
+/* ========================= */
+/* CONTENITORE SUPERIORE DEL FOOTER */
+/* ========================= */
+.footer__header {
+    height: 600px;
+    width: 66%;
+    display: flex;
+
+    /* Allineamento del testo */
+    text-align: justify;
+
+    /* Spazio superiore rispetto all'inizio del footer */
+    margin-top: 200px;
+}
+
+
+
+/* ========================= */
+/* SINGOLA COLONNA DEL FOOTER */
+/* ========================= */
+.footer__section {
+    margin-right: 70px;
+}
+
+
+
+/* ========================= */
+/* TITOLI DELLE SEZIONI DEL FOOTER */
+/* ========================= */
+.footer__section h2 {
     font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 20px;
+
+    /* Colore dei titoli */
+    color: var(--color-footer-title);
 }
 
 
 
+/* ========================= */
+/* LISTA DI NAVIGAZIONE DEL FOOTER */
+/* ========================= */
+.footer__section-nav {
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 10px;
 
-/* Fine section footer up */
-
-
-
-
-/* Section footer bottom */
-.footer__main-bottom-subtitle{
-     color: #d7ffb8;
-    font-size: 19px;
-    font-weight: 700;
-    margin-bottom: 12px;
+    /* Colore testo generale */
+    color: var(--color-footer-text);
 }
 
-/* Fine section footer bottom */
+
+
+/* ========================= */
+/* ELEMENTI DELLA LISTA */
+/* ========================= */
+.footer__section-nav li {
+    margin-top: 10px;
+}
+
+
+
+/* ========================= */
+/* LINK DEL FOOTER */
+/* ========================= */
+.footer__section-nav a {
+    /* Colore dei collegamenti */
+    color: var(--color-footer-link);
+
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+
+/* ========================= */
+/* TITOLO DELLA SEZIONE SOCIAL */
+/* ========================= */
+.footer__section-social {
+    margin-top: 30px;
+}
+
+
+
+/* ========================= */
+/* BLOCCO PRIVACY E TERMINI */
+/* ========================= */
+.footer__section-privacy {
+    width: 150px;
+    text-align: left;
+}
+
+
+
+/* ========================= */
+/* LINEA DIVISORIA DEL FOOTER */
+/* ========================= */
+.footer__line {
+    border: none;
+    height: 1px;
+
+    /* Colore della linea */
+    background-color: var(--color-footer-line);
+
+    width: 100%;
+    margin: 20px auto;
+}
+
+
+
+/* ========================= */
+/* SEZIONE LINGUE DEL SITO */
+/* ========================= */
+.footer__languages {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    margin-bottom: 100px;
+}
+
+
+
+/* ========================= */
+/* LISTA DELLE LINGUE */
+/* ========================= */
+.footer__languages-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* ========================= */
+/* LINK DELLE LINGUE */
+/* ========================= */
+.footer__languages-nav li a {
+    text-decoration: none;
+
+    /* Colore dei link lingua */
+    color: var(--color-footer-link);
+
+    font-size: 13px;
+}
+
+
+
+/* ========================= */
+/* TITOLO DELLA SEZIONE LINGUE */
+/* ========================= */
+.footer__languages h2 {
+    font-size: 15px;
+    margin-bottom: 20px;
+
+    /* Colore del titolo */
+    color: var(--color-footer-title);
+}
