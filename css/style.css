@@ -1,841 +1,1250 @@
 :root {
-    /* ========================= */
-    /* FONT PRINCIPALI */
-    /* ========================= */
-    --font-primary: 'Varela Round', sans-serif;
-    --font-secondary: 'Orbitron', sans-serif;
+  /* ========================= */
+  /* FONT PRINCIPALI */
+  /* ========================= */
+  --font-primary: "Varela Round", sans-serif;
+  --font-secondary: "Orbitron", sans-serif;
 
-    /* ========================= */
-    /* PALETTE COLORI GENERALE */
-    /* ========================= */
-    --color-white: white;
-    --color-white-alt: #ffff;
-    --color-transparent: transparent;
+  /* ========================= */
+  /* PALETTE COLORI GENERALE */
+  /* ========================= */
+  --color-white: white;
+  --color-white-alt: #ffff;
+  --color-transparent: transparent;
 
-    --color-gray-light: #ddd;
-    --color-gray-medium: #afafaf;
-    --color-gray-text: #777777;
-    --color-gray-dark: #4b4b4b;
-    --color-gray-button-shadow: rgb(137, 136, 136);
-    --color-gray-hover: rgb(209, 206, 206);
-    --color-gray-text-dark: #484848;
+  --color-gray-light: #ddd;
+  --color-gray-medium: #afafaf;
+  --color-gray-text: #777777;
+  --color-gray-dark: #4b4b4b;
+  --color-gray-button-shadow: rgb(137, 136, 136);
+  --color-gray-hover: rgb(209, 206, 206);
+  --color-gray-text-dark: #484848;
 
-    --color-green-primary: #58cc02;
-    --color-green-light: #9fed62;
-    --color-green-shadow: rgba(88, 167, 0);
+  --color-green-primary: #58cc02;
+  --color-green-light: #9fed62;
+  --color-green-shadow: rgba(88, 167, 0);
 
-    --color-blue-primary: #1cb0f6;
-    --color-blue-dark: #042c60;
-    --color-blue-deep: #0d1b3d;
-    --color-blue-bg-soft: #b6dced;
+  --color-blue-primary: #1cb0f6;
+  --color-blue-dark: #042c60;
+  --color-blue-deep: #0d1b3d;
+  --color-blue-bg-soft: #b6dced;
 
-    --color-purple-dark: #120e36;
+  --color-purple-dark: #120e36;
 
-    --color-red-debug: red;
+  --color-red-debug: red;
 
-    --color-shadow-white: rgba(255, 255, 255, 0.40);
+  --color-shadow-white: rgba(255, 255, 255, 0.4);
 }
-
-
-
-
 
 /* ========================= */
 /* RESET GLOBALE */
 /* ========================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
 
 /* ========================= */
 /* BODY / CORPO DELLA PAGINA */
 /* ========================= */
 body {
-    width: 100%;
+  width: 100%;
 
-    /* Sfondo principale della pagina */
-    background: var(--color-white);
+  /* Sfondo principale della pagina */
+  background: var(--color-white);
 }
-
-
 
 /* ========================= */
 /* HEADER / INTESTAZIONE */
 /* ========================= */
 .header {
-    display: flex;
-    align-items: center;
-    width: 1000px;
-    padding: 14px 0;
-    justify-content: space-between;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-
 
 /* ========================= */
 /* PULSANTE LINGUA DEL SITO */
 /* ========================= */
 .header__btn-lang {
-    border: none;
+  border: none;
 
-    /* Sfondo trasparente */
-    background: var(--color-transparent);
+  /* Sfondo trasparente */
+  background: var(--color-transparent);
 
-    cursor: pointer;
-    text-transform: uppercase;
+  cursor: pointer;
+  text-transform: uppercase;
 
-    /* Colore del testo */
-    color: var(--color-gray-medium);
+  /* Colore del testo */
+  color: var(--color-gray-medium);
 }
-
-
 
 /* ========================= */
 /* SEZIONE 1 - LOGIN / CREAZIONE ACCOUNT */
 /* ========================= */
 .login-create {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 100px;
-    margin-top: 110px;
-    margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 100px;
+  margin-top: 110px;
+  margin-bottom: 140px;
 }
-
-
 
 /* Immagine introduttiva */
 .login-create__left img {
-    width: 450px;
-    height: 450px;
-    display: block;
+  width: 450px;
+  height: 450px;
+  display: block;
 }
-
-
 
 /* Contenitore testo e pulsanti */
 .login-create__right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-
 
 /* Contenitore dei pulsanti iniziali */
 .login-create__btn-inizial {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    max-width: 400px;
-    flex-direction: column;
-    gap: 15px;
-    width: 330px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  max-width: 400px;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
-
-
 
 /* Stile comune ai pulsanti */
 .login-create__btn-inizial button {
-    width: 100%;
-    height: 46px;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
+  width: 100%;
+  height: 46px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
-
-
 
 /* Pulsante "Inizia" */
 .login-create__btn-inizia {
-    background: var(--color-green-primary);
-    color: var(--color-white-alt);
-    box-shadow: 0 4px 4px 0 var(--color-green-shadow);
-    border: 1px solid var(--color-green-shadow);
+  background: var(--color-green-primary);
+  color: var(--color-white-alt);
+  box-shadow: 0 4px 4px 0 var(--color-green-shadow);
+  border: 1px solid var(--color-green-shadow);
 }
-
-
 
 /* Pulsante "Ho già un account" */
 .login-create__btn-account {
-    background: var(--color-white);
-    color: var(--color-blue-primary);
-    box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
-    border: 1px solid var(--color-gray-button-shadow);
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
+  border: 1px solid var(--color-gray-button-shadow);
 }
-
-
 
 /* Titolo principale */
 .login-create__right h1 {
-    color: var(--color-gray-dark);
-    font-family: "din-round sans-serif";
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 20px;
+  color: var(--color-gray-dark);
+  font-family: "din-round sans-serif";
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-
-
 
 /* Hover pulsante inizia */
 .login-create__btn-inizia:hover {
-    background: var(--color-green-light);
+  background: var(--color-green-light);
 }
-
-
 
 /* Hover pulsante account */
 .login-create__btn-account:hover {
-    background: var(--color-gray-medium);
+  background: var(--color-gray-medium);
 }
-
-
 
 /* ========================= */
 /* SEZIONE 2 - LINGUE */
 /* ========================= */
 .lang-select__languages {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    width: 100%;
-    padding: 20px 30px;
-    box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
 
-    border-top: 1px solid var(--color-gray-light);
-    border-bottom: 1px solid var(--color-gray-light);
+  border-top: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-gray-light);
 
-    background: var(--color-white-alt);
+  background: var(--color-white-alt);
 }
-
-
 
 /* Menu delle lingue */
 .lang-select__menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    flex-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: nowrap;
 }
-
-
 
 /* Configurazione link lingua */
 .lang-select__language {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: var(--color-gray-text);
-    font-weight: 600;
-    font-size: 15px;
-    text-transform: uppercase;
-    white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--color-gray-text);
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
-
-
 
 /* Configurazione bandiere */
 .lang-select__language img {
-    width: 36px;
-    height: 27.77px;
-    object-fit: cover;
-    display: block;
+  width: 36px;
+  height: 27.77px;
+  object-fit: cover;
+  display: block;
 }
-
-
 
 /* Frecce di navigazione */
 .lang-select__arrow img {
-    width: 15px;
-    height: 15px;
-    color: var(--color-gray-text);
+  width: 15px;
+  height: 15px;
+  color: var(--color-gray-text);
 }
-
-
 
 /* Pulsanti freccia */
 .lang-select__arrow {
-    background: none;
-    border: none;
-    cursor: pointer;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
-
-
 
 /* ========================= */
 /* SEZIONE FREE-FUN */
 /* ========================= */
 .free-fun {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
-    margin-top: 110px;
-    margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 110px;
+  margin-bottom: 140px;
 }
-
-
 
 /* Immagine della sezione */
 .free-fun img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
-
-
 
 /* Blocco testo */
 .free-fun__left {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  /* width: 35%; */
+  margin-right: 100px;
 }
-
-
 
 /* Titolo sezione */
 .free-fun__left h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
-
-
 
 /* Paragrafo */
 .free-fun p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
-
-
 
 /* Testo evidenziato */
 .free-fun__left-text {
-    color: var(--color-blue-primary);
-    font-weight: bold;
+  color: var(--color-blue-primary);
+  font-weight: bold;
 }
-
-
 
 /* ========================= */
 /* SEZIONE BACKED BY SCIENCE */
 /* ========================= */
 .backed-science {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
-    margin-top: 110px;
-    margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 110px;
+  margin-bottom: 140px;
 }
 
 .backed-science img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
 
 .backed-science__right {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 150px;
 }
 
 .backed-science h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .backed-science p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
-
-
 
 /* ========================= */
 /* SEZIONE STAY MOTIVATED */
 /* ========================= */
 .stay-motivated {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
-    margin-top: 110px;
-    margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 10px;
+  margin-top: 110px;
+  margin-bottom: 140px;
 }
 
 .stay-motivated img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
 
 .stay-motivated__left {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 100px;
 }
 
 .stay-motivated__left h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .stay-motivated p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
-
-
 
 /* ========================= */
 /* SEZIONE PERSONALIZED LEARNING */
 /* ========================= */
 .personalized-learning {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
-    margin-top: 110px;
-    margin-bottom: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 10px;
+  margin-top: 110px;
+  margin-bottom: 140px;
 }
 
 .personalized-learning img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
 
 .personalized-learning__right {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 150px;
 }
 
 .personalized-learning h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .personalized-learning p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
-
-
 
 /* ========================= */
 /* SEZIONE LEARN WHENEVER YOU WANT */
 /* ========================= */
 .learn {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    background: var(--color-blue-bg-soft);
-    flex-direction: column;
-    height: 1000px;
-    width: 100%;
-    background-image: url("/assets/animations/impara-dove-vuoi.gif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-blue-bg-soft);
+  flex-direction: column;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  background-image: url("/assets/animations/impara-dove-vuoi.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
-
 
 /* Contenitore pulsanti download */
 .learn__download-app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
-
-
 
 /* Icone download */
 .learn__download-app img {
-    width: 34px;
-    height: 34px;
+  width: 34px;
+  height: 34px;
 }
-
-
 
 /* Titolo sezione */
 .learn__title {
-    margin-top: 100px;
-    color: var(--color-blue-dark);
-    font-size: 35px;
-    font-weight: 500px;
-    width: 40%;
+  margin-top: 100px;
+  color: var(--color-blue-dark);
+  font-size: 35px;
+  font-weight: 500px;
+  width: 40%;
 }
-
-
 
 /* Pulsante App Store */
 .learn__apple-store {
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--color-white);
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
 }
 
 .learn__apple-store:hover {
-    cursor: pointer;
-    background: var(--color-gray-hover);
+  cursor: pointer;
+  background: var(--color-gray-hover);
 }
-
-
 
 /* Pulsante Google Play */
 .learn__google-play {
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--color-white);
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
 }
 
 .learn__google-play:hover {
-    cursor: pointer;
-    background: var(--color-gray-hover);
+  cursor: pointer;
+  background: var(--color-gray-hover);
 }
-
-
 
 /* Testo interno dei pulsanti */
 .learn__text {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: var(--color-gray-text-dark);
-    font-weight: bold;
-    text-align: justify;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--color-gray-text-dark);
+  font-weight: bold;
+  text-align: justify;
 }
 
 .learn__text-top {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .learn__text-bottom {
-    font-size: 20px;
+  font-size: 20px;
 }
-
-
 
 /* ========================= */
 /* SEZIONE PROVA GRATIS */
 /* ========================= */
 .prova-gratis {
-    display: flex;
-    background: var(--color-purple-dark);
-    align-items: center;
-    justify-content: center;
-    height: 1000px;
+  display: flex;
+  background: var(--color-purple-dark);
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
 }
 
 .prova-gratis__left img {
-    width: 530px;
-    height: 530px;
-    margin-left: 10px;
+  width: 530px;
+  height: 530px;
+  margin-left: 10px;
 }
 
 .prova-gratis__right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .prova-gratis__right img {
-    width: 605px;
-    height: 87.84px;
+  width: 605px;
+  height: 87.84px;
 }
 
 .prova-gratis__button {
-    color: var(--color-blue-deep);
-    font-weight: 700px;
-    font-size: 16px;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px var(--color-shadow-white);
-    margin-top: 50px;
+  color: var(--color-blue-deep);
+  font-weight: 700px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px var(--color-shadow-white);
+  margin-top: 50px;
 }
-
-
 
 /* ========================= */
 /* SEZIONE ENGLISH TEST */
 /* ========================= */
 .english-test {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 10px;
 }
 
 .english-test img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
 
 .english-test__left {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 100px;
 }
 
 .english-test__left h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .english-test p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
 
 .english-test__left-text {
-    color: var(--color-blue-primary);
-    font-weight: bold;
+  color: var(--color-blue-primary);
+  font-weight: bold;
 }
 
 .english-test__btn {
-    background: var(--color-white);
-    color: var(--color-blue-primary);
-    box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
-    border: 1px solid var(--color-gray-button-shadow);
-    font-weight: bold;
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
+  border: 1px solid var(--color-gray-button-shadow);
+  font-weight: bold;
 }
 
 .english-test__btn-certifica button {
-    width: 50%;
-    height: 46px;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    border: none;
-    align-content: center;
-    margin-top: 40px;
+  /* width: 50%; */
+  /* height: 46px; */
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  align-content: center;
+  margin-top: 40px;
 }
-
-
 
 /* ========================= */
 /* SEZIONE DUOLINGO FOR SCHOOLS */
 /* ========================= */
 .for-schools {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
-    margin: 150px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 10px;
+  margin: 150px auto;
+  padding: 0 20px;
 }
 
 .for-schools img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
 
 .for-schools__right {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 150px;
 }
 
 .for-schools h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .for-schools p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
 
 .for-schools__btn {
-    background: var(--color-white);
-    color: var(--color-blue-primary);
-    box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
-    border: 1px solid var(--color-gray-button-shadow);
-    font-weight: bold;
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
+  border: 1px solid var(--color-gray-button-shadow);
+  font-weight: bold;
 }
 
 .for-schools__btn-imposta button {
-    width: 50%;
-    height: 46px;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    border: none;
-    align-content: center;
-    margin-top: 40px;
+  /* width: 50%;
+  height: 46px; */
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  align-content: center;
+  margin-top: 40px;
 }
-
-
 
 /* ========================= */
 /* SEZIONE DUOLINGO ABC */
 /* ========================= */
 .duolingo-abc {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    gap: 10px;
-    height: 550px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  box-sizing: border-box;
+  gap: 10px;
+  height: 550px;
 }
 
 .duolingo-abc img {
-    width: 400px;
-    height: 400px;
-    display: block;
+  width: 400px;
+  height: 400px;
+  display: block;
 }
 
 .duolingo-abc__left {
-    display: flex;
-    flex-direction: column;
-    width: 35%;
-    margin-right: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  margin-right: 100px;
 }
 
 .duolingo-abc__left h2 {
-    color: var(--color-green-primary);
-    margin-bottom: 30px;
-    font-size: 50px;
+  color: var(--color-green-primary);
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
 .duolingo-abc p {
-    color: var(--color-gray-text);
+  color: var(--color-gray-text);
 }
 
 .duolingo-abc__left-text {
-    color: var(--color-blue-primary);
-    font-weight: bold;
+  color: var(--color-blue-primary);
+  font-weight: bold;
 }
 
 .duolingo-abc__btn {
-    background: var(--color-white);
-    color: var(--color-blue-primary);
-    box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
-    border: 1px solid var(--color-gray-button-shadow);
-    font-weight: bold;
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
+  border: 1px solid var(--color-gray-button-shadow);
+  font-weight: bold;
 }
 
 .duolingo-abc__btn-abc button {
-    width: 50%;
-    height: 46px;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    border: none;
-    align-content: center;
-    margin-top: 40px;
+  /* width: 50%;
+  height: 46px; */
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  align-content: center;
+  margin-top: 40px;
 }
-
-
 
 /* ========================= */
 /* SEZIONE FINALE - IMPARA UNA LINGUA */
 /* ========================= */
 .impara-lingua {
-    margin-bottom: -45px;
+  margin-bottom: -45px;
 }
 
 .impara-lingua img {
-    width: 100%;
-    height: 500px;
-    display: block;
-    margin-top: 20px;
+  width: 100%;
+  height: 500px;
+  display: block;
+  margin-top: 20px;
 }
 
 .impara-lingua__header {
-    position: relative;
-    margin-bottom: 200px;
+  position: relative;
+  margin-bottom: 200px;
 
-    /* Sfondo temporaneo / debug */
-    background: var(--color-red-debug);
+  /* Sfondo temporaneo / debug */
+  background: var(--color-red-debug);
 }
 
 .impara-lingua__title h2 {
-    color: var(--color-green-primary);
-    align-items: center;
-    font-size: 80px;
-    text-align: center;
-    margin-bottom: 60px;
+  color: var(--color-green-primary);
+  align-items: center;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .impara-lingua__title {
-    width: 750px;
-    left: 50%;
-    position: absolute;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+  width: 750px;
+  left: 50%;
+  position: absolute;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .impara-lingua__header-btn {
-    width: 330px;
-    height: 46px;
-    margin-bottom: 200px;
-    border-radius: 10px;
+  width: 330px;
+  height: 46px;
+  margin-bottom: 200px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: var(--color-green-primary);
+  color: var(--color-white-alt);
+  box-shadow: 0 4px 4px 0 var(--color-green-shadow);
+  border: 1px solid var(--color-green-shadow);
+  font-weight: bold;
+}
+
+/* ========================= */
+/* MEDIA QUERY RESPONSIVE */
+/* ========================= */
+
+/* Esconde no desktop */
+.login-create__banner-mobile {
+  display: none;
+}
+
+/* HIDE DESKTOP */
+.hide-desktop {
+  display: none; /* desktop: escondido */
+}
+
+/* HIDE MOBILE */
+.hide-mobile {
+  display: block; /* desktop: visível */
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  /*  ajuste do header */
+  .header {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__logo img {
+    height: 57px;
+    margin-top: 10px;
+  }
+
+  .header__top-lang {
+    display: none;
+  }
+
+  .login-create {
+    margin-top: 40px;
+  }
+
+  .login-create__left img {
+    width: 100%;
+    max-width: 410px;
+    height: auto;
+  }
+
+  .login-create {
+    flex-direction: column;
+  }
+
+  .login-create__right h1 {
+    font-size: 50px;
+    margin-top: -90px;
+  }
+
+  .login-create__btn-inizial {
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .login-create__btn-inizial button {
+    height: 70px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
     cursor: pointer;
     text-transform: uppercase;
-    background: var(--color-green-primary);
-    color: var(--color-white-alt);
-    box-shadow: 0 4px 4px 0 var(--color-green-shadow);
-    border: 1px solid var(--color-green-shadow);
+    font-size: 20px;
     font-weight: bold;
+  }
+
+  .lang-select {
+    display: none;
+  }
+
+  /* Divertente, Gratis ed Efficace */
+  .free-fun {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .free-fun__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .free-fun__left h2 {
+    font-size: 60px;
+  }
+
+  .free-fun__left p {
+    font-size: 27px;
+  }
+
+  /* Un approccio Scientifico  */
+
+  .backed-science {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .backed-science__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .backed-science__right h2 {
+    font-size: 60px;
+  }
+
+  .backed-science__right p {
+    font-size: 27px;
+  }
+
+  .backed-science__left img {
+    width: 390px;
+    height: 390px;
+  }
+
+  .backed-science__right {
+    margin-top: 90px;
+  }
+
+  .hide-desktop {
+    display: block; /* mobile: visível */
+  }
+
+  .hide-mobile {
+    display: none; /* mobile: escondido */
+  }
+
+  /* Motivante */
+  .stay-motivated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .stay-motivated__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .stay-motivated__left h2 {
+    font-size: 70px;
+  }
+
+  .stay-motivated__left p {
+    font-size: 26px;
+  }
+
+  /* Apprendimento Personalizzato */
+  .personalized-learning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .personalized-learning__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .personalized-learning__right h2 {
+    font-size: 60px;
+  }
+
+  .personalized-learning__right p {
+    font-size: 27px;
+  }
+
+  .personalized-learning__left img {
+    width: 390px;
+    height: 390px;
+  }
+
+  .personalized-learning__left {
+    margin-top: 100px;
+  }
+
+  .hide-desktop {
+    display: block; /* mobile: visível */
+  }
+
+  .hide-mobile {
+    display: none; /* mobile: escondido */
+  }
+
+  /* Impara quando e dove vuoi */
+  .learn__title {
+    width: 100%;
+    font-size: 45px;
+    padding: 10px;
+  }
+
+  .learn__download-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+  }
+
+  .learn__apple-store {
+    width: 230px;
+    height: 85px;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+
+  .learn__apple-store img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .learn__apple-store a {
+    color: #484848;
+    text-decoration: none;
+  }
+
+  .learn__google-play {
+    width: 230px;
+    height: 85px;
+    gap: 20px;
+  }
+
+  .learn__google-play img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .learn__google-play a {
+    color: #484848;
+    text-decoration: none;
+  }
+
+  /* Prova una settimana Gratis */
+
+  .prova-gratis {
+    flex-direction: column;
+  }
+
+  .prova-gratis__left img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .prova-gratis__right {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .prova-gratis__right img {
+    width: 100%;
+    max-width: 470px;
+    height: auto;
+  }
+
+  .prova-gratis__button {
+    width: 95%;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /* Duolingo english test */
+  .english-test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .english-test__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .english-test__left h2 {
+    font-size: 70px;
+  }
+
+  .english-test__left p {
+    font-size: 26px;
+  }
+
+  .english-test__btn-certifica {
+    width: 100%;
+  }
+
+  .english-test__btn {
+    width: 100%;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /* duolingo for schools */
+  .for-schools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .for-schools__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .for-schools__right h2 {
+    font-size: 60px;
+  }
+
+  .for-schools__right p {
+    font-size: 27px;
+  }
+
+  .for-schools__left img {
+    width: 390px;
+    height: 390px;
+  }
+
+  .for-schools__left {
+    margin-top: 100px;
+  }
+
+  .hide-desktop {
+    display: block; /* mobile: visível */
+  }
+
+  .hide-mobile {
+    display: none; /* mobile: escondido */
+  }
+
+  .for-schools__btn-imposta {
+    width: 100%;
+  }
+
+  .for-schools__btn {
+    width: 100%;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /* duolingo ABC */
+  .duolingo-abc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .duolingo-abc__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .duolingo-abc__left h2 {
+    font-size: 70px;
+  }
+
+  .duolingo-abc__left p {
+    font-size: 26px;
+  }
+
+  .duolingo-abc__btn-certifica {
+    width: 100%;
+  }
+
+  .duolingo-abc__btn {
+    width: 100%;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .duolingo-abc__btn-abc {
+    width: 100%;
+  }
+
+  .duolingo-abc__btn {
+    width: 100%;
+    height: 60px;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  /* impara una lingua con duolingo */
+  .impara-lingua {
+    margin-top: 600px;
+  }
+
+  .impara-lingua__title {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
+  }
+
+  .impara-lingua__title h2 {
+    font-size: 60px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .impara-lingua__header-btn {
+    width: 100%;
+    max-width: 460px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 380px;
+  }
+
+  .impara-lingua img {
+    width: 100%;
+    height: 280px;
+  }
+
+  /* Fiz, mas não sei do que se trata */
+  .free-fun__right img,
+  .stay-motivated__right img,
+  .english-test__right img,
+  .duolingo-abc__right img,
+  .backed-science__left img,
+  .personalized-learning__left img,
+  .for-schools__left img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
 }
