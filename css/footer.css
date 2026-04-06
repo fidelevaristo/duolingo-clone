@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --font-primary: 'Varela Round', sans-serif;
+    --font-secondary: 'Orbitron', sans-serif; 
+}
+footer{
+    width: 100%;
+    background:#58cc02 ;
+}
+ul{
+    list-style: none;
+}
+
+/* Section footer up */
+.footer__main-up{
+    display: flex;
+}
+
+.footer__main-up-collum-subtitle{
+    color: #d7ffb8;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+
+
+/* Fine section footer up */
+
+
+
+
+/* Section footer bottom */
+.footer__main-bottom-subtitle{
+     color: #d7ffb8;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Fine section footer bottom */

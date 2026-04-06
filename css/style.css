@@ -6,15 +6,16 @@
 }
 
 :root {
-    --font-h1: "Varela Round", sans-serif;
-    --font-weight-h1: 400;
-    --font-style-h1: normal;
+    --font-primary: 'Varela Round', sans-serif;
+    --font-secondary: 'Orbitron', sans-serif; 
 }
 
 body {
     width: 100%;
     background: white;
+    font-family: var(--font-primary);
 }
+
 
 /* header */
 .header {
@@ -439,7 +440,7 @@ body {
 /* Section prova gratis */
 .prova__gratis {
     display: flex;
-    background: rgb(10, 10, 51);
+    background:#120e36;
     display: flex;
     height: 1000px;
     align-items: center;
@@ -459,7 +460,9 @@ body {
 
 }
 
-.prova__gratis-right{
+.prova__gratis-right-text{
+
+    align-items: center;
     
    
     
@@ -473,15 +476,17 @@ body {
     text-transform: uppercase;
     align-content: center;
     align-items: center;
+    font-family: var(--font-secondary);
     
 
 }
 .prova__gratis-right-text-bottom{
-    display: flex;
+display: flex;
 color: greenyellow;
 font-size:xxx-large;
 font-weight: 400;
 font-style:oblique;
+font-family: var(--font-secondary);
 }
 
 .prova__gratis-right-button{
@@ -495,4 +500,199 @@ font-style:oblique;
     box-sizing: border-box;
     box-shadow: 0 4px 4px 0 rgb(137, 136, 136);
 
+}
+
+/* section english test */
+/* section english test(Background and items position) */
+.english-test {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+
+}
+
+.english-test img {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+
+.english-test__left {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-right: 100px;
+}
+
+
+
+/* section english-test (text configs) */
+.english-test__left h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.english-test p {
+    color: #777777;
+}
+
+.english-test__left-text {
+    color: #1cb0f6;
+    font-weight: bold;
+}
+
+.english-test__btn{
+    background: white;
+    color: #1cb0f6;
+    box-shadow: 0 4px 4px 4px rgb(137, 136, 136);
+    border: 1px solid rgb(137, 136, 136);
+    font-weight: bold;
+
+}
+
+.english-test__btn-certifica button{
+    width: 50%;
+    height: 46px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    align-content: center;
+    margin-top: 40px;
+}
+
+/* section duolingo for-schools */
+
+/* section duolingo for-schools (Background and items position)*/
+.for-schools {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+}
+
+.for-schools img {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+.for-schools__right {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 150px;
+
+}
+
+/* section for-schools (text configs)  */
+.for-schools h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+
+}
+
+.for-schools p {
+    color: #777777;
+}
+
+.for-schools__btn{
+    background: white;
+    color: #1cb0f6;
+    box-shadow: 0 4px 4px 4px rgb(137, 136, 136);
+    border: 1px solid rgb(137, 136, 136);
+    font-weight: bold;
+
+}
+
+.for-schools__btn-imposta button{
+    width: 50%;
+    height: 46px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    align-content: center;
+    margin-top: 40px;
+}
+
+
+/* section duolingo abc */
+/* section duolingo-abc(Background and items position) */
+.duolingo-abc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 10px;
+    margin-top: 110px;
+    margin-bottom: 140px;
+
+
+}
+
+.duolingo-abc img {
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+
+
+.duolingo-abc__left {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-right: 100px;
+}
+
+/* section duolingo-abc (text configs) */
+.duolingo-abc__left h1 {
+    color: #58cc02;
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.duolingo-abc p {
+    color: #777777;
+}
+
+.duolingo-abc__left-text {
+    color: #1cb0f6;
+    font-weight: bold;
+}
+.duolingo-abc__btn{
+    background: white;
+    color: #1cb0f6;
+    box-shadow: 0 4px 4px 4px rgb(137, 136, 136);
+    border: 1px solid rgb(137, 136, 136);
+    font-weight: bold;
+
+}
+
+.duolingo-abc__btn-abc button{
+    width: 50%;
+    height: 46px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+    align-content: center;
+    margin-top: 40px;
 }
