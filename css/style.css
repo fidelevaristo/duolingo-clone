@@ -1,17 +1,63 @@
+/* ========================= */
+/* FONT CUSTOM - DIN ROUNDED */
+/* ========================= */
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("/assets/fonts/din-rounded-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("/assets/fonts/din-rounded-medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("/assets/fonts/din-rounded-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("/assets/fonts/din-rounded-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("/assets/fonts/din-round-pro.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* ========================= */
+/* FONT CUSTOM - FEATHER */
+/* ========================= */
+
+@font-face {
+  font-family: "Feather";
+  src: url("/assets/fonts/feather-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   /* ========================= */
-  /* FONT PRINCIPALI */
+  /* VARIABILI GLOBALI */
   /* ========================= */
-  --font-primary: "Varela Round", sans-serif;
-  --font-secondary: "Orbitron", sans-serif;
 
-  /* ========================= */
-  /* PALETTE COLORI GENERALE */
-  /* ========================= */
-  --color-white: white;
-  --color-white-alt: #ffff;
+  /* Colori base */
+  --color-white: #fff;
   --color-transparent: transparent;
 
+  /* Scala di grigi */
   --color-gray-light: #ddd;
   --color-gray-medium: #afafaf;
   --color-gray-text: #777777;
@@ -20,9 +66,10 @@
   --color-gray-hover: rgb(209, 206, 206);
   --color-gray-text-dark: #484848;
 
+  /* Colori principali del brand */
   --color-green-primary: #58cc02;
   --color-green-light: #9fed62;
-  --color-green-shadow: rgba(88, 167, 0);
+  --color-green-shadow: rgba(88, 167, 0, 0.85);
 
   --color-blue-primary: #1cb0f6;
   --color-blue-dark: #042c60;
@@ -31,118 +78,231 @@
 
   --color-purple-dark: #120e36;
 
-  --color-red-debug: red;
-
+  /* Ombra chiara utilizzata su sfondi scuri */
   --color-shadow-white: rgba(255, 255, 255, 0.4);
+
+  /* Variabili di layout */
+  --container-width: 1200px;
+  --container-padding: 20px;
+  --section-spacing: 72px;
+  --section-gap: 32px;
+
+  /* Raggi di bordo */
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 
 /* ========================= */
 /* RESET GLOBALE */
 /* ========================= */
+
+/* Applica box-sizing coerente a tutti gli elementi */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Rimuove margini e padding di default */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-/* ========================= */
-/* BODY / CORPO DELLA PAGINA */
-/* ========================= */
+/* Evita overflow orizzontale accidentale */
+html,
 body {
   width: 100%;
+  overflow-x: hidden;
+}
 
-  /* Sfondo principale della pagina */
+/* Stile base del body */
+body {
   background: var(--color-white);
+  font-family: "DIN Rounded", sans-serif;
 }
 
-/* ========================= */
-/* HEADER / INTESTAZIONE */
-/* ========================= */
-.header {
+/* Le immagini diventano fluide per default */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* I bottoni ereditano il font del contesto */
+button {
+  font: inherit;
+}
+
+/* Gli anchor non hanno sottolineatura di default */
+a {
+  text-decoration: none;
+}
+
+/* Main sempre a tutta larghezza */
+main {
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 /* ========================= */
-/* PULSANTE LINGUA DEL SITO */
+/* CONTAINER COMUNI */
 /* ========================= */
+
+/* 
+  Questi blocchi condividono la stessa logica:
+  - larghezza massima controllata
+  - centratura automatica
+  - padding laterale costante
+*/
+.header,
+.login-create,
+.free-fun,
+.backed-science,
+.stay-motivated,
+.personalized-learning,
+.english-test,
+.for-schools,
+.duolingo-abc,
+.prova-gratis,
+.impara-lingua__header {
+  width: min(
+    100%,
+    calc(var(--container-width) + (var(--container-padding) * 2))
+  );
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+ 
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+/* 
+  Layout mobile-first:
+  nel mobile il logo è centrato.
+  Da tablet in poi verrà distribuito con space-between.
+*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Dimensione controllata del logo */
+.header__logo img {
+  height: 56px;
+  width: auto;
+}
+
+/* 
+  Nel mobile nascondiamo la selezione lingua.
+  Verrà mostrata dai breakpoint maggiori.
+*/
+.header__top-lang {
+  display: none;
+}
+
+/* Stile del bottone lingua */
 .header__btn-lang {
   border: none;
-
-  /* Sfondo trasparente */
   background: var(--color-transparent);
-
   cursor: pointer;
   text-transform: uppercase;
-
-  /* Colore del testo */
   color: var(--color-gray-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* ========================= */
-/* SEZIONE 1 - LOGIN / CREAZIONE ACCOUNT */
+/* HERO / LOGIN-CREATE */
 /* ========================= */
+
+/* 
+  Nel mobile la sezione è verticale:
+  immagine sopra, contenuto sotto.
+*/
 .login-create {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  gap: 20px;
+  padding-top: 32px;
+  padding-bottom: 48px;
+  text-align: center;
+}
+
+/* I due blocchi occupano tutta la larghezza disponibile */
+.login-create__left,
+.login-create__right {
+  width: 100%;
+}
+
+/* Centra l'immagine nel suo contenitore */
+.login-create__left {
+  display: flex;
   justify-content: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 100px;
-  margin-top: 110px;
-  margin-bottom: 140px;
 }
 
-/* Immagine introduttiva */
-.login-create__left img {
-  width: 450px;
-  height: 450px;
-  display: block;
+/* Immagine responsive della hero */
+.login-create__banner-mobile {
+  width: 100%;
+  max-width: 380px;
 }
 
-/* Contenitore testo e pulsanti */
+/* Contenuto testuale e CTA allineati al centro nel mobile */
 .login-create__right {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
-/* Contenitore dei pulsanti iniziali */
+/* Titolo principale adattivo */
+.login-create__right h1 {
+  color: var(--color-gray-dark);
+  font-size: clamp(2rem, 7vw, 3rem);
+  line-height: 1.15;
+  margin-bottom: 20px;
+  max-width: 100%;
+  font-family: "DIN Rounded", sans-serif;
+  font-size: 47px;
+  margin-bottom: 50px;
+}
+
+/* Contenitore dei bottoni */
 .login-create__btn-inizial {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  max-width: 400px;
-  flex-direction: column;
-  gap: 15px;
   width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; 
 }
 
-/* Stile comune ai pulsanti */
+/* Stile base dei bottoni */
 .login-create__btn-inizial button {
   width: 100%;
-  height: 46px;
-  padding: 10px;
-  border-radius: 10px;
+  min-height: 70px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-/* Pulsante "Inizia" */
+/* Bottone primario */
 .login-create__btn-inizia {
   background: var(--color-green-primary);
-  color: var(--color-white-alt);
+  color: var(--color-white);
   box-shadow: 0 4px 4px 0 var(--color-green-shadow);
   border: 1px solid var(--color-green-shadow);
+  font-family: "DIN Rounded", sans-serif;
 }
 
-/* Pulsante "Ho già un account" */
+/* Bottone secondario */
 .login-create__btn-account {
   background: var(--color-white);
   color: var(--color-blue-primary);
@@ -150,1101 +310,637 @@ body {
   border: 1px solid var(--color-gray-button-shadow);
 }
 
-/* Titolo principale */
-.login-create__right h1 {
-  color: var(--color-gray-dark);
-  font-family: "din-round sans-serif";
-  font-size: 32px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Hover pulsante inizia */
+/* Stati hover */
 .login-create__btn-inizia:hover {
   background: var(--color-green-light);
 }
 
-/* Hover pulsante account */
 .login-create__btn-account:hover {
-  background: var(--color-gray-medium);
+  background: var(--color-gray-hover);
 }
 
 /* ========================= */
-/* SEZIONE 2 - LINGUE */
+/* LANG SELECT */
 /* ========================= */
-.lang-select__languages {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  width: 100%;
-  padding: 20px 30px;
-  box-sizing: border-box;
 
-  border-top: 1px solid var(--color-gray-light);
-  border-bottom: 1px solid var(--color-gray-light);
-
-  background: var(--color-white-alt);
-}
-
-/* Menu delle lingue */
-.lang-select__menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  flex-wrap: nowrap;
-}
-
-/* Configurazione link lingua */
-.lang-select__language {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--color-gray-text);
-  font-weight: 600;
-  font-size: 15px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-/* Configurazione bandiere */
-.lang-select__language img {
-  width: 36px;
-  height: 27.77px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Frecce di navigazione */
-.lang-select__arrow img {
-  width: 15px;
-  height: 15px;
-  color: var(--color-gray-text);
-}
-
-/* Pulsanti freccia */
-.lang-select__arrow {
-  background: none;
-  border: none;
-  cursor: pointer;
+/* 
+  Nel mobile il carosello lingue viene nascosto.
+  Lo mostreremo da tablet in poi.
+*/
+.lang-select {
+  display: none;
 }
 
 /* ========================= */
-/* SEZIONE FREE-FUN */
+/* SEZIONI CONTENUTO GENERICHE */
 /* ========================= */
-.free-fun {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 110px;
-  margin-bottom: 140px;
-}
 
-/* Immagine della sezione */
-.free-fun img {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-
-/* Blocco testo */
-.free-fun__left {
+/* 
+  Queste sezioni condividono una struttura quasi identica:
+  testo + immagine.
+  Nel mobile usiamo colonna e testo centrato.
+*/
+.free-fun,
+.backed-science,
+.stay-motivated,
+.personalized-learning,
+.english-test,
+.for-schools,
+.duolingo-abc {
   display: flex;
   flex-direction: column;
-  /* width: 35%; */
-  margin-right: 100px;
+  align-items: center;
+  gap: var(--section-gap);
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
+  text-align: center;
+  margin-bottom: -100px;
 }
 
-/* Titolo sezione */
-.free-fun__left h2 {
+/* Blocchi testuali */
+.free-fun__left,
+.backed-science__right,
+.stay-motivated__left,
+.personalized-learning__right,
+.english-test__left,
+.for-schools__right,
+.duolingo-abc__left {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Blocchi immagine */
+.free-fun__right,
+.backed-science__left,
+.stay-motivated__right,
+.personalized-learning__left,
+.english-test__right,
+.for-schools__left,
+.duolingo-abc__right {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+}
+
+/* Regola comune per le immagini delle sezioni */
+.free-fun__right img,
+.backed-science__left img,
+.stay-motivated__right img,
+.personalized-learning__left img,
+.english-test__right img,
+.for-schools__left img,
+.duolingo-abc__right img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Titoli grandi, adattivi e coerenti */
+.free-fun h2,
+.backed-science h2,
+.stay-motivated h2,
+.personalized-learning h2,
+.english-test h2,
+.for-schools h2,
+.duolingo-abc h2 {
   color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
+  font-size: 55px;
+  line-height: 1.08;
+  margin-bottom: 20px;
+  font-family: "Feather", sans-serif;
 }
 
-/* Paragrafo */
-.free-fun p {
+/* Paragrafi delle sezioni */
+.free-fun p,
+.backed-science p,
+.stay-motivated p,
+.personalized-learning p,
+.english-test p,
+.for-schools p,
+.duolingo-abc p {
   color: var(--color-gray-text);
+  font-size: 25px;
+  line-height: 1.65;
 }
 
 /* Testo evidenziato */
 .free-fun__left-text {
   color: var(--color-blue-primary);
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* ========================= */
-/* SEZIONE BACKED BY SCIENCE */
-/* ========================= */
-.backed-science {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 110px;
-  margin-bottom: 140px;
-}
-
-.backed-science img {
-  width: 400px;
-  height: 400px;
+/* 
+  Utility per mostrare/nascondere contenuti
+  in base al breakpoint.
+*/
+.hide-desktop {
   display: block;
 }
 
-.backed-science__right {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: 150px;
-}
-
-.backed-science h2 {
-  color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
-}
-
-.backed-science p {
-  color: var(--color-gray-text);
+.hide-mobile {
+  display: none;
 }
 
 /* ========================= */
-/* SEZIONE STAY MOTIVATED */
+/* SEZIONE LEARN */
 /* ========================= */
-.stay-motivated {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 10px;
-  margin-top: 110px;
-  margin-bottom: 140px;
-}
 
-.stay-motivated img {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-
-.stay-motivated__left {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  margin-right: 100px;
-}
-
-.stay-motivated__left h2 {
-  color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
-}
-
-.stay-motivated p {
-  color: var(--color-gray-text);
-}
-
-/* ========================= */
-/* SEZIONE PERSONALIZED LEARNING */
-/* ========================= */
-.personalized-learning {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 10px;
-  margin-top: 110px;
-  margin-bottom: 140px;
-}
-
-.personalized-learning img {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-
-.personalized-learning__right {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: 150px;
-}
-
-.personalized-learning h2 {
-  color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
-}
-
-.personalized-learning p {
-  color: var(--color-gray-text);
-}
-
-/* ========================= */
-/* SEZIONE LEARN WHENEVER YOU WANT */
-/* ========================= */
+/* Sezione con sfondo grafico e contenuto centrato */
 .learn {
+  width: 100%;
+  min-height: 100vh;
+  padding: 72px 20px;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   text-align: center;
   background: var(--color-blue-bg-soft);
-  flex-direction: column;
-  min-height: 100vh;
-  height: auto;
-  width: 100%;
   background-image: url("/assets/animations/impara-dove-vuoi.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 100px;
 }
 
-/* Contenitore pulsanti download */
-.learn__download-app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-/* Icone download */
-.learn__download-app img {
-  width: 34px;
-  height: 34px;
+/* Wrapper del titolo */
+.learn__title {
+  width: 100%;
+  max-width: 720px;
+  margin-bottom: 28px;
 }
 
 /* Titolo sezione */
-.learn__title {
-  margin-top: 100px;
+.learn__title h2 {
   color: var(--color-blue-dark);
-  font-size: 35px;
-  font-weight: 500px;
-  width: 40%;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 1.15;
 }
 
-/* Pulsante App Store */
-.learn__apple-store {
-  margin-right: 20px;
+/* 
+  Nel mobile i badge di download sono in colonna.
+  Da tablet in poi passeranno in riga.
+*/
+.learn__download-app {
+  width: 100%;
+  max-width: 280px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background: var(--color-white);
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
+  flex-direction: column;
+  gap: 16px;
 }
 
-.learn__apple-store:hover {
-  cursor: pointer;
-  background: var(--color-gray-hover);
-}
-
-/* Pulsante Google Play */
+/* Card dei badge store */
+.learn__apple-store,
 .learn__google-play {
-  margin-right: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
+  width: 100%;
+  min-height: 84px;
+  padding: 12px 16px;
   background: var(--color-white);
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: var(--radius-md);
   box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
 }
 
+/* Hover delle card */
+.learn__apple-store:hover,
 .learn__google-play:hover {
   cursor: pointer;
   background: var(--color-gray-hover);
 }
 
-/* Testo interno dei pulsanti */
+/* Dimensioni delle icone store */
+.learn__download-app img {
+  width: 42px;
+  height: 42px;
+}
+
+/* Testo dentro i badge */
 .learn__text {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  text-align: left;
   color: var(--color-gray-text-dark);
-  font-weight: bold;
-  text-align: justify;
+  font-weight: 700;
+}
+
+/* I link dentro il testo ereditano il colore corretto */
+.learn__text a {
+  color: var(--color-gray-text-dark);
 }
 
 .learn__text-top {
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 
 .learn__text-bottom {
-  font-size: 20px;
+  font-size: 1.15rem;
 }
 
 /* ========================= */
 /* SEZIONE PROVA GRATIS */
 /* ========================= */
+
+/* 
+  Base mobile:
+  contenuto in colonna, ben centrato,
+  senza altezza fissa.
+*/
 .prova-gratis {
   display: flex;
-  background: var(--color-purple-dark);
+  flex-direction: column;
   align-items: center;
+  gap: 28px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background: var(--color-purple-dark);
+}
+
+.prova-gratis__left,
+.prova-gratis__right {
+  width: 100%;
+}
+
+.prova-gratis__left {
+  display: flex;
   justify-content: center;
-  height: 1000px;
 }
 
+/* Gif promozionale */
 .prova-gratis__left img {
-  width: 530px;
-  height: 530px;
-  margin-left: 10px;
+  width: 100%;
+  max-width: 400px;
 }
 
+/* Blocco destro con logo + CTA */
 .prova-gratis__right {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
+/* Logo Super Duolingo */
 .prova-gratis__right img {
-  width: 605px;
-  height: 87.84px;
-}
-
-.prova-gratis__button {
-  color: var(--color-blue-deep);
-  font-weight: 700px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px var(--color-shadow-white);
-  margin-top: 50px;
-}
-
-/* ========================= */
-/* SEZIONE ENGLISH TEST */
-/* ========================= */
-.english-test {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 10px;
-}
-
-.english-test img {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-
-.english-test__left {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  margin-right: 100px;
-}
-
-.english-test__left h2 {
-  color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
-}
-
-.english-test p {
-  color: var(--color-gray-text);
-}
-
-.english-test__left-text {
-  color: var(--color-blue-primary);
-  font-weight: bold;
-}
-
-.english-test__btn {
-  background: var(--color-white);
-  color: var(--color-blue-primary);
-  box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
-  border: 1px solid var(--color-gray-button-shadow);
-  font-weight: bold;
-}
-
-.english-test__btn-certifica button {
-  /* width: 50%; */
-  /* height: 46px; */
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-transform: uppercase;
-  border: none;
-  align-content: center;
-  margin-top: 40px;
-}
-
-/* ========================= */
-/* SEZIONE DUOLINGO FOR SCHOOLS */
-/* ========================= */
-.for-schools {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 10px;
-  margin: 150px auto;
-  padding: 0 20px;
-}
-
-.for-schools img {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-
-.for-schools__right {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin-left: 150px;
-}
-
-.for-schools h2 {
-  color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
-}
-
-.for-schools p {
-  color: var(--color-gray-text);
-}
-
-.for-schools__btn {
-  background: var(--color-white);
-  color: var(--color-blue-primary);
-  box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
-  border: 1px solid var(--color-gray-button-shadow);
-  font-weight: bold;
-}
-
-.for-schools__btn-imposta button {
-  /* width: 50%;
-  height: 46px; */
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-transform: uppercase;
-  border: none;
-  align-content: center;
-  margin-top: 40px;
-}
-
-/* ========================= */
-/* SEZIONE DUOLINGO ABC */
-/* ========================= */
-.duolingo-abc {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  box-sizing: border-box;
-  gap: 10px;
-  height: 550px;
-}
-
-.duolingo-abc img {
-  width: 400px;
-  height: 400px;
-  display: block;
-}
-
-.duolingo-abc__left {
-  display: flex;
-  flex-direction: column;
-  width: 35%;
-  margin-right: 100px;
-}
-
-.duolingo-abc__left h2 {
-  color: var(--color-green-primary);
-  margin-bottom: 30px;
-  font-size: 50px;
-}
-
-.duolingo-abc p {
-  color: var(--color-gray-text);
-}
-
-.duolingo-abc__left-text {
-  color: var(--color-blue-primary);
-  font-weight: bold;
-}
-
-.duolingo-abc__btn {
-  background: var(--color-white);
-  color: var(--color-blue-primary);
-  box-shadow: 0 4px 4px 4px var(--color-gray-button-shadow);
-  border: 1px solid var(--color-gray-button-shadow);
-  font-weight: bold;
-}
-
-.duolingo-abc__btn-abc button {
-  /* width: 50%;
-  height: 46px; */
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  text-transform: uppercase;
-  border: none;
-  align-content: center;
-  margin-top: 40px;
-}
-
-/* ========================= */
-/* SEZIONE FINALE - IMPARA UNA LINGUA */
-/* ========================= */
-.impara-lingua {
-  margin-bottom: -45px;
-}
-
-.impara-lingua img {
   width: 100%;
-  height: 500px;
-  display: block;
-  margin-top: 20px;
+  max-width: 470px;
 }
 
+/* Bottone CTA */
+.prova-gratis__button {
+  width: 100%;
+  max-width: 420px;
+  min-height: 56px;
+  margin-top: 28px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  box-shadow: 0 4px 4px var(--color-shadow-white);
+  color: var(--color-blue-deep);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ========================= */
+/* BOTTONI SEZIONI INTERMEDIE */
+/* ========================= */
+
+/* Wrapper dei bottoni con margine superiore */
+.english-test__btn-certifica,
+.for-schools__btn-imposta,
+.duolingo-abc__btn-abc {
+  width: 100%;
+  margin-top: 32px;
+}
+
+/* Stile condiviso dei bottoni secondari */
+.english-test__btn,
+.for-schools__btn,
+.duolingo-abc__btn {
+  width: 100%;
+  max-width: 420px;
+  min-height: 56px;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px solid var(--color-gray-button-shadow);
+  background: var(--color-white);
+  color: var(--color-blue-primary);
+  box-shadow: 0 4px 4px 0 var(--color-gray-button-shadow);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* ========================= */
+/* SEZIONE FINALE */
+/* ========================= */
+
+/* Spaziatura superiore della CTA finale */
+.impara-lingua {
+  padding-top: 72px;
+}
+
+/* Contenitore del titolo finale */
 .impara-lingua__header {
   position: relative;
-  margin-bottom: 200px;
-
-  /* Sfondo temporaneo / debug */
-  background: var(--color-red-debug);
+  margin-bottom: 32px;
 }
 
-.impara-lingua__title h2 {
-  color: var(--color-green-primary);
-  align-items: center;
-  font-size: 80px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
+/* Blocco testo + bottone finale */
 .impara-lingua__title {
-  width: 750px;
-  left: 50%;
-  position: absolute;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  max-width: 460px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+/* Titolo finale adattivo */
+.impara-lingua__title h2 {
+  color: var(--color-green-primary);
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+/* Bottone finale */
 .impara-lingua__header-btn {
-  width: 330px;
-  height: 46px;
-  margin-bottom: 200px;
-  border-radius: 10px;
+  width: 100%;
+  max-width: 360px;
+  min-height: 56px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   text-transform: uppercase;
   background: var(--color-green-primary);
-  color: var(--color-white-alt);
+  color: var(--color-white);
   box-shadow: 0 4px 4px 0 var(--color-green-shadow);
   border: 1px solid var(--color-green-shadow);
-  font-weight: bold;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Immagine finale a piena larghezza */
+.impara-lingua > img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.impara-lingua img {
+  margin-bottom: -40px;
 }
 
 /* ========================= */
-/* MEDIA QUERY RESPONSIVE */
+/* BREAKPOINT TABLET */
 /* ========================= */
 
-/* Esconde no desktop */
-.login-create__banner-mobile {
-  display: none;
-}
-
-/* HIDE DESKTOP */
-.hide-desktop {
-  display: none; /* desktop: escondido */
-}
-
-/* HIDE MOBILE */
-.hide-mobile {
-  display: block; /* desktop: visível */
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  /*  ajuste do header */
+@media (min-width: 768px) {
+  /* Header distribuito ai lati */
   .header {
-    width: 100%;
-    padding: 10px;
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
   }
 
-  .header__logo img {
-    height: 57px;
-    margin-top: 10px;
-  }
-
+  /* Mostra il selettore lingua da tablet in poi */
   .header__top-lang {
-    display: none;
+    display: block;
   }
 
+  /* Hero in riga da tablet */
   .login-create {
-    margin-top: 40px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 48px;
+    text-align: left;
+    padding-top: 64px;
+    padding-bottom: 72px;
   }
 
-  .login-create__left img {
-    width: 100%;
-    max-width: 410px;
-    height: auto;
+  .login-create__left,
+  .login-create__right {
+    width: 50%;
   }
 
-  .login-create {
-    flex-direction: column;
+  .login-create__right {
+    align-items: flex-start;
   }
 
   .login-create__right h1 {
-    font-size: 50px;
-    margin-top: -90px;
+    text-align: left;
+    max-width: 14ch;
   }
 
-  .login-create__btn-inizial {
-    width: 100%;
-    max-width: 440px;
-  }
-
-  .login-create__btn-inizial button {
-    height: 70px;
-    padding: 10px;
-    width: 100%;
-    border-radius: 15px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 20px;
-    font-weight: bold;
-  }
-
+  /* Barra lingue visibile */
   .lang-select {
+    display: block;
+    border-top: 1px solid var(--color-gray-light);
+    border-bottom: 1px solid var(--color-gray-light);
+  }
+
+  .lang-select__languages {
+    width: min(
+      100%,
+      calc(var(--container-width) + (var(--container-padding) * 2))
+    );
+    margin-inline: auto;
+    padding: 18px var(--container-padding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .lang-select__menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: nowrap;
+  }
+
+  .lang-select__language {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-gray-text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .lang-select__language img {
+    width: 36px;
+    height: 28px;
+    object-fit: cover;
+  }
+
+  .lang-select__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .lang-select__arrow img {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* Le sezioni principali passano da colonna a riga */
+  .free-fun,
+  .backed-science,
+  .stay-motivated,
+  .personalized-learning,
+  .english-test,
+  .for-schools,
+  .duolingo-abc,
+  .prova-gratis {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+
+  /* Ogni lato occupa metà spazio */
+  .free-fun__left,
+  .backed-science__left,
+  .backed-science__right,
+  .stay-motivated__left,
+  .stay-motivated__right,
+  .personalized-learning__left,
+  .personalized-learning__right,
+  .english-test__left,
+  .english-test__right,
+  .for-schools__left,
+  .for-schools__right,
+  .duolingo-abc__left,
+  .duolingo-abc__right,
+  .prova-gratis__left,
+  .prova-gratis__right {
+    width: 50%;
+  }
+
+  /* Nel tablet/desktop nascondiamo il contenuto mobile-duplicato */
+  .hide-desktop {
     display: none;
   }
 
-  /* Divertente, Gratis ed Efficace */
-  .free-fun {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .free-fun__left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-
-  .free-fun__left h2 {
-    font-size: 60px;
-  }
-
-  .free-fun__left p {
-    font-size: 27px;
-  }
-
-  /* Un approccio Scientifico  */
-
-  .backed-science {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .backed-science__right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .backed-science__right h2 {
-    font-size: 60px;
-  }
-
-  .backed-science__right p {
-    font-size: 27px;
-  }
-
-  .backed-science__left img {
-    width: 390px;
-    height: 390px;
-  }
-
-  .backed-science__right {
-    margin-top: 90px;
-  }
-
-  .hide-desktop {
-    display: block; /* mobile: visível */
-  }
-
   .hide-mobile {
-    display: none; /* mobile: escondido */
+    display: block;
   }
 
-  /* Motivante */
-  .stay-motivated {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .stay-motivated__left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .stay-motivated__left h2 {
-    font-size: 70px;
-  }
-
-  .stay-motivated__left p {
-    font-size: 26px;
-  }
-
-  /* Apprendimento Personalizzato */
-  .personalized-learning {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .personalized-learning__right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .personalized-learning__right h2 {
-    font-size: 60px;
-  }
-
-  .personalized-learning__right p {
-    font-size: 27px;
-  }
-
-  .personalized-learning__left img {
-    width: 390px;
-    height: 390px;
-  }
-
-  .personalized-learning__left {
-    margin-top: 100px;
-  }
-
-  .hide-desktop {
-    display: block; /* mobile: visível */
-  }
-
-  .hide-mobile {
-    display: none; /* mobile: escondido */
-  }
-
-  /* Impara quando e dove vuoi */
-  .learn__title {
-    width: 100%;
-    font-size: 45px;
-    padding: 10px;
-  }
-
+  /* I badge store passano in riga */
   .learn__download-app {
-    display: flex;
+    max-width: none;
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-    width: 70%;
   }
 
-  .learn__apple-store {
-    width: 230px;
-    height: 85px;
-    margin-bottom: 20px;
-    gap: 20px;
-  }
-
-  .learn__apple-store img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .learn__apple-store a {
-    color: #484848;
-    text-decoration: none;
-  }
-
+  .learn__apple-store,
   .learn__google-play {
-    width: 230px;
-    height: 85px;
-    gap: 20px;
+    width: auto;
+    min-width: 230px;
   }
 
-  .learn__google-play img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .learn__google-play a {
-    color: #484848;
-    text-decoration: none;
-  }
-
-  /* Prova una settimana Gratis */
-
-  .prova-gratis {
-    flex-direction: column;
-  }
-
-  .prova-gratis__left img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-
-  .prova-gratis__right {
-    width: 100%;
-    padding: 0 20px;
-  }
-
-  .prova-gratis__right img {
-    width: 100%;
-    max-width: 470px;
-    height: auto;
-  }
-
-  .prova-gratis__button {
-    width: 95%;
-    height: 70px;
-    border-radius: 20px;
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  /* Duolingo english test */
-  .english-test {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .english-test__left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .english-test__left h2 {
-    font-size: 70px;
-  }
-
-  .english-test__left p {
-    font-size: 26px;
-  }
-
-  .english-test__btn-certifica {
-    width: 100%;
-  }
-
-  .english-test__btn {
-    width: 100%;
-    height: 60px;
-    border-radius: 25px;
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  /* duolingo for schools */
-  .for-schools {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .for-schools__right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .for-schools__right h2 {
-    font-size: 60px;
-  }
-
-  .for-schools__right p {
-    font-size: 27px;
-  }
-
-  .for-schools__left img {
-    width: 390px;
-    height: 390px;
-  }
-
-  .for-schools__left {
-    margin-top: 100px;
-  }
-
-  .hide-desktop {
-    display: block; /* mobile: visível */
-  }
-
-  .hide-mobile {
-    display: none; /* mobile: escondido */
-  }
-
-  .for-schools__btn-imposta {
-    width: 100%;
-  }
-
-  .for-schools__btn {
-    width: 100%;
-    height: 60px;
-    border-radius: 25px;
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  /* duolingo ABC */
-  .duolingo-abc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    text-align: center;
-  }
-
-  .duolingo-abc__left {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .duolingo-abc__left h2 {
-    font-size: 70px;
-  }
-
-  .duolingo-abc__left p {
-    font-size: 26px;
-  }
-
-  .duolingo-abc__btn-certifica {
-    width: 100%;
-  }
-
-  .duolingo-abc__btn {
-    width: 100%;
-    height: 60px;
-    border-radius: 25px;
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  .duolingo-abc__btn-abc {
-    width: 100%;
-  }
-
-  .duolingo-abc__btn {
-    width: 100%;
-    height: 60px;
-    border-radius: 25px;
-    font-size: 25px;
-    font-weight: bold;
-  }
-
-  /* impara una lingua con duolingo */
-  .impara-lingua {
-    margin-top: 600px;
-  }
-
+  /* La CTA finale può allargarsi di più */
   .impara-lingua__title {
-    width: 100%;
-    max-width: 400px;
-    padding: 0 20px;
-  }
-
-  .impara-lingua__title h2 {
-    font-size: 60px;
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .impara-lingua__header-btn {
-    width: 100%;
-    max-width: 460px;
-    height: 60px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 380px;
+    max-width: 720px;
   }
 
   .impara-lingua img {
-    width: 100%;
-    height: 280px;
+    margin-bottom: -40px;
+  }
+}
+
+/* ========================= */
+/* BREAKPOINT DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  /* Aumenta il gap della hero */
+  .login-create {
+    gap: 100px;
   }
 
-  /* Fiz, mas não sei do que se trata */
+  .login-create__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .login-create__right h1 {
+    font-size: 35px;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  /* L'immagine hero può diventare più grande */
+  .login-create__banner-mobile {
+    max-width: 450px;
+  }
+
+  /* Aumenta spaziatura verticale delle sezioni */
+  .free-fun,
+  .backed-science,
+  .stay-motivated,
+  .personalized-learning,
+  .english-test,
+  .for-schools,
+  .duolingo-abc {
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+
+  /* Limiti più precisi sulle larghezze dei blocchi testuali */
+  .free-fun__left,
+  .stay-motivated__left,
+  .english-test__left,
+  .duolingo-abc__left {
+    max-width: 420px;
+  }
+
+  .backed-science__right,
+  .personalized-learning__right,
+  .for-schools__right {
+    max-width: 360px;
+  }
+
+  /* Immagini desktop con dimensione massima stabile */
   .free-fun__right img,
-  .stay-motivated__right img,
-  .english-test__right img,
-  .duolingo-abc__right img,
   .backed-science__left img,
+  .stay-motivated__right img,
   .personalized-learning__left img,
-  .for-schools__left img {
-    width: 100%;
+  .english-test__right img,
+  .for-schools__left img,
+  .duolingo-abc__right img {
     max-width: 400px;
-    height: auto;
+  }
+
+  /* Sezione Super Duolingo più grande nel desktop */
+  .prova-gratis {
+    width: 100%;
+    gap: 200px;
+    height: 1000px;
+  }
+  .prova-gratis__left img {
+    max-width: 530px;
+  }
+
+  .prova-gratis__right img {
+    max-width: 605px;
+  }
+
+  /* CTA finale più ampia */
+  .impara-lingua__title {
+    max-width: 750px;
+  }
+
+  /* impara una lingua con duolingo */
+  .impara-lingua img {
+    margin-bottom: -40px;
   }
 }
