@@ -137,7 +137,7 @@ main {
   align-items: center;
   gap: 43px;
   padding: 16px;
-  background-color: var(--color-white); 
+  background-color: var(--color-white);
   height: 55px;
 }
 
@@ -149,4 +149,70 @@ main {
 .header__logo {
   width: 210px;
   height: 32px;
+}
+
+/* ========================= */
+/* HERO MOBILE FIRST */
+/* ========================= */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 49px 15px;
+  text-align: center;
+}
+
+.hero__image {
+  order: -1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.hero__image img {
+  width: 100%;
+  height: 100%;
+  max-width: 275px;
+  max-height: 187px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero__title {
+  font-size: 31px;
+  color: var(--color-gray-dark);
+  margin-bottom: 20px;
+}
+
+.hero__benefit {
+  display: none;
+}
+
+.hero__subtitle-mobile {
+  font-size: 19px;
+  font-weight: 800;
+  font-style: normal;
+  margin-bottom: 35px;
+  color: var(--color-gray-text);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 43px;
+  background-color: rgb(88, 204, 2);
+  color: var(--color-white);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 12px;
+  box-shadow: 0 6px 0 rgb(88, 167, 0);
+  line-height: 2rem; 
 }
