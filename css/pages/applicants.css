@@ -214,5 +214,34 @@ main {
   text-transform: uppercase;
   border-radius: 12px;
   box-shadow: 0 6px 0 rgb(88, 167, 0);
-  line-height: 2rem; 
+  line-height: 2rem;
+}
+
+/* ========================= */
+/* PARTNERS MOBILE FIRST */
+/* ========================= */
+
+.partners {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 30px;
+}
+
+.partners__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px 16px;
+  align-items: center;
+  justify-items: center;
+}
+
+.partners__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners__item svg {
+  width: auto;
+  height: 48px;
 }
