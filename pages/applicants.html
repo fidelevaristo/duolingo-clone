@@ -13,24 +13,39 @@
     />
   </head>
   <body>
-    <!-- Mobile Header -->
-    <header class="header header--mobile">
-      <!-- Mobile Top Bar -->
-      <div class="header__mobile-bar">
-        <!-- Menu Toggle -->
-        <button
-          class="header__menu-toggle"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <img
-            src="../assets/english-test/icons/hamburger-icon.svg"
-            alt=""
-            aria-hidden="true"
-          />
-        </button>
+    <!-- Header -->
+    <header class="header">
+      <!-- Mobile Header -->
+      <div class="header__mobile">
+        <div class="header__mobile-bar">
+          <button
+            class="header__menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <img
+              src="../assets/english-test/icons/hamburger-icon.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </button>
 
-        <!-- Logo -->
+          <a
+            href="/"
+            class="header__logo"
+            aria-label="Duolingo English Test home"
+          >
+            <img
+              src="../assets/english-test/icons/duolingo-english-test.svg"
+              alt="Duolingo English Test"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Desktop Header -->
+      <div class="header__desktop">
         <a
           href="/"
           class="header__logo"
@@ -41,69 +56,56 @@
             alt="Duolingo English Test"
           />
         </a>
-      </div>
-    </header>
 
-    <!-- Inizio Header -->
-    <header class="header">
-      <!-- Inizio Logo -->
-      <div class="header__logo">
-        <img
-          src="../assets/english-test/icons/duolingo-english-test.svg"
-          alt="Duolingo English Test"
-        />
-      </div>
-      <!-- Fine Logo -->
+        <div class="header__nav-menu">
+          <nav class="header__nav-menu-items" aria-label="Main navigation">
+            <ul>
+              <li class="header__nav-menu-item">
+                <button type="button" class="header__nav-trigger">
+                  <span>Candidati</span>
+                  <img
+                    src="../assets/english-test/icons/arrow-bottom.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
 
-      <!-- Inizio Nav Menu -->
-      <div class="header__nav-menu">
-        <!-- Inizio Navigazione -->
-        <nav class="header__nav-menu-items">
-          <ul>
-            <!-- Inizio Item Candidati -->
-            <li class="header__nav-menu-item">
-              <span>Candidati</span>
-              <img
-                src="../assets/english-test/icons/arrow-bottom.svg"
-                alt="Open Candidati menu"
-              />
-            </li>
-            <!-- Fine Item Candidati -->
+              <li class="header__nav-menu-item">
+                <button type="button" class="header__nav-trigger">
+                  <span>Istituti</span>
+                  <img
+                    src="../assets/english-test/icons/arrow-bottom.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
 
-            <!-- Inizio Item Istituti -->
-            <li class="header__nav-menu-item">
-              <span>Istituti</span>
-              <img
-                src="../assets/english-test/icons/arrow-bottom.svg"
-                alt="Open Istituti menu"
-              />
-            </li>
-            <!-- Fine Item Istituti -->
+              <li class="header__nav-menu-item">
+                <button type="button" class="header__nav-trigger">
+                  <span>Ricercatori</span>
+                  <img
+                    src="../assets/english-test/icons/arrow-bottom.svg"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+            </ul>
+          </nav>
 
-            <!-- Inizio Item Ricercatori -->
-            <li class="header__nav-menu-item">
-              <span>Ricercatori</span>
-              <img
-                src="../assets/english-test/icons/arrow-bottom.svg"
-                alt="Open Ricercatori menu"
-              />
-            </li>
-            <!-- Fine Item Ricercatori -->
-          </ul>
-        </nav>
-        <!-- Fine Navigazione -->
-
-        <!-- Inizio Bottoni -->
-        <div class="header__nav-menu-buttons">
-          <a href="#" class="header__nav-menu-buttons-accedi">Accedi</a>
-          <a href="#" class="header__nav-menu-buttons-registrati">Registrati</a>
+          <div class="header__nav-menu-buttons">
+            <a href="#" class="header__nav-menu-buttons-accedi">Accedi</a>
+            <a href="#" class="header__nav-menu-buttons-registrati"
+              >Registrati</a
+            >
+          </div>
         </div>
-        <!-- Fine Bottoni -->
       </div>
-      <!-- Fine Nav Menu -->
     </header>
     <!-- Fine Header -->
-
+     
     <!-- Main -->
     <main>
       <!-- Hero Section -->
