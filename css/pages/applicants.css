@@ -116,3 +116,37 @@ main {
   outline: 2px solid var(--color-blue-primary);
   outline-offset: 2px;
 }
+
+/* ========================= */
+/* HEADER MOBILE FIRST */
+/* ========================= */
+.header {
+  width: 100%;
+}
+
+.header__mobile {
+  display: block;
+}
+
+.header__desktop {
+  display: none;
+}
+
+.header__mobile-bar {
+  display: flex;
+  align-items: center;
+  gap: 43px;
+  padding: 16px;
+  background-color: var(--color-white); 
+  height: 55px;
+}
+
+.header__menu-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+.header__logo {
+  width: 210px;
+  height: 32px;
+}
