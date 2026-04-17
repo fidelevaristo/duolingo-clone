@@ -519,3 +519,46 @@ main {
   box-shadow: 0 6px 0 rgb(88, 167, 0);
   line-height: 2rem;
 }
+
+/* ========================= */
+/* ILLUSTRATION DIVIDER MOBILE FIRST */
+/* ========================= */
+
+/* ========================= */
+/* ILLUSTRATION DIVIDER */
+/* ========================= */
+
+.illustration-divider {
+  position: relative;
+  overflow: hidden;
+}
+
+.illustration-divider__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 55px;
+  margin-bottom: -0.75px;
+
+  background-image: url("../../assets/english-test/background/green-waves.svg");
+  background-position: 50%;
+  background-repeat: repeat-x;
+  z-index: 2;
+}
+
+.illustration-divider__image {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 20px;
+}
+
+.illustration-divider__image img {
+  width: 100%;
+  max-width: 252px;
+}
