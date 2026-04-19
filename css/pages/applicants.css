@@ -538,7 +538,7 @@ main {
   height: 55px;
   margin-bottom: -0.75px;
 
-  background-image: url("../../assets/english-test/background/green-waves.svg");
+  background-image: url("/assets/pages/english-test/images/green-waves.svg");
   background-position: 50%;
   background-repeat: repeat-x;
   z-index: 2;
