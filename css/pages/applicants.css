@@ -628,6 +628,56 @@ main {
 }
 
 /* ========================= */
+/* TRUST DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .trust {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 72px 32px;
+    text-align: left;
+    gap: 72px;
+  }
+
+  .trust__image {
+    flex: 1;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  .trust__image img {
+    width: 100%;
+    max-width: 520px;
+    max-height: none;
+    height: auto;
+  }
+
+  .trust__content {
+    flex: 1;
+    align-items: flex-start;
+    max-width: 520px;
+  }
+
+  .trust__title {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+
+  .trust__cta {
+    width: 345px;
+    min-height: 48px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+}
+
+/* ========================= */
 /* EXAM OVERVIEW MOBILE FIRST */
 /* ========================= */
 
