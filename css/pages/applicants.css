@@ -1214,6 +1214,33 @@ main {
 }
 
 /* ========================= */
+/* ILLUSTRATION DIVIDER DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .illustration-divider {
+    min-height: 330px;
+  }
+
+  .illustration-divider__image {
+    justify-content: center;
+    padding-top: 26px;
+  }
+
+  .illustration-divider__image img {
+    width: 100%;
+    max-width: 370px;
+  }
+
+  .illustration-divider__wave {
+    height: 78px;
+    background-size: auto 78px;
+    background-position: center bottom;
+    margin-bottom: -1px;
+  }
+}
+
+/* ========================= */
 /* FOOTER MOBILE FIRST */
 /* ========================= */
 
