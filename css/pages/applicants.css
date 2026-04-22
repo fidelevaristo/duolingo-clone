@@ -152,6 +152,144 @@ main {
 }
 
 /* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__mobile {
+    display: block;
+  }
+
+  .header__desktop {
+    display: none;
+  }
+
+  .header__mobile-bar {
+    position: relative;
+    justify-content: center;
+    gap: 0;
+    height: 72px;
+    padding: 20px 24px;
+  }
+
+  .header__menu-toggle {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .header__menu-toggle img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header__logo {
+    width: 240px;
+    height: auto;
+  }
+}
+
+/* ========================= */
+/* DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .header {
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .header__mobile {
+    display: none;
+  }
+
+  .header__desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 32px;
+    min-height: 80px;
+  }
+
+  .header__desktop .header__logo {
+    flex-shrink: 0;
+    width: 245px;
+    height: auto;
+  }
+
+  .header__nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .header__nav-menu-items ul {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .header__nav-menu-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__nav-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-gray-dark);
+    line-height: 1;
+  }
+
+  .header__nav-trigger img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .header__nav-menu-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header__nav-menu-buttons-accedi,
+  .header__nav-menu-buttons-registrati {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .header__nav-menu-buttons-accedi {
+    color: #1cb0f6;
+    background-color: var(--color-white);
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 2px 0 #e5e5e5;
+  }
+
+  .header__nav-menu-buttons-registrati {
+    color: var(--color-white);
+    background-color: rgb(88, 204, 2);
+    box-shadow: 0 4px 0 rgb(88, 167, 0);
+  }
+}
+
+/* ========================= */
 /* HERO MOBILE FIRST */
 /* ========================= */
 
@@ -538,7 +676,7 @@ main {
   height: 55px;
   margin-bottom: -0.75px;
 
-  background-image: url("/assets/pages/english-test/images/green-waves.svg");
+  background-image: url("../../assets/pages/english-test/images/green-waves.svg");
   background-position: 50%;
   background-repeat: repeat-x;
   z-index: 2;
