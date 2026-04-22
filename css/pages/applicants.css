@@ -615,6 +615,19 @@ main {
 }
 
 /* ========================= */
+/* TABLET */
+/* ========================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .trust__title {
+    font-size: 32px;
+  }
+
+  .trust__cta {
+    max-width: 400px;
+  }
+}
+
+/* ========================= */
 /* EXAM OVERVIEW MOBILE FIRST */
 /* ========================= */
 
