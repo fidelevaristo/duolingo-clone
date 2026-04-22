@@ -356,6 +356,134 @@ main {
 }
 
 /* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    margin: 56px auto 0;
+    padding: 0 24px;
+    max-width: 640px;
+  }
+
+  .hero__image {
+    margin-bottom: 24px;
+  }
+
+  .hero__image img {
+    max-width: 340px;
+    max-height: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__content {
+    max-width: 560px;
+  }
+
+  .hero__title {
+    max-width: 700px;
+    font-size: 52px;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero__subtitle-mobile {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 36px;
+    color: var(--color-gray-text);
+  }
+
+  .hero__cta {
+    width: 344px;
+    min-height: 56px;
+    border-radius: 16px;
+    font-size: 1.125rem;
+  }
+}
+
+/* ========================= */
+/* DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 56px 32px 72px;
+    text-align: left;
+    gap: 56px;
+  }
+
+  .hero__content {
+    align-items: flex-start;
+    flex: 1;
+    max-width: 560px;
+  }
+
+  .hero__title {
+    font-size: 60px;
+    line-height: 1.04;
+    letter-spacing: -0.8px;
+    margin-bottom: 36px;
+  }
+
+  .hero__benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 38px;
+  }
+
+  .hero__benefit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-gray-dark);
+  }
+
+  .hero__benefit img {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .hero__subtitle-mobile {
+    display: none;
+  }
+
+  .hero__cta {
+    width: 344px;
+    min-height: 56px;
+    font-size: 1.125rem;
+    border-radius: 16px;
+  }
+
+  .hero__image {
+    order: 0;
+    flex: 1;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+
+  .hero__image img {
+    width: 100%;
+    max-width: 560px;
+    max-height: none;
+    height: auto;
+  }
+}
+
+/* ========================= */
 /* PARTNERS MOBILE FIRST */
 /* ========================= */
 
