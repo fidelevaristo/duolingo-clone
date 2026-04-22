@@ -513,6 +513,55 @@ main {
 }
 
 /* ========================= */
+/* PARTNERS - TABLET */
+/* ========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .partners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .partners__list {
+    display: flex;
+    gap: 55px;
+  }
+
+  .partners__item svg {
+    width: auto;
+    height: 100%;
+    max-height: 60px;
+  }
+}
+
+/* ========================= */
+/* DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .partners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .partners__list {
+    display: flex;
+    gap: 55px;
+  }
+
+  .partners__item svg {
+    height: 100%;
+    max-height: 150px;
+  }
+}
+
+/* ========================= */
 /* TRUST MOBILE FIRST */
 /* ========================= */
 
