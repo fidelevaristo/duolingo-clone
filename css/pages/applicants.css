@@ -1009,6 +1009,172 @@ main {
 }
 
 /* ========================= */
+/* COMPARISON TABLET */
+/* ========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .comparison {
+    margin: 64px auto;
+    padding: 0 24px;
+  }
+
+  .comparison__content {
+    max-width: 500px;
+    margin: 0 auto 42px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.4fr 0.5fr;
+    align-items: stretch;
+  }
+
+  .comparison__features,
+  .comparison__column {
+    min-height: 40px;
+  }
+
+  .comparison__features {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 32px 18px;
+    border-radius: 18px 0 0 18px;
+  }
+
+  .comparison__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 320px;
+  }
+
+  .comparison__column--highlight {
+    min-height: 380px;
+    margin-top: -18px;
+    margin-bottom: -12px;
+    padding: 22px 0 24px;
+    border-radius: 18px;
+  }
+
+  .comparison__checks {
+    gap: 28px;
+  }
+
+  .comparison__subtitle {
+    padding-top: 32px;
+    margin-bottom: 40px;
+  }
+
+  .comparison__button {
+    max-width: 360px;
+  }
+
+  .comparison__checks img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .comparison__brand img {
+    width: 51px;
+    height: auto;
+  }
+}
+
+/* ========================= */
+/* COMPARISON DESKTOP */
+/* ========================= */
+
+@media (min-width: 1024px) {
+  .comparison {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 88px 32px;
+  }
+
+  .comparison__header {
+    margin-bottom: 64px;
+  }
+
+  .comparison__title {
+    font-size: 52px;
+    line-height: 1.12;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .comparison__content {
+    max-width: 860px;
+    margin: 0 auto 56px;
+    grid-template-columns: 1fr 0.68fr 1fr;
+    min-height: 420px;
+  }
+
+  .comparison__features,
+  .comparison__column {
+    min-height: 420px;
+  }
+
+  .comparison__features {
+    justify-content: flex-end;
+    gap: 18px;
+    padding: 44px 32px 32px;
+    border-radius: 24px 0 0 24px;
+  }
+
+  .comparison__feature {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+
+  .comparison__column {
+    min-height: 420px;
+    border-radius: 0 24px 24px 0;
+  }
+
+  .comparison__column--highlight {
+    min-height: 470px;
+    margin-top: -26px;
+    margin-bottom: -18px;
+    padding: 30px 0 30px;
+    border-radius: 24px;
+    box-shadow: 0 6px 0 #d9d9d9;
+  }
+
+  .comparison__brand {
+    margin-bottom: 34px;
+  }
+
+  .comparison__brand img {
+    width: 72px;
+    height: auto;
+  }
+
+  .comparison__subtitle {
+    padding-top: 36px;
+    margin-bottom: 42px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .comparison__checks {
+    gap: 34px;
+  }
+
+  .comparison__checks img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .comparison__button {
+    width: 100%;
+    max-width: 420px;
+    min-height: 58px;
+    font-size: 18px;
+    border-radius: 16px;
+  }
+}
+
+/* ========================= */
 /* ILLUSTRATION DIVIDER MOBILE FIRST */
 /* ========================= */
 
