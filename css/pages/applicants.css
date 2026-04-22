@@ -17,7 +17,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
-
+ 
 body {
   min-height: 100vh;
   width: 100%;
@@ -30,7 +30,9 @@ body {
 
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
+
+  padding-top: 55px;
+} 
 
 /* ========================= */
 /* MEDIA */
@@ -121,7 +123,13 @@ main {
 /* HEADER MOBILE FIRST */
 /* ========================= */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  z-index: 1000;
+  background-color: var(--color-white);
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .header__mobile {
@@ -158,6 +166,7 @@ main {
 @media (min-width: 768px) and (max-width: 1023px) {
   .header__mobile {
     display: block;
+    border-bottom: 1px solid #d3d3d3;
   }
 
   .header__desktop {
@@ -196,6 +205,7 @@ main {
 
 @media (min-width: 1024px) {
   .header {
+    border-bottom: 1px solid #d3d3d3;
     width: 100%;
     background-color: var(--color-white);
     border-bottom: 1px solid #e5e5e5;
@@ -615,7 +625,7 @@ main {
 }
 
 .trust__highlight {
-  color:  rgb(88, 204, 2);
+  color: rgb(88, 204, 2);
 }
 
 /* ========================= */
@@ -1528,7 +1538,7 @@ main {
 /* ========================= */
 /* FOOTER MODAL */
 /* ========================= */
- 
+
 .modal {
   position: fixed;
   inset: 0;
