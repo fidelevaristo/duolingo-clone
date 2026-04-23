@@ -14,9 +14,9 @@
   <header class="header">
     <div class="header__mobile">
       <div class="header__mobile-bar">
-        <img src="../assets/pages/duolingo-for-schools/icons/duolingo-for-schools-logo-mobile.svg"
+        <img class="header__logo" src="../assets/pages/duolingo-for-schools/icons/duolingo-for-schools-logo-mobile.svg"
           alt="logo duolingo for schools">
-        <a href="#">SIGN UP</a>
+        <a class="header__sign-up" href="#">SIGN UP</a>
       </div>
     </div>
     <div class="header__desktop">
@@ -57,7 +57,7 @@
       <div class="hero__content">
         <h1 class="hero__title">free for your classroom!</h1>
         <p class="hero__subtitle">An easy way to make language learning fun and personalized</p>
-        <a href="">Sign up</a>
+        <a class="hero__sign-up" href="">Sign up</a>
       </div>
       <div class="hero__image">
         <img src="../assets/pages/duolingo-for-schools/images/hero_header-desktop.svg" alt="">
@@ -67,50 +67,54 @@
 
     <!--Section features-->
     <section class="features">
-      <div class="feature">
-        <div class="feature__image">
-          <img src="../assets/pages/duolingo-for-schools/images/feature-curriculum.svg"
-            alt="Standards aligned curriculum interface">
-        </div>
+      <div class="features__track" id="featuresTrack">
+        <article class="feature">
+          <div class="feature__content">
+            <h2 class="feature__title">standards-aligned curriculum</h2>
+            <p class="feature__description">
+              Duolingo for Schools applies both ACTFL and CEFR learning standards to
+              Duolingo's extensive curriculum, allowing you to find content that meets
+              your teaching needs.
+            </p>
+          </div>
+          <div class="feature__image">
+            <img src="../assets/pages/duolingo-for-schools/images/feature-curriculum.svg" alt="Standards aligned curriculum interface" />
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature__content">
+            <h2 class="feature__title">fun, personalized assignments</h2>
+            <p class="feature__description">
+              Assignments leverage the best of AI and language science to adapt to the
+              right level and pace for each student. And students love the game-like
+              features and fun challenges!
+            </p>
+          </div>
 
-        <div class="feture__content">
-          <h2 class="feature__title">standards-aligned curriculum</h2>
-          <p class="feature__description">Duolingo for Schools applies both ACTFL and CEFR learning standards to
-            Duolingo’s extensive curriculum, allowing you to find content that meets your teaching needs.</p>
-        </div>
+          <div class="feature__image">
+            <img src="../assets/pages/duolingo-for-schools/images/feature-assignment.svg" alt="Personalized assignments interface" />
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature__content">
+            <h2 class="feature__title">student progress insights</h2>
+            <p class="feature__description">
+              See how your students are progressing with in-depth insights like
+              accuracy and time spent learning.
+            </p>
+          </div>
+
+          <div class="feature__image">
+            <img src="../assets/pages/duolingo-for-schools/images/feature-progress.svg" alt="Student progress insights interface" />
+          </div>
+        </article>
       </div>
-    </section>
-    <!--Fine section features-->
 
-    <!--Section feature 2-->
-    <section class="feature feature--reverse">
-      <div class="feature__image">
-        <img src="../assets/pages/duolingo-for-schools/images/feature-assignment.svg"
-          alt="Personalized assignments interface">
-      </div>
-
-      <div class="feture__content">
-        <h2 class="feature__title">fun, personalized assignments</h2>
-        <p class="feature__description">Assignments leverage the best of AI and language science to adapt to the right
-          level and pace for each student. And students love the game-like features and fun challenges!</p>
-      </div>
-    </section>
-    <!--Fine section feature 2-->
-
-
-    <!--Section feature 3-->
-    <section class="features">
-      <div class="feature">
-        <div class="feature__image">
-          <img src="../assets/pages/duolingo-for-schools/images/feature-progress.svg"
-            alt="Student progress insights interface">
-        </div>
-
-        <div class="feture__content">
-          <h2 class="feature__title">student progress insights</h2>
-          <p class="feature__description">See how your students are progressing with in-depth insights like accuracy and
-            time spent learning.</p>
-        </div>
+      <div class="features__pagination" aria-label="Features navigation">
+        <button class="features__dot features__dot--active" type="button" aria-label="Go to slide 1"></button>
+        <button class="features__dot" type="button" aria-label="Go to slide 2"></button>
+        <button class="features__dot" type="button" aria-label="Go to slide 3"></button>
       </div>
     </section>
     <!--Fine section feature 3-->
@@ -296,6 +300,9 @@
     </div>
   </footer>
   <!--Fine section footer-->
+
+<!--JavaScript-->
+<script src="../js/features/schools-scrollbar.js" defer ></script>
 
 </body>
 
