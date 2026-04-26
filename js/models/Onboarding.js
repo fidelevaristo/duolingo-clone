@@ -44,7 +44,7 @@ Onboarding.prototype.canGoNext = function () {
 };
 
 Onboarding.prototype.canGoBack = function () {
-  return this.currentStepIndex > 0;
+  return true;
 };
 
 Onboarding.prototype.next = function () {
