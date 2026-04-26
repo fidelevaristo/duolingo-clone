@@ -389,7 +389,7 @@ main {
     width: 10px;
     height: 10px;
     border: none;
-    background-color: var(--color-gray-medium);
+    background-color: rgb(195, 191, 191);
     border-radius: 50%;
     cursor: pointer;
     padding: 0;
@@ -397,6 +397,6 @@ main {
 }
 
 .testimonials__dot--active {
-    background-color: #9e9e9e;
+    background-color: var(--color-white);
     transform: scale(1.1);
 }
