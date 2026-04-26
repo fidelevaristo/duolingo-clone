@@ -1,5 +1,5 @@
-import { welcomeSteps } from "../data/welcome-steps";
-import { Onboarding } from "../models/Onboarding";
+import { welcomeSteps } from "../data/welcome-steps.js";
+import { Onboarding } from "../models/Onboarding.js";
 
 
 const onboarding = new Onboarding(welcomeSteps)
