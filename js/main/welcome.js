@@ -1,35 +1,66 @@
 import { welcomeSteps } from "../data/welcome-steps.js";
 import { Onboarding } from "../models/Onboarding.js";
 
+const onboarding = new Onboarding(welcomeSteps);
 
-const onboarding = new Onboarding(welcomeSteps)
+function printState(title) {
+  const state = onboarding.getState();
 
-console.log("Initial State: ")
-console.log(onboarding.getState())
+  console.log("\n==============================");
+  console.log(title);
+  console.log("==============================");
 
-console.log("Trying to continue without option: ")
-try {
-    onboarding.next()
-} catch (error) {
-    console.log(error.message)
+  console.log("Step:", state.currentStep.id);
+  console.log("Question:", state.currentStep.question);
+  console.log("Selected:", state.selectedOption);
+  console.log("Can Continue:", state.canContinue);
+  console.log("Can Go Back:", state.canGoBack);
+  console.log(`
+    Progress: ${state.progress.current}/${state.progress.total} (${state.progress.percentage.toFixed(0)}%)
+  `);
+  console.log("Answers:", state.answers);
 }
 
-console.log("Selecting option: ")
-console.log(onboarding.selectOption("tiktok"))
-console.log(onboarding.getState());
+// Estado inicial
+printState("INITIAL STATE");
 
-console.log("Going next:");
-onboarding.next();
-console.log(onboarding.getState());
+// Tenta avançar sem selecionar
+try {
+  onboarding.next();
+} catch (e) {
+  console.log("\n[EXPECTED ERROR]", e.message);
+}
 
-console.log("Selecting option in second step:");
-onboarding.selectOption("migliorare-educazione");
-console.log(onboarding.getState());
+// Loop por todos os steps
+while (true) {
+  const state = onboarding.getState();
+  const step = state.currentStep;
 
-console.log("Going back:");
-onboarding.back();
-console.log(onboarding.getState());
+  // Seleciona automaticamente a primeira opção
+  const option = step.options[0];
 
-console.log("Going forward again:");
-onboarding.next();
-console.log(onboarding.getState());
+  console.log(`\nSelecting option: ${option.id}`);
+  onboarding.selectOption(option.id);
+
+  printState("AFTER SELECTION");
+
+  if (!onboarding.canGoNext()) {
+    console.log("\nReached last step or cannot continue.");
+    break;
+  }
+
+  console.log("\nGoing NEXT");
+  onboarding.next();
+
+  printState("AFTER NEXT");
+}
+
+// Teste de voltar (back)
+console.log("\n=== TESTING BACK NAVIGATION ===");
+
+while (onboarding.canGoBack()) {
+  onboarding.back();
+  printState("AFTER BACK");
+}
+
+console.log("\n=== END OF FLOW ===");
