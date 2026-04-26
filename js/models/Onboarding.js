@@ -1,6 +1,6 @@
 export function Onboarding(steps) {
     this.steps = steps
-    this.currentStepIndex = this.currentStepIndex
+    this.currentStepIndex = 0
     this.answers = {}
 }
 
@@ -9,7 +9,7 @@ Onboarding.prototype.getCurrentStep = function () {
 }
 
 Onboarding.prototype.getCurrentStepId = function () {
-    return this.currentStepIndex().id
+    return this.getCurrentStep().id
 }
 
 Onboarding.prototype.selectOption = function (optionId) {
@@ -71,6 +71,6 @@ Onboarding.prototype.getState = function () {
         canContinue: this.hasSelectedOption(),
         canGoBack: this.canGoBack(),
         progress: this.getProgress(),
-        answers: this.answers()
+        answers: this.answers
     }
 }
