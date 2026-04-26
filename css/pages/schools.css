@@ -359,7 +359,7 @@ main {
 }
 
 
-.testimonial-card__quote-text{
+.testimonial-card__quote-text {
     color: var(--color-gray-text);
     text-align: center;
 
@@ -399,4 +399,56 @@ main {
 .testimonials__dot--active {
     background-color: var(--color-white);
     transform: scale(1.1);
+}
+
+/* Section Faq */
+
+.faq {
+    padding: 80px 20px;
+}
+
+.faq__container {
+    margin: 0 auto;
+}
+
+.faq__title {
+    color: var(--color-gray-dark);
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    text-transform: lowercase;
+    margin-bottom: 25px;
+}
+
+.faq__list {
+    border: 2px solid #E5e5e5;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-item {
+    padding: 20px;
+}
+
+.faq-item+.faq-item {
+    border-top: 2px solid #E5e5e5;
+}
+
+.faq-item__question {
+    display: block;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #3c3c3c;
+    margin-bottom: 10px;
+}
+
+
+.faq-item__answer {
+    font-size: 17px;
+    color: #777777;
+}
+
+.faq-item__answer p {
+    margin: 0;
 }
