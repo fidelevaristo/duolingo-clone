@@ -455,14 +455,14 @@ main {
 
 /* Section teacher message */
 
-.teacher-message{
+.teacher-message {
     padding: 80px 20px;
     background-color: var(--color-blue-primary);
     text-align: center;
 }
 
 .teacher-message___container {
-margin: 0 auto;
+    margin: 0 auto;
 }
 
 .teacher-message__header {
@@ -500,62 +500,90 @@ margin: 0 auto;
 /* Section CTA */
 
 .cta {
-padding: 60px 20px;
-text-align: center;
+    padding: 60px 20px;
+    text-align: center;
 }
 
 .cta__container {
-max-width: 380px;
-margin: 0 auto;
+    max-width: 380px;
+    margin: 0 auto;
 
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta__image {
-margin-bottom: 30px;
-order: -1;
+    margin-bottom: 30px;
+    order: -1;
 }
 
 .cta__img {
-width: 100%;
-max-width: 193px;
-height: 100%;
-max-height: 173px;
-display: block;
-margin: 0 auto;
+    width: 100%;
+    max-width: 193px;
+    height: 100%;
+    max-height: 173px;
+    display: block;
+    margin: 0 auto;
 }
 
 
 .cta__content {
-display: flex;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cta__title {
-font-size: 36px;
-font-weight: 800;
-color: #4b4b4b;
-text-transform: lowercase;
-margin: 0 0 20px;
+    font-size: 36px;
+    font-weight: 800;
+    color: #4b4b4b;
+    text-transform: lowercase;
+    margin: 0 0 20px;
 }
 
 .cta__button {
-display: inline-block;
-width: 100%;
-max-width: 350px;
-padding: 14px 24px;
-border-radius: 12px;
-background-color: var(--color-blue-primary);
-color: var(--color-white);
-text-decoration: none;
-font-size: 15px;
-font-weight: 800;
-text-transform: uppercase;
-letter-spacing: 0.5px;
-box-shadow: 0 4px 0 #1899d6;
-transition: transform 0.1s ease, box-shadow 0.1s ease;
+    display: inline-block;
+    width: 100%;
+    max-width: 350px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    background-color: var(--color-blue-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 0 #1899d6;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
+/* Section footer */
+
+.footer {
+    padding: 34px 24px;
+    margin: 0 auto;
+    border-top: 2px solid #e5e5e5;
+}
+
+.footer__container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__link {
+    color: #afafaf;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+}
