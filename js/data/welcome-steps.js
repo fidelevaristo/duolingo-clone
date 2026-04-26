@@ -14,8 +14,6 @@ export const welcomeSteps = [
         ]
     },
 
-
-
     {
         id: "goal",
         question: "Perché vuoi imparare il portoghese?",
@@ -42,7 +40,6 @@ export const welcomeSteps = [
         ]
     },
 
-
     {
         id: "benefits",
         question: "Ecco quello che puoi ottenere?",
@@ -52,7 +49,6 @@ export const welcomeSteps = [
             { id: "trasforma-abitudine", label: "Trasforma lo studio in una sana abitudine" },
         ]
     },
-
 
     {
         id: "daily-goal",
@@ -81,17 +77,5 @@ export const welcomeSteps = [
             { id: "inizia-basi", label: "Inizia dalle basi" },
             { id: "trova-livello", label: "Trova il mio livello" },
         ]
-    }    
-
-
-
-
-
-
-
-
-
-
-
-
+    },
 ]
