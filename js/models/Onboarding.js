@@ -47,6 +47,10 @@ Onboarding.prototype.canGoBack = function () {
   return true;
 };
 
+Onboarding.prototype.hasPreviousStep = function () {
+  return this.currentStepIndex > 0;
+};
+
 Onboarding.prototype.next = function () {
   if (!this.hasSelectedOption()) {
     throw new Error("Select an option before you continuing");
@@ -58,7 +62,7 @@ Onboarding.prototype.next = function () {
 };
 
 Onboarding.prototype.back = function () {
-  if (this.canGoBack()) {
+  if (this.hasPreviousStep()) {
     this.currentStepIndex--;
   }
 };

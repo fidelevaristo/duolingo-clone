@@ -60,14 +60,15 @@ while (true) {
 
 console.log("\n=== TESTING BACK NAVIGATION ===");
 
-while (onboarding.currentStepIndex > 0) {
+while (onboarding.hasPreviousStep()) {
   onboarding.back();
   printState("AFTER BACK");
 }
 
 console.log(
-  "\nBack button is still available on first step, but it should leave onboarding.",
+  "\nBack button is still available on first step, but it should leave onboarding."
 );
+
 printState("FIRST STEP - BACK WOULD EXIT FLOW");
 
 console.log("\n=== END OF FLOW ===");
