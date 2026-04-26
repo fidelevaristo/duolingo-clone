@@ -40,7 +40,48 @@ export const welcomeSteps = [
             { id: "vari-argomenti", label: "Riesco a parlare di vari argomenti" },
             { id: "maggior-parte-degli-argomenti", label: "Riesco a parlare in detaglio della maggior parte degli argomenti" },
         ]
-    }
+    },
+
+
+    {
+        id: "benefits",
+        question: "Ecco quello che puoi ottenere?",
+        options: [
+            { id: "Parla-con-sicurezza", label: "Parla con sicurezza" },
+            { id: "espandi-vocabolario", label: "Espandi il tuo vocabolario" },
+            { id: "trasforma-abitudine", label: "Trasforma lo studio in una sana abitudine" },
+        ]
+    },
+
+
+    {
+        id: "daily-goal",
+        question: "Qual è il tuo obiettivo giornaliero?",
+        options: [
+            { id: "5-min-giorno", label: "5 min/giorno" },
+            { id: "10-min-giorno", label: "10 min/giorno" },
+            { id: "15-min-giorno", label: "15 min/giorno" },
+            { id: "20-min-giorno", label: "20 min/giorno" },
+        ]
+    },
+
+    {
+        id: "notification",
+        question: "Ti ricorderò di non perdere il ritmo!",
+        options: [
+            { id: "blocca", label: "Blocca" },
+            { id: "consenti", label: "Consenti" },
+        ]
+    },
+
+    {
+        id: "path",
+        question: "Ora vediamo da dove iniziare!",
+        options: [
+            { id: "inizia-basi", label: "Inizia dalle basi" },
+            { id: "trova-livello", label: "Trova il mio livello" },
+        ]
+    }    
 
 
 
