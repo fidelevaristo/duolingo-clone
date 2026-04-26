@@ -23,7 +23,7 @@ Onboarding.prototype.selectOption = function (optionId) {
         throw new Error("Option does not exist in this step")
     }
 
-    this.answers[currentStep.id = optionId]
+    this.answers[currentStep.id] = optionId
 }
 
 Onboarding.prototype.hasSelectedOption = function () {
