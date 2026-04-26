@@ -496,3 +496,66 @@ margin: 0 auto;
     border: 0;
     display: block;
 }
+
+/* Section CTA */
+
+.cta {
+padding: 60px 20px;
+text-align: center;
+}
+
+.cta__container {
+max-width: 380px;
+margin: 0 auto;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cta__image {
+margin-bottom: 30px;
+order: -1;
+}
+
+.cta__img {
+width: 100%;
+max-width: 193px;
+height: 100%;
+max-height: 173px;
+display: block;
+margin: 0 auto;
+}
+
+
+.cta__content {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.cta__title {
+font-size: 36px;
+font-weight: 800;
+color: #4b4b4b;
+text-transform: lowercase;
+margin: 0 0 20px;
+}
+
+.cta__button {
+display: inline-block;
+width: 100%;
+max-width: 350px;
+padding: 14px 24px;
+border-radius: 12px;
+background-color: var(--color-blue-primary);
+color: var(--color-white);
+text-decoration: none;
+font-size: 15px;
+font-weight: 800;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+box-shadow: 0 4px 0 #1899d6;
+transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
