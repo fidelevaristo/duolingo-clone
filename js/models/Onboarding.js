@@ -1,76 +1,83 @@
 export function Onboarding(steps) {
-    this.steps = steps
-    this.currentStepIndex = 0
-    this.answers = {}
+  this.steps = steps;
+  this.currentStepIndex = 0;
+  this.answers = {};
 }
 
 Onboarding.prototype.getCurrentStep = function () {
-    return this.steps[this.currentStepIndex]
-}
+  return this.steps[this.currentStepIndex];
+};
 
 Onboarding.prototype.getCurrentStepId = function () {
-    return this.getCurrentStep().id
-}
+  return this.getCurrentStep().id;
+};
 
 Onboarding.prototype.selectOption = function (optionId) {
-    const currentStep = this.getCurrentStep()
+  const currentStep = this.getCurrentStep();
 
-    const optionExists = currentStep.options.some(function (option) {
-        return option.id === optionId
-    })
+  const optionExists = currentStep.options.some(function (option) {
+    return option.id === optionId;
+  });
 
-    if (!optionExists) {
-        throw new Error("Option does not exist in this step")
-    }
+  if (!optionExists) {
+    throw new Error("Option does not exist in this step");
+  }
 
-    this.answers[currentStep.id] = optionId
-}
+  this.answers[currentStep.id] = optionId;
+};
 
 Onboarding.prototype.hasSelectedOption = function () {
-    const currentStepId = this.getCurrentStepId()
+  const currentStep = this.getCurrentStep();
 
-    return Boolean(this.answers[currentStepId])
-}
+  if (currentStep.requiresSelection === false) {
+    return true;
+  }
+
+  const currentStepId = currentStep.id;
+  return Boolean(this.answers[currentStepId]);
+};
 
 Onboarding.prototype.canGoNext = function () {
-    return this.hasSelectedOption() && this.currentStepIndex < this.steps.length - 1
-}
+  return (
+    this.hasSelectedOption() && this.currentStepIndex < this.steps.length - 1
+  );
+};
 
 Onboarding.prototype.canGoBack = function () {
-    return this.currentStepIndex > 0
-}
+  return this.currentStepIndex > 0;
+};
 
 Onboarding.prototype.next = function () {
-    if (!this.hasSelectedOption()) {
-        throw new Error("Select an option before you continuing")
-    }
+  if (!this.hasSelectedOption()) {
+    throw new Error("Select an option before you continuing");
+  }
 
-    if (this.currentStepIndex < this.steps.length - 1) {
-        this.currentStepIndex++
-    }
-}
+  if (this.currentStepIndex < this.steps.length - 1) {
+    this.currentStepIndex++;
+  }
+};
 
 Onboarding.prototype.back = function () {
-    if (this.canGoBack()) {
-        this.currentStepIndex--
-    }
-}
+  if (this.canGoBack()) {
+    this.currentStepIndex--;
+  }
+};
 
 Onboarding.prototype.getProgress = function () {
-    return {
-        current: this.currentStepIndex + 1,
-        total: this.steps.length,
-        percentage: ((this.currentStepIndex + 1) / this.steps.length) * 100
-    }
-}
+  return {
+    current: this.currentStepIndex + 1,
+    total: this.steps.length,
+    percentage: ((this.currentStepIndex + 1) / this.steps.length) * 100,
+  };
+};
 
 Onboarding.prototype.getState = function () {
-    return {
-        currentStep: this.getCurrentStep(),
-        selectedOption: this.answers[this.getCurrentStepId()] || null,
-        canContinue: this.hasSelectedOption(),
-        canGoBack: this.canGoBack(),
-        progress: this.getProgress(),
-        answers: this.answers
-    }
-}
+  return {
+    currentStep: this.getCurrentStep(),
+    selectedOption: this.answers[this.getCurrentStepId()] || null,
+    canContinue: this.hasSelectedOption(),
+    canGoBack: this.canGoBack(),
+    progress: this.getProgress(),
+    answers: this.answers,
+  };
+};
