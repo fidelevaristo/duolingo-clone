@@ -43,6 +43,7 @@ export const welcomeSteps = [
     {
         id: "benefits",
         question: "Ecco quello che puoi ottenere?",
+        requiresSelection: false,
         options: [
             { id: "Parla-con-sicurezza", label: "Parla con sicurezza" },
             { id: "espandi-vocabolario", label: "Espandi il tuo vocabolario" },
