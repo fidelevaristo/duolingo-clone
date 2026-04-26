@@ -21,28 +21,31 @@ function printState(title) {
   console.log("Answers:", state.answers);
 }
 
-// Estado inicial
 printState("INITIAL STATE");
 
-// Tenta avançar sem selecionar
 try {
   onboarding.next();
 } catch (e) {
   console.log("\n[EXPECTED ERROR]", e.message);
 }
 
-// Loop por todos os steps
 while (true) {
   const state = onboarding.getState();
   const step = state.currentStep;
 
-  // Seleciona automaticamente a primeira opção
-  const option = step.options[0];
+  if (step.requiresSelection === false) {
+    console.log("\nThis step does not require selection.");
+    console.log("Continuing directly...");
 
-  console.log(`\nSelecting option: ${option.id}`);
-  onboarding.selectOption(option.id);
+    printState("NO SELECTION REQUIRED");
+  } else {
+    const option = step.options[0];
 
-  printState("AFTER SELECTION");
+    console.log(`\nSelecting option: ${option.id}`);
+    onboarding.selectOption(option.id);
+
+    printState("AFTER SELECTION");
+  }
 
   if (!onboarding.canGoNext()) {
     console.log("\nReached last step or cannot continue.");
@@ -55,7 +58,6 @@ while (true) {
   printState("AFTER NEXT");
 }
 
-// Teste de voltar (back)
 console.log("\n=== TESTING BACK NAVIGATION ===");
 
 while (onboarding.canGoBack()) {
