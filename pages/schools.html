@@ -20,11 +20,11 @@
       </div>
     </div>
     <div class="header__desktop">
-      <img src="../assets/pages/duolingo-for-schools/icons/duolingo-for-schools-logo-mobile.svg"
+      <img class="header__logo" src="../assets/pages/duolingo-for-schools/icons/duolingo-for-schools-logo-mobile.svg"
         alt="logo duolingo for schools">
       <div class="header__nav-menu">
-        <nav class="header__nav-menu-items">
-          <ul>
+        <nav>
+          <ul class="header__nav-menu-items">
             <li class="header__nav-menu-item">
               <a href="">
                 Teacher training
@@ -36,12 +36,12 @@
               </a>
             </li>
             <li class="header__nav-menu-item">
-              <a href="">
+              <a class="button-login" href="">
                 Login
               </a>
             </li>
             <li class="header__nav-menu-item">
-              <a href="">
+              <a class="button-sign-up" href="">
                 Sign up
               </a>
             </li>
@@ -78,7 +78,8 @@
             </p>
           </div>
           <div class="feature__image">
-            <img src="../assets/pages/duolingo-for-schools/images/feature-curriculum.svg" alt="Standards aligned curriculum interface" />
+            <img src="../assets/pages/duolingo-for-schools/images/feature-curriculum.svg"
+              alt="Standards aligned curriculum interface" />
           </div>
         </article>
         <article class="feature">
@@ -92,7 +93,8 @@
           </div>
 
           <div class="feature__image">
-            <img src="../assets/pages/duolingo-for-schools/images/feature-assignment.svg" alt="Personalized assignments interface" />
+            <img src="../assets/pages/duolingo-for-schools/images/feature-assignment.svg"
+              alt="Personalized assignments interface" />
           </div>
         </article>
 
@@ -106,7 +108,8 @@
           </div>
 
           <div class="feature__image">
-            <img src="../assets/pages/duolingo-for-schools/images/feature-progress.svg" alt="Student progress insights interface" />
+            <img src="../assets/pages/duolingo-for-schools/images/feature-progress.svg"
+              alt="Student progress insights interface" />
           </div>
         </article>
       </div>
@@ -124,14 +127,16 @@
       <div class="testimonials__container">
         <h2 class="testimonials__title">hear from our teachers</h2>
 
-        <div class="testimonials__list">
+        <div class="testimonials__list" id="testimonialsTrack">
           <article class="testimonial-card">
             <div class="testimonial-card__image-wrapper">
               <img class="testimonial-card__image" src="../assets/pages/duolingo-for-schools/images/pamela-parks.png"
                 alt="Pamela Parks">
-              <img src="../assets/pages/duolingo-for-schools/icons/apple-badge.svg" alt="Apple badge"
-                aria-hidden="true">
-              <p class="testimonial-card__quote">
+              <img class="testimonial-card__badge" src="../assets/pages/duolingo-for-schools/icons/apple-badge.svg"
+                alt="Apple badge" aria-hidden="true">
+            </div>
+            <div class="testimonial-card__quote">
+              <p class="testimonial-card__quote-text">
                 Learning happens best when the application feels like a game. Duolingo is
                 just plain fun, and we are able to leverage this in the classroom.
               </p>
@@ -140,7 +145,6 @@
               <p class="testimonial-card__role">
                 High School French, Spanish, &amp; Japanese teacher
               </p>
-
             </div>
           </article>
 
@@ -148,10 +152,13 @@
             <div class="testimonial-card__image-wrapper">
               <img class="testimonial-card__image" src="../assets/pages/duolingo-for-schools/images/melissa-cantu.png"
                 alt="Pamela Parks">
-              <img src="../assets/pages/duolingo-for-schools/icons/apple-badge.svg" alt="Apple badge"
-                aria-hidden="true">
-              <p class="testimonial-card__quote">
-                I love that Duolingo is a quick and easy way for my students to keep practicing their Spanish outside of
+              <img class="testimonial-card__badge" src="../assets/pages/duolingo-for-schools/icons/apple-badge.svg"
+                alt="Apple badge" aria-hidden="true">
+            </div>
+            <div class="testimonial-card__quote">
+              <p class="testimonial-card__quote-text">
+                I love that Duolingo is a quick and easy way for my students to keep practicing their Spanish outside
+                of
                 the classroom.
               </p>
 
@@ -159,7 +166,6 @@
               <p class="testimonial-card__role">
                 High School Spanish teacher
               </p>
-
             </div>
           </article>
 
@@ -167,9 +173,11 @@
             <div class="testimonial-card__image-wrapper">
               <img class="testimonial-card__image" src="../assets/pages/duolingo-for-schools/images/gitte-duus.png"
                 alt="Pamela Parks">
-              <img src="../assets/pages/duolingo-for-schools/icons/apple-badge.svg" alt="Apple badge"
-                aria-hidden="true">
-              <p class="testimonial-card__quote">
+              <img class="testimonial-card__badge" src="../assets/pages/duolingo-for-schools/icons/apple-badge.svg"
+                alt="Apple badge" aria-hidden="true">
+            </div>
+            <div class="testimonial-card__quote">
+              <p class="testimonial-card__quote-text">
                 I love using Duolingo because the element of gamification makes my students forget that they are
                 actually learning while playing.
               </p>
@@ -178,11 +186,17 @@
               <p class="testimonial-card__role">
                 High School language teacher
               </p>
-
             </div>
           </article>
 
         </div>
+
+        <div class="testimonials__pagination">
+          <button class="testimonials__dot testimonials__dot--active" type="button"></button>
+          <button class="testimonials__dot" type="button"></button>
+          <button class="testimonials__dot" type="button"></button>
+        </div>
+      
 
       </div>
     </section>
@@ -235,7 +249,7 @@
           </p>
         </header>
         <div class="teacher-message__video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/E6hadnnW-JE?si=jn6uyrR81ZD85OQi"
+          <iframe class="teacher-message__video-frame" width="560" height="315" src="https://www.youtube.com/embed/E6hadnnW-JE?si=jn6uyrR81ZD85OQi"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -301,9 +315,10 @@
   </footer>
   <!--Fine section footer-->
 
-<!--JavaScript-->
-<script src="../js/features/schools-scrollbar.js" defer ></script>
+  <!--JavaScript-->
+  <script src="../js/features/schools-scrollbar.js" defer></script>
 
+  <script src="../js/features/schools-testimonials-slidebar.js" defer></script>
 </body>
 
 </html>
