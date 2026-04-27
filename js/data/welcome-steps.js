@@ -33,7 +33,7 @@ export const welcomeSteps = [
         question: "Come te la cavi in portoghese?",
         options: [
             { id: "studiare-portoghese", label: "Ho appena iniziato a studiare portoghese" },
-            { id: "Conosco-parole", label: "Conosco alcune parole di uso comune" },
+            { id: "conosco-parole", label: "Conosco alcune parole di uso comune" },
             { id: "conversazione-basi", label: "Riesco a sostenere conversazione di basi" },
             { id: "vari-argomenti", label: "Riesco a parlare di vari argomenti" },
             { id: "maggior-parte-degli-argomenti", label: "Riesco a parlare in detaglio della maggior parte degli argomenti" },
@@ -45,7 +45,7 @@ export const welcomeSteps = [
         question: "Ecco quello che puoi ottenere?",
         requiresSelection: false,
         options: [
-            { id: "Parla-con-sicurezza", label: "Parla con sicurezza" },
+            { id: "parla-con-sicurezza", label: "Parla con sicurezza" },
             { id: "espandi-vocabolario", label: "Espandi il tuo vocabolario" },
             { id: "trasforma-abitudine", label: "Trasforma lo studio in una sana abitudine" },
         ]
