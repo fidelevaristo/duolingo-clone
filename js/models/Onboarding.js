@@ -1,5 +1,15 @@
+import { Step } from "./Step.js";
+
 export function Onboarding(steps) {
-  this.steps = steps;
+  this.steps = steps.map(function (step) {
+    return new Step(
+      step.id,
+      step.question,
+      step.options,
+      step.requiresSelection,
+    );
+  });
+
   this.currentStepIndex = 0;
   this.answers = {};
 }
@@ -15,11 +25,7 @@ Onboarding.prototype.getCurrentStepId = function () {
 Onboarding.prototype.selectOption = function (optionId) {
   const currentStep = this.getCurrentStep();
 
-  const optionExists = currentStep.options.some(function (option) {
-    return option.id === optionId;
-  });
-
-  if (!optionExists) {
+  if (!currentStep.hasOption(optionId)) {
     throw new Error("Option does not exist in this step");
   }
 
@@ -33,8 +39,7 @@ Onboarding.prototype.hasSelectedOption = function () {
     return true;
   }
 
-  const currentStepId = currentStep.id;
-  return Boolean(this.answers[currentStepId]);
+  return Boolean(this.answers[currentStep.id]);
 };
 
 Onboarding.prototype.canGoNext = function () {
@@ -43,17 +48,17 @@ Onboarding.prototype.canGoNext = function () {
   );
 };
 
-Onboarding.prototype.canGoBack = function () {
-  return true;
-};
-
 Onboarding.prototype.hasPreviousStep = function () {
   return this.currentStepIndex > 0;
 };
 
+Onboarding.prototype.canGoBack = function () {
+  return this.hasPreviousStep();
+};
+
 Onboarding.prototype.next = function () {
   if (!this.hasSelectedOption()) {
-    throw new Error("Select an option before you continuing");
+    throw new Error("Select an option before continuing");
   }
 
   if (this.currentStepIndex < this.steps.length - 1) {
@@ -76,9 +81,11 @@ Onboarding.prototype.getProgress = function () {
 };
 
 Onboarding.prototype.getState = function () {
+  const currentStep = this.getCurrentStep();
+
   return {
-    currentStep: this.getCurrentStep(),
-    selectedOption: this.answers[this.getCurrentStepId()] || null,
+    currentStep: currentStep,
+    selectedOption: this.answers[currentStep.id] || null,
     canContinue: this.hasSelectedOption(),
     canGoBack: this.canGoBack(),
     progress: this.getProgress(),
