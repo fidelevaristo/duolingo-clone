@@ -250,6 +250,17 @@ main {
     z-index: 2;
 }
 
+/* Hero section desktop */
+@media (min-width: 1024px) {
+    .hero {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 300px;
+    }
+}
+
 /* Section features style */
 
 .features {
@@ -521,6 +532,18 @@ main {
 .faq-item__answer p {
     margin: 0;
 }
+/* Faq section desktop */
+@media (min-width: 1024px) {
+    .faq {
+        display: flex;
+        margin: 0 670px;
+    }
+
+    .faq__title {
+        font-size: 48px;
+        width: 650px;
+    }
+}
 
 /* Section teacher message */
 
@@ -564,6 +587,19 @@ main {
     height: 100%;
     border: 0;
     display: block;
+}
+/* Teacher message section desktop */
+@media (min-width: 1024px) {
+    .teacher-message___title {
+        font-size: 48px;
+    }
+
+    .teacher-message__video {
+        height: 100%;
+        min-height: 320px;
+        width: 100%;
+        min-width: 560px;
+    }
 }
 
 /* Section CTA */
