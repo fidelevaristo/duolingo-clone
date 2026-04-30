@@ -725,3 +725,16 @@ main {
     text-transform: uppercase;
     letter-spacing: 0.2px;
 }
+
+/* Cta message section desktop */
+@media (min-width: 1024px) {
+   .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   } 
+
+   .footer__link {
+    font-size: 14px;
+   }
+}
