@@ -664,6 +664,39 @@ main {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
+/* Cta message section desktop */
+@media (min-width: 1024px) {
+    .cta__container {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cta__content {
+        order: 1;
+        text-align: start;
+    }
+    .cta__image {
+        order: 2;
+    }
+    
+    .cta__button {
+        display: none;
+    }
+
+    .cta__title {
+        width: 400px;
+        font-size: 48px;
+    }
+
+    .cta__image img{
+        width: 271px;
+        height: 231px;
+    }
+}
+
 /* Section footer */
 
 .footer {
