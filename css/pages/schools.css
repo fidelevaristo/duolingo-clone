@@ -291,8 +291,9 @@ main {
 
         background-image: url(../../assets/pages/duolingo-for-schools/backgrounds/hero-background.svg);
         background-position: 100%;
-        
+
     }
+
     .hero__container {
         display: flex;
         flex-direction: row;
@@ -326,7 +327,7 @@ main {
         margin-bottom: -109px;
     }
 
-    .hero__image img{
+    .hero__image img {
         width: 440px;
         height: auto;
     }
@@ -482,7 +483,7 @@ main {
         justify-content: center;
     }
 
-    .feature__image img{
+    .feature__image img {
         width: 100%;
         max-width: 640px;
         height: auto;
@@ -622,6 +623,60 @@ main {
     background-color: var(--color-white);
     transform: scale(1.1);
 }
+
+
+/* Testimolials section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .testimonial-card {
+        flex: 0 0 100%;
+        max-width: none;
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .testimonial-card__quote {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .testimonials__title {
+        max-width: 400px;
+    }
+}
+
+
+/* Testimonials section desktop */
+@media (min-width: 1024px) {
+    .testimonials {
+        padding: 80px 15px;
+    }
+
+    .testimonials__title {
+        max-width: none;
+        margin-bottom: 40px;
+        font-size: 36px;
+    }
+
+    .testimonials__list {
+        overflow: visible;
+        scroll-snap-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .testimonial-card {
+        flex: 1;
+        max-width: 360px;
+        margin: 0;
+        scroll-snap-align: none;
+    }
+
+    .testimonials__pagination {
+        display: none;
+    }
+}
+
 
 /* Section Faq */
 
