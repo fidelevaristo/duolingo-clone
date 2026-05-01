@@ -281,17 +281,15 @@ main {
         display: none;
     }
 
-
     .hero {
         display: flex;
         flex-direction: row;
         justify-content: center;
-
         padding: 0 50px;
         min-height: 450px;
 
 
-        background-image: url("../../assets/pages/duolingo-for-schools/backgrounds/hero-background.svg");
+        background-image: url(../../assets/pages/duolingo-for-schools/backgrounds/hero-background.svg);
         background-position: 100%;
 
     }
@@ -303,6 +301,8 @@ main {
         width: 100%;
         max-width: 1000px;
     }
+
+    .hero__title {}
 
     .hero__content,
     .hero__image {
@@ -333,6 +333,7 @@ main {
     }
 
 }
+
 
 /* Section features style */
 
@@ -728,18 +729,6 @@ main {
 .faq-item__answer p {
     margin: 0;
 }
-/* Faq section desktop */
-@media (min-width: 1024px) {
-    .faq {
-        display: flex;
-        margin: 0 670px;
-    }
-
-    .faq__title {
-        font-size: 48px;
-        width: 650px;
-    }
-}
 
 /* Faq section tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -813,19 +802,6 @@ main {
     height: 100%;
     border: 0;
     display: block;
-}
-/* Teacher message section desktop */
-@media (min-width: 1024px) {
-    .teacher-message___title {
-        font-size: 48px;
-    }
-
-    .teacher-message__video {
-        height: 100%;
-        min-height: 320px;
-        width: 100%;
-        min-width: 560px;
-    }
 }
 
 /* Teacher message section tablet */
@@ -913,7 +889,6 @@ main {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-
 /* cta section tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
     .cta__title {
@@ -966,11 +941,9 @@ main {
         margin-bottom: 24px;
     }
 
-
     .cta__button {
         display: none;
     }
-
 
     .cta__image {
         display: flex;
@@ -985,7 +958,6 @@ main {
     .cta__img img{
         max-width: 257px;
         height: 2700px;
-
     }
 }
 
