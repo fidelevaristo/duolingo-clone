@@ -730,6 +730,36 @@ main {
     margin: 0;
 }
 
+/* Faq section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .faq {
+        padding: 70px 120px;
+    }
+
+    .faq__title {
+        font-size: 34px;
+    }
+    }
+
+
+/* Faq section desktop */
+@media (min-width: 1024px) {
+    .faq {
+        padding: 80px 20px;
+    }
+
+    .faq__title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    .faq__list {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+
 /* Section teacher message */
 
 .teacher-message {
