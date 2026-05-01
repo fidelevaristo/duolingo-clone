@@ -424,6 +424,75 @@ main {
     transform: scale(1.1);
 }
 
+/* Features section desktop */
+@media (min-width: 1024px) {
+    .features {
+        padding: 80px 15px;
+    }
+
+    .features__track {
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .feature {
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        padding: 0;
+        text-align: left;
+        scroll-snap-align: none;
+    }
+
+    .feature:nth-child(1) {
+        flex-direction: row-reverse;
+    }
+
+    .feature:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+    .feature__content {
+        width: 360px;
+        margin-bottom: 0;
+    }
+
+    .feature__title {
+        font-size: 36px;
+        line-height: 0.95;
+        margin-bottom: 22px;
+    }
+
+    .feature__description {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: left;
+        min-height: 0;
+        height: auto;
+    }
+
+    .feature__image {
+        width: 640px;
+        justify-content: center;
+    }
+
+    .feature__image img{
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+    }
+
+    .features__pagination {
+        display: none;
+    }
+}
+
 
 /* Section testimonials style */
 .testimonials {
