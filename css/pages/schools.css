@@ -739,7 +739,7 @@ main {
     .faq__title {
         font-size: 34px;
     }
-    }
+}
 
 
 /* Faq section desktop */
@@ -803,6 +803,29 @@ main {
     border: 0;
     display: block;
 }
+
+/* Teacher message section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .teacher-message___title {
+        font-size: 36px;   
+    }
+
+    .teacher-message__video {
+        max-width: 550px;
+    }
+}
+
+/* Teacher message section desktop */
+@media (min-width: 1024px) {
+    .teacher-message___title{
+        font-size: 48px;
+    }
+
+    .teacher-message__video {
+        max-width: 550px;
+    }
+}
+
 
 /* Section CTA */
 
