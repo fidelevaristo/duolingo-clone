@@ -250,15 +250,88 @@ main {
     z-index: 2;
 }
 
+/* Hero section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hero__sign-up {
+        display: none;
+    }
+
+    .hero__image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .hero__image img {
+        width: 100%;
+        max-width: 590px;
+        height: auto;
+        max-height: 772px;
+        z-index: 2;
+        margin-bottom: -50px;
+    }
+}
+
 /* Hero section desktop */
 @media (min-width: 1024px) {
+
+    .hero__sign-up {
+        display: none;
+    }
+
+
     .hero {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        align-items: center;
-        gap: 300px;
+
+        padding: 0 50px;
+        min-height: 450px;
+
+
+        background-image: url("../../assets/pages/duolingo-for-schools/backgrounds/hero-background.svg");
+        background-position: 100%;
+
     }
+
+    .hero__container {
+        display: flex;
+        flex-direction: row;
+        gap: 200px;
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .hero__content,
+    .hero__image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .hero__image {
+        width: 440px;
+        height: auto;
+        margin: 0;
+        z-index: 2;
+        margin-bottom: -109px;
+    }
+
+    .hero__image img {
+        width: 440px;
+        height: auto;
+    }
+
 }
 
 /* Section features style */
@@ -349,6 +422,75 @@ main {
 .features__dot--active {
     background-color: #9e9e9e;
     transform: scale(1.1);
+}
+
+/* Features section desktop */
+@media (min-width: 1024px) {
+    .features {
+        padding: 80px 15px;
+    }
+
+    .features__track {
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+        overflow: visible;
+        scroll-snap-type: none;
+    }
+
+    .feature {
+        flex: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 70px;
+        padding: 0;
+        text-align: left;
+        scroll-snap-align: none;
+    }
+
+    .feature:nth-child(1) {
+        flex-direction: row-reverse;
+    }
+
+    .feature:nth-child(3) {
+        flex-direction: row-reverse;
+    }
+
+    .feature__content {
+        width: 360px;
+        margin-bottom: 0;
+    }
+
+    .feature__title {
+        font-size: 36px;
+        line-height: 0.95;
+        margin-bottom: 22px;
+    }
+
+    .feature__description {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: left;
+        min-height: 0;
+        height: auto;
+    }
+
+    .feature__image {
+        width: 640px;
+        justify-content: center;
+    }
+
+    .feature__image img {
+        width: 100%;
+        max-width: 640px;
+        height: auto;
+    }
+
+    .features__pagination {
+        display: none;
+    }
 }
 
 
@@ -481,6 +623,60 @@ main {
     transform: scale(1.1);
 }
 
+
+/* Testimolials section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .testimonial-card {
+        flex: 0 0 100%;
+        max-width: none;
+        width: 100%;
+        margin: 20px 10px;
+    }
+
+    .testimonial-card__quote {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .testimonials__title {
+        max-width: 400px;
+    }
+}
+
+
+/* Testimonials section desktop */
+@media (min-width: 1024px) {
+    .testimonials {
+        padding: 80px 15px;
+    }
+
+    .testimonials__title {
+        max-width: none;
+        margin-bottom: 40px;
+        font-size: 36px;
+    }
+
+    .testimonials__list {
+        overflow: visible;
+        scroll-snap-type: none;
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .testimonial-card {
+        flex: 1;
+        max-width: 360px;
+        margin: 0;
+        scroll-snap-align: none;
+    }
+
+    .testimonials__pagination {
+        display: none;
+    }
+}
+
+
 /* Section Faq */
 
 .faq {
@@ -545,6 +741,36 @@ main {
     }
 }
 
+/* Faq section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .faq {
+        padding: 70px 120px;
+    }
+
+    .faq__title {
+        font-size: 34px;
+    }
+}
+
+
+/* Faq section desktop */
+@media (min-width: 1024px) {
+    .faq {
+        padding: 80px 20px;
+    }
+
+    .faq__title {
+        font-size: 48px;
+        margin-bottom: 40px;
+    }
+
+    .faq__list {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+
 /* Section teacher message */
 
 .teacher-message {
@@ -601,6 +827,29 @@ main {
         min-width: 560px;
     }
 }
+
+/* Teacher message section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .teacher-message___title {
+        font-size: 36px;
+    }
+
+    .teacher-message__video {
+        max-width: 550px;
+    }
+}
+
+/* Teacher message section desktop */
+@media (min-width: 1024px) {
+    .teacher-message___title {
+        font-size: 48px;
+    }
+
+    .teacher-message__video {
+        max-width: 550px;
+    }
+}
+
 
 /* Section CTA */
 
@@ -664,36 +913,79 @@ main {
     transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
-/* Cta message section desktop */
+
+/* cta section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cta__title {
+        font-size: 36px;
+    }
+
+    .cta__button {
+        display: none;
+    }
+}
+
+/* Cta section desktop */
 @media (min-width: 1024px) {
-    .cta__container {
+    .cta {
         display: flex;
         flex-direction: row;
-        gap: 50px;
         justify-content: center;
-        align-items: center;
+        padding: 80px 20px;
+    }
+
+    .cta__container {
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    .cta__content,
+    .cta__image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 120px;
     }
 
     .cta__content {
-        order: 1;
-        text-align: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 420px;
     }
-    .cta__image {
-        order: 2;
+
+    .cta__title {
+        font-size: 48px;
+        margin-bottom: 24px;
     }
-    
+
+
     .cta__button {
         display: none;
     }
 
-    .cta__title {
-        width: 400px;
-        font-size: 48px;
+
+    .cta__image {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        order: 0;
+        margin: 0;
+        height: auto;
+        max-width: 257px;
     }
 
-    .cta__image img{
-        width: 271px;
-        height: 231px;
+    .cta__img img{
+        max-width: 257px;
+        height: 2700px;
+
     }
 }
 
@@ -726,15 +1018,29 @@ main {
     letter-spacing: 0.2px;
 }
 
-/* Cta message section desktop */
-@media (min-width: 1024px) {
-   .footer__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   } 
+/* Footer section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
 
-   .footer__link {
-    font-size: 14px;
-   }
+/* Footer section desktop */
+@media (min-width: 1024px) {
+    .footer__container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer__list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .footer__link {
+        font-size: 15px;
+    }
 }
