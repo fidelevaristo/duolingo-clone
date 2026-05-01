@@ -1,0 +1,61 @@
+/* Base globale della pagina */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "din-rounded", sans-serif;
+    background-color: #0f2026;
+    color: #ffffff;
+}
+
+button {
+    font: inherit;
+}
+
+/* Layout principale */
+
+.survey-page {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.survey-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+}
+
+.survey-header__back {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.survey-progress {
+    flex: 1;
+    height: 12px;
+    border-radius: 999px;
+    overflow: hidden;
+    background-color: red;
+}
+
+.survey-progress__bar {
+    width: 18%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: #8ee938;
+}
