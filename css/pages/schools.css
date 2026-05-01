@@ -807,7 +807,7 @@ main {
 /* Teacher message section tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
     .teacher-message___title {
-        font-size: 36px;   
+        font-size: 36px;
     }
 
     .teacher-message__video {
@@ -817,7 +817,7 @@ main {
 
 /* Teacher message section desktop */
 @media (min-width: 1024px) {
-    .teacher-message___title{
+    .teacher-message___title {
         font-size: 48px;
     }
 
@@ -887,6 +887,78 @@ main {
     letter-spacing: 0.5px;
     box-shadow: 0 4px 0 #1899d6;
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* cta section tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .cta__title {
+        font-size: 36px;
+    }
+
+    .cta__button {
+        display: none;
+    }
+}
+
+/* Cta section desktop */
+@media (min-width: 1024px) {
+    .cta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 80px 20px;
+    }
+
+    .cta__container {
+        width: 100%;
+        max-width: 1000px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        margin: 0 auto;
+    }
+
+    .cta__content,
+    .cta__image {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        min-height: 120px;
+    }
+
+    .cta__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 420px;
+    }
+
+    .cta__title {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    .cta__button {
+        display: none;
+    }
+
+    .cta__image {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        order: 0;
+        margin: 0;
+        height: auto;
+        max-width: 257px;
+    }
+
+    .cta__img img{
+        max-width: 257px;
+        height: 2700px;
+    }
 }
 
 /* Section footer */
