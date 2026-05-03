@@ -101,6 +101,17 @@
   box-shadow: none;
 }
 
+.course-selector__card--active {
+  background-color: #d7eaf4;
+  border-color: #1cb0f6;
+  box-shadow: none;
+}
+
+.language-selector__card--active {
+  background-color: #eeeeee;
+  border-color: #d4d4d4;
+}
+
 .course-selector__icon {
   width: 56px;
   height: 56px;

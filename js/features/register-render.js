@@ -5,6 +5,9 @@ const languageCards = document.querySelectorAll(".language-selector__card");
 const ENABLED_COURSE = "languages";
 const ENABLED_LANGUAGE = "portuguese";
 
+/**
+ * Mostra una schermata e nasconde le altre
+ */
 function showScreen(screenName) {
   screens.forEach((screen) => {
     const isActive = screen.dataset.screen === screenName;
@@ -13,12 +16,24 @@ function showScreen(screenName) {
 }
 
 /**
- * Gestione selezione corso
+ * Gestisce lo stato attivo (selezione singola)
+ */
+function setActiveCard(cards, selectedCard, activeClass) {
+  cards.forEach((card) => {
+    card.classList.remove(activeClass);
+  });
+
+  selectedCard.classList.add(activeClass);
+}
+
+/**
+ * =========================
+ * COURSE SELECTION
+ * =========================
  */
 courseCards.forEach((card) => {
   const course = card.dataset.course;
 
-  // Disabilita tutto ciò che non è "languages"
   if (course !== ENABLED_COURSE) {
     card.setAttribute("disabled", "true");
     card.classList.add("course-selector__card--disabled");
@@ -26,17 +41,22 @@ courseCards.forEach((card) => {
   }
 
   card.addEventListener("click", () => {
+    // stato attivo
+    setActiveCard(courseCards, card, "course-selector__card--active");
+
+    // navigazione
     showScreen("languages");
   });
 });
 
 /**
- * Gestione selezione lingua
+ * =========================
+ * LANGUAGE SELECTION
+ * =========================
  */
 languageCards.forEach((card) => {
   const language = card.dataset.language;
 
-  // Disabilita tutto ciò che non è "portuguese"
   if (language !== ENABLED_LANGUAGE) {
     card.setAttribute("disabled", "true");
     card.classList.add("language-selector__card--disabled");
@@ -44,6 +64,10 @@ languageCards.forEach((card) => {
   }
 
   card.addEventListener("click", () => {
+    // stato attivo
+    setActiveCard(languageCards, card, "language-selector__card--active");
+
+    // navigazione
     showScreen("loading");
 
     setTimeout(() => {
