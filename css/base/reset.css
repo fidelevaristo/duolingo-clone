@@ -21,7 +21,12 @@ body {
 
 body {
   background: var(--color-white);
-  font-family: "DIN Rounded", sans-serif;
+  font-family: "DIN Rounded", Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Feather", "DIN Rounded", Arial, sans-serif;
 }
 
 img {

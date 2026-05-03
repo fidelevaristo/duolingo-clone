@@ -94,7 +94,6 @@
   line-height: 1.15;
   margin-bottom: 50px;
   max-width: 100%;
-  font-family: "DIN Rounded", sans-serif;
 }
 
 .login-create__btn-inizial {
@@ -121,7 +120,6 @@
   color: var(--color-white);
   box-shadow: 0 4px 4px 0 var(--color-green-shadow);
   border: 1px solid var(--color-green-shadow);
-  font-family: "DIN Rounded", sans-serif;
 }
 
 .login-create__btn-account {
@@ -213,7 +211,6 @@
   font-size: 55px;
   line-height: 1.08;
   margin-bottom: 20px;
-  font-family: "Feather", sans-serif;
 }
 
 .free-fun p,
@@ -472,10 +469,6 @@
   /* VARIABILI FOOTER */
   /* ========================= */
 
-  /* Font */
-  --font-primary: "Varela Round", sans-serif;
-  --font-secondary: "Orbitron", sans-serif;
-
   /* Colori del footer */
   --color-footer-bg: #58cc02;
   --color-footer-title: #d7ffb8;
@@ -505,6 +498,7 @@
   background-color: var(--color-footer-bg);
   margin-top: 40px;
   padding: 56px var(--footer-padding) 40px;
+  font-weight: 600;
 }
 
 /* 
