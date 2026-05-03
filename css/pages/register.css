@@ -1,0 +1,353 @@
+/* ================================
+   ONBOARDING
+   Struttura generale della pagina
+================================ */
+
+.onboarding {
+  min-height: 100vh;
+  padding: 16px;
+  background-color: #ffffff;
+  color: #3c3c3c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header minimale con logo centrato su mobile */
+.onboarding__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+}
+
+.onboarding__logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.onboarding__logo {
+  width: 128px;
+  height: auto;
+  display: block;
+}
+
+/* Bottone lingua nascosto su mobile, come nello screenshot */
+.onboarding__language-button {
+  display: none;
+}
+
+/* Ogni schermata viene nascosta di default */
+.onboarding__screen {
+  display: none;
+}
+
+/* Solo la schermata attiva viene mostrata */
+.onboarding__screen--active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titolo principale delle schermate */
+.onboarding__title {
+  margin: 42px 0 24px;
+  max-width: 320px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #3c3c3c;
+}
+
+/* ================================
+   COURSE SELECTOR
+   Prima schermata: cosa vuoi imparare
+================================ */
+
+.course-selector {
+  width: 100%;
+  max-width: 360px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.course-selector__card {
+  min-height: 118px;
+  padding: 18px 16px;
+  border: 2px solid #e5e5e5;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 #e5e5e5;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.course-selector__card:hover {
+  background-color: #f7f7f7;
+}
+
+.course-selector__card:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.course-selector__icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.course-selector__name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #4b4b4b;
+}
+
+/* ================================
+   LANGUAGE SELECTOR
+   Seconda schermata: scelta lingua
+================================ */
+
+.language-selector {
+  width: 100%;
+  max-width: 360px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.language-selector__card {
+  min-height: 116px;
+  padding: 14px 10px 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 0 #e5e5e5;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.language-selector__card:hover,
+.language-selector__card--selected {
+  background-color: #eeeeee;
+  border-color: #d4d4d4;
+}
+
+.language-selector__card:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+.language-selector__flag {
+  width: 58px;
+  height: 42px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.language-selector__name {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #4b4b4b;
+}
+
+.language-selector__students {
+  font-size: 11px;
+  line-height: 1.2;
+  color: #777777;
+  text-align: center;
+}
+
+/* ================================
+   LOADING
+   Terza schermata: caricamento
+================================ */
+
+.loading-dots {
+  margin-top: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.loading-dots__dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #e5e5e5;
+  animation: loadingPulse 1s infinite ease-in-out;
+}
+
+.loading-dots__dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.loading-dots__dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes loadingPulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ================================
+   TABLET
+   Layout intermedio
+================================ */
+
+@media (min-width: 600px) {
+  .onboarding {
+    padding: 16px 32px;
+  }
+
+  .onboarding__title {
+    margin-top: 140px;
+    margin-bottom: 40px;
+    max-width: none;
+    font-size: 24px;
+  }
+
+  .course-selector {
+    max-width: 560px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .course-selector__card {
+    min-height: 132px;
+  }
+
+  .language-selector {
+    max-width: 640px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .language-selector__card {
+    min-height: 132px;
+  }
+}
+
+/* ================================
+   DESKTOP
+   Layout più vicino allo screenshot desktop
+================================ */
+
+@media (min-width: 1024px) {
+  .onboarding {
+    padding: 18px 48px;
+  }
+
+  .onboarding__header {
+    max-width: 1060px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .onboarding__logo {
+    width: 158px;
+  }
+
+  .onboarding__language-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #afafaf;
+  }
+
+  .onboarding__language-icon {
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .onboarding__title {
+    margin-top: 250px;
+    margin-bottom: 34px;
+    font-size: 28px;
+  }
+
+  .course-selector {
+    max-width: 480px;
+    gap: 18px;
+  }
+
+  .course-selector__card {
+    min-height: 170px;
+    border-radius: 12px;
+  }
+
+  .course-selector__icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .course-selector__name {
+    font-size: 16px;
+  }
+
+  .language-selector {
+    max-width: 900px;
+    gap: 24px 14px;
+  }
+
+  .language-selector__card {
+    min-height: 170px;
+    border-radius: 12px;
+  }
+
+  .language-selector__flag {
+    width: 76px;
+    height: 54px;
+    margin-bottom: 18px;
+  }
+
+  .language-selector__name {
+    font-size: 15px;
+  }
+
+  .language-selector__students {
+    font-size: 14px;
+  }
+
+  .loading-dots {
+    margin-top: 150px;
+  }
+}
