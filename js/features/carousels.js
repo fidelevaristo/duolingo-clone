@@ -1,98 +1,72 @@
+import { $, $$, on } from "../utils/dom.js";
+
 /**
  * Inizializza un carousel orizzontale con navigazione tramite dots.
  *
  * @param {Object} config
- * @param {string} config.trackId - ID dell'elemento che contiene lo scroll (track)
- * @param {string} config.dotSelector - Selettore CSS per i dots di navigazione
- * @param {string} config.activeDotClass - Classe CSS da applicare al dot attivo
+ * @param {string} config.trackSelector - Selettore CSS dell'elemento che contiene lo scroll
+ * @param {string} config.dotSelector - Selettore CSS dei dots di navigazione
+ * @param {string} config.activeDotClass - Classe CSS applicata al dot attivo
  */
-function initCarousel({ trackId, dotSelector, activeDotClass }) {
-  // Recupera il contenitore principale dello scroll
-  const track = document.getElementById(trackId);
+function initCarousel({ trackSelector, dotSelector, activeDotClass }) {
+  const track = $(trackSelector);
 
-  // Se il track non esiste, interrompe l'inizializzazione
   if (!track) return;
 
-  // Limita la ricerca dei dots al container del carousel
   const container = track.parentElement;
-  const dots = container.querySelectorAll(dotSelector);
+  const dots = $$(dotSelector, container);
 
-  // Se non ci sono dots, non ha senso inizializzare il comportamento
   if (dots.length === 0) return;
 
-  /**
-   * Aggiorna lo stato attivo dei dots
-   * @param {number} index - Indice dello slide attivo
-   */
-  function updateActiveDot(index) {
+  function updateActiveDot(activeIndex) {
     dots.forEach((dot, currentIndex) => {
-      dot.classList.toggle(activeDotClass, currentIndex === index);
+      dot.classList.toggle(activeDotClass, currentIndex === activeIndex);
     });
   }
 
-  /**
-   * Calcola l'indice dello slide corrente in base allo scroll orizzontale
-   * @returns {number}
-   */
   function getCurrentSlideIndex() {
-    const scrollPosition = track.scrollLeft;
     const slideWidth = track.clientWidth;
 
-    // Protezione contro divisione per zero (es. elemento non visibile)
     if (slideWidth === 0) return 0;
 
-    return Math.round(scrollPosition / slideWidth);
+    return Math.round(track.scrollLeft / slideWidth);
   }
 
-  /**
-   * Handler per lo scroll del carousel
-   */
+  function scrollToSlide(index) {
+    track.scrollTo({
+      left: track.clientWidth * index,
+      behavior: "smooth",
+    });
+  }
+
   function handleScroll() {
     updateActiveDot(getCurrentSlideIndex());
   }
 
-  /**
-   * Handler per il resize della finestra
-   * (necessario per ricalcolare l'indice corretto)
-   */
   function handleResize() {
     updateActiveDot(getCurrentSlideIndex());
   }
 
-  // Listener per aggiornare il dot attivo durante lo scroll
-  track.addEventListener("scroll", handleScroll);
+  on(track, "scroll", handleScroll);
+  on(window, "resize", handleResize);
 
-  // Gestione click sui dots per navigare tra gli slide
   dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      track.scrollTo({
-        left: track.clientWidth * index,
-        behavior: "smooth",
-      });
+    on(dot, "click", () => {
+      scrollToSlide(index);
     });
   });
 
-  // Listener globale per aggiornare lo stato al resize
-  window.addEventListener("resize", handleResize);
-
-  // Imposta lo stato iniziale (primo slide attivo)
   updateActiveDot(0);
 }
 
-/**
- * Inizializzazione carousel sezione "features"
- */
 initCarousel({
-  trackId: "featuresTrack",
+  trackSelector: "#featuresTrack",
   dotSelector: ".features__dot",
   activeDotClass: "features__dot--active",
 });
 
-/**
- * Inizializzazione carousel sezione "testimonials"
- */
 initCarousel({
-  trackId: "testimonialsTrack",
+  trackSelector: "#testimonialsTrack",
   dotSelector: ".testimonials__dot",
   activeDotClass: "testimonials__dot--active",
 });
