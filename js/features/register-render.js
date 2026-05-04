@@ -1,6 +1,7 @@
 const screens = document.querySelectorAll(".onboarding__screen");
 const courseCards = document.querySelectorAll(".course-selector__card");
 const languageCards = document.querySelectorAll(".language-selector__card");
+const header = document.querySelector(".onboarding__header");
 
 const ENABLED_COURSE = "languages";
 const ENABLED_LANGUAGE = "portuguese";
@@ -27,6 +28,19 @@ function setActiveCard(cards, selectedCard, activeClass) {
 }
 
 /**
+ * Gestisce lo stato dell'header durante lo scroll
+ */
+function handleHeaderScroll() {
+  if (!header) return;
+
+  const isScrolled = window.scrollY > 0;
+  header.classList.toggle("onboarding__header--scrolled", isScrolled);
+}
+
+window.addEventListener("scroll", handleHeaderScroll);
+handleHeaderScroll();
+
+/**
  * =========================
  * COURSE SELECTION
  * =========================
@@ -41,10 +55,7 @@ courseCards.forEach((card) => {
   }
 
   card.addEventListener("click", () => {
-    // stato attivo
     setActiveCard(courseCards, card, "course-selector__card--active");
-
-    // navigazione
     showScreen("languages");
   });
 });
@@ -64,14 +75,11 @@ languageCards.forEach((card) => {
   }
 
   card.addEventListener("click", () => {
-    // stato attivo
     setActiveCard(languageCards, card, "language-selector__card--active");
-
-    // navigazione
     showScreen("loading");
 
     setTimeout(() => {
-      window.location.href = `../pages/welcome.html`;
+      window.location.href = "../pages/welcome.html";
     }, 1800);
   });
 });

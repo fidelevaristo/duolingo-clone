@@ -26,6 +26,10 @@
   align-items: center;
 }
 
+.onboarding__header--scrolled {
+  border-bottom: 2px solid #e5e5e5;
+}
+
 .onboarding__logo-link {
   display: inline-flex;
   align-items: center;
@@ -316,8 +320,8 @@
   }
 
   .onboarding__title {
-    margin-top: 250px;
-    margin-bottom: 34px;
+    margin-top: 60px;
+    margin-bottom: 90px;
     font-size: 28px;
   }
 
@@ -341,27 +345,28 @@
   }
 
   .language-selector {
-    max-width: 900px;
+    max-width: 820px;
     gap: 24px 14px;
   }
 
   .language-selector__card {
-    min-height: 170px;
+    min-height: 220px;
     border-radius: 12px;
   }
 
   .language-selector__flag {
-    width: 76px;
-    height: 54px;
+    width: 88px;
+    height: 67px;
     margin-bottom: 18px;
   }
 
   .language-selector__name {
-    font-size: 15px;
+    font-size: 17px;
+    font-weight: 600;
   }
 
   .language-selector__students {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .loading-dots {
