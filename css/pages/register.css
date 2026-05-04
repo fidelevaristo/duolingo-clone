@@ -5,7 +5,7 @@
 
 .onboarding {
   min-height: 100vh;
-  padding: 16px;
+  padding: 76px 30px 16px;
   background-color: #ffffff;
   color: #3c3c3c;
   font-family: Arial, Helvetica, sans-serif;
@@ -13,10 +13,17 @@
 
 /* Header minimale con logo centrato su mobile */
 .onboarding__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 80px;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 40px;
 }
 
 .onboarding__logo-link {
@@ -25,7 +32,7 @@
 }
 
 .onboarding__logo {
-  width: 128px;
+  width: 161px;
   height: auto;
   display: block;
 }
@@ -49,10 +56,10 @@
 
 /* Titolo principale delle schermate */
 .onboarding__title {
-  margin: 42px 0 24px;
+  margin: 42px 0 76px;
   max-width: 320px;
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   line-height: 1.25;
   font-weight: 800;
   color: #3c3c3c;
@@ -72,7 +79,7 @@
 }
 
 .course-selector__card {
-  min-height: 118px;
+  min-height: 140px;
   padding: 18px 16px;
   border: 2px solid #e5e5e5;
   border-radius: 12px;
@@ -138,7 +145,7 @@
 }
 
 .language-selector__card {
-  min-height: 116px;
+  min-height: 200px;
   padding: 14px 10px 12px;
   border: 2px solid #e5e5e5;
   border-radius: 10px;
@@ -169,22 +176,22 @@
 }
 
 .language-selector__flag {
-  width: 58px;
-  height: 42px;
+  width: 78px;
+  height: 67px;
   object-fit: contain;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .language-selector__name {
   margin-bottom: 4px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.2;
   font-weight: 800;
   color: #4b4b4b;
 }
 
 .language-selector__students {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.2;
   color: #777777;
   text-align: center;
@@ -239,7 +246,7 @@
 
 @media (min-width: 600px) {
   .onboarding {
-    padding: 16px 32px;
+    padding: 76px 32px 16px;
   }
 
   .onboarding__title {
@@ -277,12 +284,11 @@
 
 @media (min-width: 1024px) {
   .onboarding {
-    padding: 18px 48px;
+    padding: 78px 48px 18px;
   }
 
   .onboarding__header {
-    max-width: 1060px;
-    margin: 0 auto;
+    padding: 18px max(48px, calc((100vw - 1060px) / 2));
     justify-content: space-between;
   }
 
