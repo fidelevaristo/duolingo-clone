@@ -6,7 +6,9 @@ export function Onboarding(steps) {
       step.id,
       step.question,
       step.options,
-      step.requiresSelection,
+      {layout: step.layout, 
+        requiresSelection: step.requiresSelection
+      }
     );
   });
 
