@@ -1,82 +1,154 @@
 export const welcomeSteps = [
-    {
-        id: "discovery",
-        question: "Come ci hai conosciuto?",
-        options: [
-            { id: "tiktok", label: "TikTok" },
-            { id: "notizie-articoli-blog", label: "Notizie/articoli/blog" },
-            { id: "facebook-instagram", label: "Facebook/Instagram" },
-            { id: "tv", label: "TV" },
-            { id: "amici-e-famiglia", label: "Amici e famiglia" },
-            { id: "youtube", label: "YouTube" },
-            { id: "ricerca-su-google", label: "Ricerca su Google" },
-            { id: "altro", label: "Altro" }
-        ]
-    },
+  {
+    id: "discovery",
+    question: "Come ci hai conosciuto?",
+    layout: "two-columns",
+    options: [
+      { id: "google", label: "Ricerca su Google", icon: "google-icon.svg" },
+      { id: "tiktok", label: "TikTok", icon: "tiktok-icon.svg" },
+      { id: "tv", label: "TV", icon: "tv-icon.svg" },
+      {
+        id: "facebook-instagram",
+        label: "Facebook/Instagram",
+        icon: "facebook-instagram-icon.svg",
+      },
+      { id: "youtube", label: "YouTube", icon: "youtube-icon.svg" },
+      {
+        id: "friends-family",
+        label: "Amici e famiglia",
+        icon: "amici-famiglia-icon.svg",
+      },
+      {
+        id: "news-blog",
+        label: "Notizie/articoli/blog",
+        icon: "notizie-articoli-blog-icon.svg",
+      },
+      { id: "other", label: "Altro", icon: "altro-icon.svg" },
+    ],
+  },
 
-    {
-        id: "goal",
-        question: "Perché vuoi imparare il portoghese?",
-        options: [
-            { id: "migliorare-educazione", label: "Migliorare la mia educazione" },
-            { id: "conoscere-persone", label: "Conoscere altre persone" },
-            { id: "nuove-possibilita-carriera", label: "Nuove possibilità di carriera" },
-            { id: "divertimento", label: "Divertimento" },
-            { id: "prepararmi-viaggio", label: "Prepararmi per un viaggio" },
-            { id: "esercitare-la-mente", label: "Esercitare la mente" },
-            { id: "altro", label: "Altro" },
-        ]
-    },
+  {
+    id: "goal",
+    question: "Perché vuoi imparare il portoghese?",
+    layout: "two-columns",
+    options: [
+      {
+        id: "travel",
+        label: "Prepararmi per un viaggio",
+        icon: "prepararmi-viaggio-icon.svg",
+      },
+      {
+        id: "education",
+        label: "Migliorare la mia educazione",
+        icon: "migliorare-educazione-icon.svg",
+      },
+      {
+        id: "career",
+        label: "Nuove possibilità di carriera",
+        icon: "nuove-possibilita-icon.svg",
+      },
+      { id: "brain", label: "Esercitare la mente", icon: "brain-icon.svg" },
+      { id: "fun", label: "Divertimento", icon: "divertimento-icon.svg" },
+      {
+        id: "people",
+        label: "Conoscere altre persone",
+        icon: "amici-famiglia-icon.svg",
+      },
+      { id: "other", label: "Altro", icon: "altro-icon.svg" },
+    ],
+  },
 
-    {
-        id: "level",
-        question: "Come te la cavi in portoghese?",
-        options: [
-            { id: "studiare-portoghese", label: "Ho appena iniziato a studiare portoghese" },
-            { id: "conosco-parole", label: "Conosco alcune parole di uso comune" },
-            { id: "conversazione-basi", label: "Riesco a sostenere conversazione di basi" },
-            { id: "vari-argomenti", label: "Riesco a parlare di vari argomenti" },
-            { id: "maggior-parte-degli-argomenti", label: "Riesco a parlare in detaglio della maggior parte degli argomenti" },
-        ]
-    },
+  {
+    id: "level",
+    question: "Come te la cavi in portoghese?",
+    layout: "level-list",
+    options: [
+      {
+        id: "starter",
+        label: "Ho appena iniziato a studiare portoghese",
+        icon: "appena-iniziato-icon.svg",
+      },
+      {
+        id: "words",
+        label: "Conosco alcune parole di uso comune",
+        icon: "conosco-parole-icon.svg",
+      },
+      {
+        id: "basic",
+        label: "Riesco a sostenere conversazioni di base",
+        icon: "conversazioni-basi-icon.svg",
+      },
+      {
+        id: "topics",
+        label: "Riesco a parlare di vari argomenti",
+        icon: "vari-argomenti-icon.svg",
+      },
+      {
+        id: "advanced",
+        label:
+          "Riesco a parlare in dettaglio della maggior parte degli argomenti",
+        icon: "parlare-dettaglio-icon.svg",
+      },
+    ],
+  },
 
-    {
-        id: "benefits",
-        question: "Ecco quello che puoi ottenere?",
-        requiresSelection: false,
-        options: [
-            { id: "parla-con-sicurezza", label: "Parla con sicurezza" },
-            { id: "espandi-vocabolario", label: "Espandi il tuo vocabolario" },
-            { id: "trasforma-abitudine", label: "Trasforma lo studio in una sana abitudine" },
-        ]
-    },
+  {
+    id: "benefits",
+    question: "Ecco quello che puoi ottenere!",
+    layout: "benefits",
+    requiresSelection: false,
+    options: [
+      {
+        id: "confidence",
+        label: "Parla con sicurezza",
+        description:
+          "Esercizi per allenarti a parlare e ascoltare senza stress",
+        icon: "parla-sicurezza-icon.svg",
+      },
+      {
+        id: "vocabulary",
+        label: "Espandi il tuo vocabolario",
+        description: "Parole comuni e frasi utili",
+        icon: "espandi-vocabulario-icon.svg",
+      },
+      {
+        id: "habit",
+        label: "Trasforma lo studio in una sana abitudine",
+        description: "Promemoria intelligenti, sfide divertenti e molto altro",
+        icon: "sana-abitudine-icon.svg",
+      },
+    ],
+  },
 
-    {
-        id: "daily-goal",
-        question: "Qual è il tuo obiettivo giornaliero?",
-        options: [
-            { id: "5-min-giorno", label: "5 min/giorno" },
-            { id: "10-min-giorno", label: "10 min/giorno" },
-            { id: "15-min-giorno", label: "15 min/giorno" },
-            { id: "20-min-giorno", label: "20 min/giorno" },
-        ]
-    },
+  {
+    id: "daily-goal",
+    question: "Qual è il tuo obiettivo giornaliero?",
+    layout: "daily-goal",
+    options: [
+      { id: "5", label: "5 min / giorno", meta: "Rilassato" },
+      { id: "10", label: "10 min / giorno", meta: "Normale" },
+      { id: "15", label: "15 min / giorno", meta: "Serio" },
+      { id: "20", label: "20 min / giorno", meta: "Intenso" },
+    ],
+  },
 
-    {
-        id: "notification",
-        question: "Ti ricorderò di non perdere il ritmo!",
-        options: [
-            { id: "blocca", label: "Blocca" },
-            { id: "consenti", label: "Consenti" },
-        ]
-    },
-
-    {
-        id: "path",
-        question: "Ora vediamo da dove iniziare!",
-        options: [
-            { id: "inizia-basi", label: "Inizia dalle basi" },
-            { id: "trova-livello", label: "Trova il mio livello" },
-        ]
-    },
-]
+  {
+    id: "path",
+    question: "Ora vediamo da dove iniziare!",
+    layout: "path",
+    options: [
+      {
+        id: "basics",
+        label: "Inizia dalle basi",
+        description: "Completa la lezione più facile del corso di portoghese",
+        icon: "inizia-dalle-basi-icon.svg",
+      },
+      {
+        id: "placement",
+        label: "Trova il mio livello",
+        description: "Lascia che Duo ti suggerisca da dove iniziare a imparare",
+        icon: "trova-livello-icon.svg",
+      },
+    ],
+  },
+];
