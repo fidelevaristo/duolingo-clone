@@ -25,3 +25,91 @@
 .header__language {
   display: none;
 }
+
+/* Hero Mobile */
+
+/* Container principale */
+.hero {
+  padding: 24px 16px 32px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+/* Blocco immagine */
+.hero__media {
+  margin-bottom: 24px;
+}
+
+/* Immagine principale */
+.hero__image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Contenuto testuale */
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titolo */
+.hero__title {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #4b4b4b;
+  margin-bottom: 24px;
+}
+
+/* Container bottoni */
+.hero__actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Bottone primario */
+.button--primary {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: #58cc02;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  box-shadow: 0 4px 0 #46a302;
+}
+
+/* Bottone secondario */
+.button--secondary {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  color: #1cb0f6;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  /* Ombra grigia */
+  box-shadow: 0 4px 0 #e5e5e5;
+}
+
+/* Stato attivo (pressione bottone) */
+.button--primary:active,
+.button--secondary:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
+}
