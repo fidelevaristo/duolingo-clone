@@ -320,55 +320,164 @@
 
 /* CTA FINALE MOBILE */
 
-/* Sezione principale */
 .final-cta {
-  padding: 56px 16px 0;
-  text-align: center;
   background-color: #ffffff;
-  overflow: hidden;
 }
 
-/* Contenuto */
+/* container */
+.final-cta__container {
+  text-align: center;
+}
+
+/* contenuto */
 .final-cta__content {
-  max-width: 320px;
-  margin: 0 auto 40px;
+  padding: 48px 16px 32px;
 }
 
-/* Titolo */
 .final-cta__content h2 {
   font-size: 26px;
   font-weight: 800;
   line-height: 1.25;
-  color: #ffffff;
+  color: #58cc02;
   margin-bottom: 24px;
   text-transform: lowercase;
 }
 
-/* Bottone */
+/* bottone centrato */
 .final-cta .button--primary {
+  max-width: 248px;
+  margin: 0 auto;
   display: block;
-  width: 100%;
-  padding: 14px 16px;
-  border-radius: 12px;
-  background-color: #58cc02;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-
-  box-shadow: 0 4px 0 #46a302;
 }
 
-/* Immagine finale */
+/* wrapper immagine */
 .final-cta__image {
+  width: 100%;
+  min-height: 160px;
+  background-color: #58cc02;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 60px;
+}
+
+/* immagine full width */
+.final-cta__image img {
   width: 180vw;
   max-width: none;
-  height: auto;
 
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
 
-  display: block;
+/* Footer mobile-first */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #58cc02;
+  margin-top: 1px;
+  padding: 80px 45px 30px 30px;
+  font-weight: 600;
+}
+
+/* 
+  Entrambi i blocchi principali del footer
+  condividono la stessa larghezza massima.
+*/
+.footer__header,
+.footer__languages {
+  width: min(100%, var(--footer-container-width));
+}
+
+/* 
+  Nel mobile le sezioni del footer
+  sono una sotto l'altra.
+*/
+.footer__header {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Ogni colonna occupa l'intera larghezza nel mobile */
+.footer__section {
+  width: 100%;
+}
+
+/* Titoli delle sezioni */
+.footer__section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  color: var(--color-footer-title);
+}
+
+/* Reset delle liste */
+.footer__section-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Spaziatura verticale tra voci della lista */
+.footer__section-nav li + li {
+  margin-top: 10px;
+}
+
+/* Link del footer */
+.footer__section-nav a {
+  color: var(--color-footer-link);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Margine extra per il blocco social */
+.footer__section-social {
+  margin-top: 28px;
+}
+
+/* Allineamento del blocco privacy */
+.footer__section-privacy {
+  text-align: left;
+}
+
+/* Linea divisoria */
+.footer__line {
+  border: none;
+  height: 1px;
+  background-color: var(--color-footer-line);
+  width: 100%;
+  margin: 32px 0;
+}
+
+/* Blocco lingue del sito */
+.footer__languages {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Titolo sezione lingue */
+.footer__languages h2 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: var(--color-footer-title);
+}
+
+/* 
+  Lista lingue responsive:
+  va automaticamente a capo.
+*/
+.footer__languages-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Link lingue */
+.footer__languages-nav a {
+  text-decoration: none;
+  color: var(--color-footer-link);
+  font-size: 0.95rem;
 }

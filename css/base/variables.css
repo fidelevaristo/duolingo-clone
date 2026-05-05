@@ -44,4 +44,15 @@
   /* Shadowns */
   --shadow-green-button: #46a302;
   --shadow-light-button: #e5e5e5;
+
+  /* Colori del footer */
+  --color-footer-bg: #58cc02;
+  --color-footer-title: #d7ffb8;
+  --color-footer-link: #a5ed6e;
+  --color-footer-text: #fff;
+  --color-footer-line: #e5e5e5;
+
+  /* Layout */
+  --footer-container-width: 1200px;
+  --footer-padding: 20px;
 }
