@@ -257,3 +257,69 @@
   font-weight: 700;
   color: #4b4b4b;
 }
+
+/* SEZIONE SUPER DUOLINGO MOBILE */
+
+/* Sezione principale */
+.super-section {
+  padding: 48px 16px 100px;
+  text-align: center;
+  background-color: #120e34;
+  margin-bottom: 60px;
+}
+
+/* Media principale */
+.super-section__media {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Immagine animata */
+.super-section__media img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
+
+/* Contenuto */
+.super-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo Super Duolingo */
+.super-section__logo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+/* Bottone chiaro */
+.button--light {
+  width: 100%;
+  max-width: 248px;
+  padding: 14px 16px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #111447;
+
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+
+  box-shadow: 0 4px 0 #c7c7d8;
+  cursor: pointer;
+}
+
+/* Stato attivo bottone */
+.button--light:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 transparent;
+}
