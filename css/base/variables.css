@@ -40,4 +40,8 @@
   /* Border radius */
   --radius-md: 12px;
   --radius-lg: 16px;
+
+  /* Shadowns */
+  --shadow-green-button: #46a302;
+  --shadow-light-button: #e5e5e5;
 }
