@@ -45,9 +45,12 @@ export const welcomeSteps = [
       {
         id: "career",
         label: "Nuove possibilità di carriera",
-        icon: "nuove-possibilita-icon.svg",
+        icon: "nuove-possibilita.svg",
       },
-      { id: "brain", label: "Esercitare la mente", icon: "brain-icon.svg" },
+      { id: "brain", 
+        label: "Esercitare la mente", 
+        icon: "esercitare-mente-icon.svg" },
+
       { id: "fun", label: "Divertimento", icon: "divertimento-icon.svg" },
       {
         id: "people",

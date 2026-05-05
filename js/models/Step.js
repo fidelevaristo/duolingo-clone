@@ -26,7 +26,7 @@ export function Step(id, question, options, config = {}) {
 }
 
 Step.prototype.hasOption = function (optionId) {
-  return this.option.some(function (option) {
+  return this.options.some(function (option) {
     return option.id === optionId
   })
 }
