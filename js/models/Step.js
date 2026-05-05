@@ -1,6 +1,6 @@
 import { Option } from "./Option.js";
 
-export function Step(id, question, options, requiresSelection = true) {
+export function Step(id, question, options, config = {}) {
   if (!id) {
     throw new Error("Step id is required");
   }
@@ -15,14 +15,18 @@ export function Step(id, question, options, requiresSelection = true) {
 
   this.id = id;
   this.question = question;
+  this.layout = config.layout || "grid";
+  this.requiresSelection = config.requiresSelection ?? true;
+  
   this.options = options.map(function (option) {
-    return new Option(option.id, option.label);
-  });
-  this.requiresSelection = requiresSelection;
+    return new Option(option.id, option.label, {
+      icon: option.icon, description: option.description, meta: option.meta
+    })
+  })
 }
 
 Step.prototype.hasOption = function (optionId) {
-  return this.options.some(function (option) {
-    return option.id === optionId;
-  });
-};
+  return this.option.some(function (option) {
+    return option.id === optionId
+  })
+}
