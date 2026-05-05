@@ -318,8 +318,57 @@
   cursor: pointer;
 }
 
-/* Stato attivo bottone */
-.button--light:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 transparent;
+/* CTA FINALE MOBILE */
+
+/* Sezione principale */
+.final-cta {
+  padding: 56px 16px 0;
+  text-align: center;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Contenuto */
+.final-cta__content {
+  max-width: 320px;
+  margin: 0 auto 40px;
+}
+
+/* Titolo */
+.final-cta__content h2 {
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 24px;
+  text-transform: lowercase;
+}
+
+/* Bottone */
+.final-cta .button--primary {
+  display: block;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background-color: #58cc02;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  box-shadow: 0 4px 0 #46a302;
+}
+
+/* Immagine finale */
+.final-cta__image {
+  width: 180vw;
+  max-width: none;
+  height: auto;
+
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
 }
