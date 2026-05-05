@@ -37,7 +37,7 @@ function render() {
 
     // aggiorna stato dei controlli
     continueBtn.disabled = !state.canContinue
-    backBtn.disabled = !state.canGoBack
+    backBtn.disabled = false
 
 
     // aggiorna la barra di progresso
@@ -147,8 +147,13 @@ on(continueBtn, "click", function () {
 
 // Navigazione indietro
 on(backBtn, "click", function () {
-    onboarding.back();
-    render();
+    if (onboarding.canGoBack()) {
+        onboarding.back() 
+        render()
+        return 
+    }
+
+    window.location.href = "../pages/register.html"
 });
 
 // Primo render iniziale
