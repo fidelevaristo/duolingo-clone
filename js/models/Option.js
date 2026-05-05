@@ -1,4 +1,4 @@
-export function Option(id, label) {
+export function Option(id, label, config = {}) {
   if (!id) {
     throw new Error("Option id is required");
   }
@@ -9,4 +9,7 @@ export function Option(id, label) {
 
   this.id = id;
   this.label = label;
+  this.icon = config.icon || null;
+  this.description = config.description || null;
+  this.meta = config.meta || null;
 }
