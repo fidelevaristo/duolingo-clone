@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Header mobile */
 .header {
   position: fixed;
@@ -147,6 +153,7 @@
   color: #58cc02; /* verde Duolingo */
   margin-bottom: 16px;
   text-transform: lowercase;
+  text-align: center;
 }
 
 /* Testo */
@@ -157,6 +164,26 @@
   max-width: 320px;
   margin: 0 auto;
   font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.button--blue {
+  display: block;
+  width: 100%;
+  padding: 14px 5px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  color: #1cb0f6;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  /* Ombra grigia */
+  box-shadow: 0 4px 0 #e5e5e5;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 /* Link nel testo */
@@ -262,7 +289,14 @@
 
 /* Sezione principale */
 .super-section {
-  padding: 48px 16px 100px;
+  min-height: 850px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 48px 16px;
   text-align: center;
   background-color: #120e34;
   margin-bottom: 60px;
@@ -278,7 +312,7 @@
 /* Immagine animata */
 .super-section__media img {
   width: 100%;
-  max-width: 280px;
+  max-width: 400px;
   height: auto;
   display: block;
 }
@@ -293,15 +327,15 @@
 /* Logo Super Duolingo */
 .super-section__logo {
   width: 100%;
-  max-width: 260px;
+  max-width: 360px;
   height: auto;
-  margin-bottom: 32px;
+  margin-bottom: 60px;
 }
 
 /* Bottone chiaro */
 .button--light {
   width: 100%;
-  max-width: 248px;
+  max-width: 348px;
   padding: 14px 16px;
 
   border: none;
@@ -371,12 +405,14 @@
 
 /* Footer mobile-first */
 .footer {
+  --footer-padding-x: 83px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #58cc02;
   margin-top: 1px;
-  padding: 80px 45px 30px 30px;
+  padding: 80px var(--footer-padding-x);
   font-weight: 600;
 }
 
@@ -445,8 +481,14 @@
   border: none;
   height: 1px;
   background-color: var(--color-footer-line);
-  width: 100%;
-  margin: 32px 0;
+
+  align-self: stretch;
+  width: auto;
+
+  margin-left: calc(var(--footer-padding-x) * -1);
+  margin-right: calc(var(--footer-padding-x) * -1);
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 /* Blocco lingue del sito */
