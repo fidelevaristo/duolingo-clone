@@ -923,8 +923,7 @@
   width: 100%;
   min-height: 160px;
   background-color: var(--color-footer-bg);
-  padding-bottom: 60px;
-  margin-bottom: 1px;
+  padding-bottom: 60px; 
 }
 
 /* immagine full width */
@@ -1004,12 +1003,11 @@
 
 /* Footer mobile-first */
 .footer {
-  --footer-padding-x: 83px;
+  --footer-padding-x: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--color-footer-bg);
-  margin-top: 0px;
   padding: 80px var(--footer-padding-x);
   font-weight: 600;
 }
