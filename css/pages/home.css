@@ -663,10 +663,16 @@
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .button--blue {
+    margin-top: 20px;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
+  .button--blue {
+    margin: 20px 0 0 0;
+  }
 }
 
 /* SEZIONE SUPER DUOLINGO MOBILE */
