@@ -23,7 +23,7 @@ body {
 
 h1,
 h2 {
-  font-family: "Feather", "DIN Rounded", Arial, sans-serif;
+  font-family: inherit;
 }
 
 img {
