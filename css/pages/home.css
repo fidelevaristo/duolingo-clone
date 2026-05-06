@@ -36,6 +36,74 @@
   display: none;
 }
 
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    height: 80px;
+  }
+
+  .header__logo img {
+    display: block;
+    width: 197px;
+    height: auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .header {
+    height: 70px;
+    background-color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: max(24px, calc((100% - 980px) / 2));
+  }
+
+  .header__logo {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .header__logo img {
+    width: 180px;
+    height: auto;
+  }
+
+  .header__language {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__language-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    border: none;
+    background: transparent;
+
+    color: #afafaf;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+    cursor: pointer;
+  }
+
+  .header__language-icon {
+    width: 12px;
+    height: 12px;
+    display: block;
+
+    position: relative;
+    top: -1px;
+  }
+}
+
 /* Hero Mobile */
 
 /* Container principale */
@@ -131,6 +199,13 @@
   display: none;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+}
+
 /* Feature Section mobile */
 
 /* Sezione principale */
@@ -204,6 +279,13 @@
   width: 100%;
   max-width: 260px;
   height: auto;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
 }
 
 /* LEARN SECTION MOBILE */
@@ -285,6 +367,13 @@
   color: #4b4b4b;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+}
+
 /* SEZIONE SUPER DUOLINGO MOBILE */
 
 /* Sezione principale */
@@ -352,6 +441,13 @@
   cursor: pointer;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+}
+
 /* CTA FINALE MOBILE */
 
 .final-cta {
@@ -401,6 +497,13 @@
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
 }
 
 /* Footer mobile-first */
@@ -522,4 +625,11 @@
   text-decoration: none;
   color: var(--color-footer-link);
   font-size: 0.95rem;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
 }
