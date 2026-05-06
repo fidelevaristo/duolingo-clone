@@ -4,220 +4,191 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Duolingo - Il metodo per l'apprendimento più famoso al mondo</title>
+
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/pages/home.css" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <!-- ========================= -->
-    <!-- HEADER / INTESTAZIONE -->
-    <!-- ========================= -->
     <header class="header">
-      <!-- Contenitore principale dell'intestazione -->
-
-      <div class="header__logo">
-        <!-- Area del logo -->
+      <a
+        href="./index.html"
+        class="header__logo"
+        aria-label="Duolingo homepage"
+      >
         <img src="./assets/global/logo/logo.svg" alt="Duolingo" />
-      </div>
+      </a>
 
-      <div class="header__top-lang">
-        <!-- Sezione per la selezione della lingua del sito -->
-        <nav class="header__languages">
-          <button type="button" class="header__btn-lang">
-            Lingua Sito: Italiano
-            <img
-              class="header__arrow-bottom"
-              src="./assets/global/icons/arrow_bottom.svg"
-              alt="Apri menu lingue"
-            />
-          </button>
-          <!-- Pulsante per aprire il menu delle lingue -->
-        </nav>
-      </div>
+      <nav class="header__language" aria-label="Selezione lingua sito">
+        <button type="button" class="header__language-button">
+          Lingua sito: Italiano
+          <img
+            class="header__language-icon"
+            src="./assets/global/icons/arrow_bottom.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
+      </nav>
     </header>
-    <!-- Fine del header -->
 
     <main>
-      <!-- ========================= -->
-      <!-- SEZIONE LOGIN / REGISTRAZIONE -->
-      <!-- ========================= -->
-      <section class="login-create">
-        <!-- Sezione introduttiva con CTA principale -->
-
-        <div class="login-create__left">
-          <!-- Parte sinistra con immagine -->
-
+      <!-- Hero principale -->
+      <section class="hero">
+        <div class="hero__media">
           <img
+            class="hero__image"
             src="./assets/pages/home/animations/banner1.gif"
-            class="login-create__banner-desk"
             alt="Illustrazione introduttiva Duolingo"
           />
-          <!-- Logo Desktop 
-          <img
-            src="./assets/images/backgrounds/home-banner-mobile.png"
-            class="login-create__banner-mobile"
-            alt="Illustrazione introduttiva Duolingo"
-          /> -->
         </div>
 
-        <div class="login-create__right">
-          <!-- Parte destra con titolo e pulsanti -->
-          <h1>
+        <div class="hero__content">
+          <h1 class="hero__title">
             Il metodo gratuito, efficace e divertente per imparare le lingue!
           </h1>
 
+<<<<<<< HEAD
           <!-- Contenitore dei pulsanti iniziali -->
           <div class="login-create__btn-inizial">
             <a href="./pages/register.html" class="login-create__btn-inizia">
               INIZIA
+=======
+          <div class="hero__actions">
+            <a href="./pages/register.html" class="button button--primary">
+              Inizia
+>>>>>>> refactor/index-responsive
             </a>
-            <!-- Pulsante per iniziare -->
 
             <a
               href="https://www.duolingo.com/?isLoggingIn=true"
-              class="login-create__btn-account"
+              class="button button--secondary"
             >
-              HO GIÀ UN ACCOUNT
+              Ho già un account
             </a>
-            <!-- Pulsante per utenti già registrati -->
           </div>
         </div>
       </section>
-      <!-- Fine section login and account create -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE SELEZIONE LINGUE -->
-      <!-- ========================= -->
-      <section class="lang-select">
-        <!-- Sezione con elenco delle lingue disponibili -->
-
-        <div class="lang-select__languages">
-          <!-- Contenitore principale del carosello lingue -->
-
-          <button type="button" class="lang-select__arrow">
-            <!-- Freccia sinistra -->
-            <img
-              src="./assets/global/icons/arrow-left.svg"
-              alt="Scorri a sinistra"
-            />
+      <!-- Selettore lingue desktop -->
+      <section class="language-strip" aria-label="Lingue disponibili">
+        <div class="language-strip__inner">
+          <button
+            id="languageStripPrev"
+            type="button"
+            class="language-strip__arrow"
+            aria-label="Scorri a sinistra"
+          >
+            <img src="./assets/global/icons/arrow-left.svg" alt="" />
           </button>
 
-          <div class="lang-select__menu">
-            <!-- Menu delle lingue -->
-
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/en/it/Impara-Inglese"
-              ><img src="./assets/global/icons/us.svg" alt="Lingua inglese" />
-              <span>Inglese</span></a
+          <div class="language-strip__viewport">
+            <nav
+              id="languageStripMenu"
+              class="language-strip__menu"
+              aria-label="Corsi di lingua"
             >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/en/it/Impara-Inglese"
+              >
+                <img src="./assets/global/icons/us.svg" alt="" />
+                <span>Inglese</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/es/it/Impara-Spagnolo"
-              ><img src="./assets/global/icons/es.svg" alt="Lingua spagnolo" />
-              <span>Spagnolo</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/es/it/Impara-Spagnolo"
+              >
+                <img src="./assets/global/icons/es.svg" alt="" />
+                <span>Spagnolo</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/fr/it/Impara-Francese"
-              ><img src="./assets/global/icons/fr.svg" alt="Lingua francese" />
-              <span>Francese</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/fr/it/Impara-Francese"
+              >
+                <img src="./assets/global/icons/fr.svg" alt="" />
+                <span>Francese</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/de/it/Impara-Tedesco"
-              ><img src="./assets/global/icons/ge.svg" alt="Lingua tedesco" />
-              <span>Tedesco</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/de/it/Impara-Tedesco"
+              >
+                <img src="./assets/global/icons/ge.svg" alt="" />
+                <span>Tedesco</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/pt/it/Impara-Portoghese"
-              ><img
-                src="./assets/global/icons/pt.svg"
-                alt="Lingua portoghese"
-              />
-              <span>Portoghese</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/pt/it/Impara-Portoghese"
+              >
+                <img src="./assets/global/icons/pt.svg" alt="" />
+                <span>Portoghese</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/pt/it/Impara-Portoghese"
-              ><img
-                src="./assets/global/icons/chess.svg"
-                alt="Impara Scacchi"
-              />
-              <span>Scacchi</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/pt/it/Impara-Portoghese"
+              >
+                <img src="./assets/global/icons/chess.svg" alt="" />
+                <span>Scacchi</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/ja/it/Impara-Giapponese"
-              ><img
-                src="./assets/global/icons/jp.svg"
-                alt="Lingua giapponese"
-              />
-              <span>Giapponese</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/ja/it/Impara-Giapponese"
+              >
+                <img src="./assets/global/icons/jp.svg" alt="" />
+                <span>Giapponese</span>
+              </a>
 
-            <a
-              class="lang-select__language"
-              href="https://it.duolingo.com/course/ko/it/Impara-Coreano"
-              ><img
-                src="./assets/global/icons/corea.svg"
-                alt="Lingua coreano"
-              />
-              <span>Coreano</span></a
-            >
+              <a
+                class="language-strip__item"
+                href="https://it.duolingo.com/course/ko/it/Impara-Coreano"
+              >
+                <img src="./assets/global/icons/corea.svg" alt="" />
+                <span>Coreano</span>
+              </a>
+            </nav>
           </div>
 
-          <button type="button" class="lang-select__arrow">
-            <!-- Freccia destra -->
-            <img
-              src="./assets/global/icons/arrow-right.svg"
-              alt="Scorri a destra"
-            />
+          <button
+            id="languageStripNext"
+            type="button"
+            class="language-strip__arrow"
+            aria-label="Scorri a destra"
+          >
+            <img src="./assets/global/icons/arrow-right.svg" alt="" />
           </button>
         </div>
       </section>
-      <!-- Fine section languages -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE DIVERTENTE / GRATIS / EFFICACE -->
-      <!-- ========================= -->
-      <section class="free-fun">
-        <div class="free-fun__left">
-          <!-- Testo descrittivo -->
+      <!-- Sezione: divertente gratis efficace -->
+      <section class="feature-section">
+        <div class="feature-section__content">
           <h2>divertente. gratis. efficace.</h2>
           <p>
             Imparare con Duolingo è divertente e
-            <span class="free-fun__left-text"
-              >studi dimostrano che funziona</span
-            >! Con le nostre lezioni brevi ed efficaci, impari le lingue che
-            vuoi guadagnando punti e sbloccando nuovi livelli.
+            <a href="#" class="text-link">studi dimostrano che funziona</a>! Con
+            le nostre lezioni brevi ed efficaci, impari le lingue che vuoi
+            guadagnando punti e sbloccando nuovi livelli.
           </p>
         </div>
 
-        <div class="free-fun__right">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
             src="./assets/pages/home/animations/free-fun.gif"
             alt="Sezione divertente, gratis ed efficace"
           />
         </div>
       </section>
-      <!-- Fine free-fun -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE APPROCCIO SCIENTIFICO -->
-      <!-- ========================= -->
-      <section class="backed-science">
-        <div class="backed-science__right hide-desktop">
-          <!-- Testo descrittivo -->
+      <!-- Sezione: approccio scientifico -->
+      <section class="feature-section feature-section--reverse">
+        <div class="feature-section__content">
           <h2>un approccio scientifico</h2>
           <p>
             Utilizziamo un metodo che unisce approccio scientifico e contenuti
@@ -226,32 +197,17 @@
           </p>
         </div>
 
-        <div class="backed-science__left">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
             src="./assets/pages/home/animations/backed-science.gif"
             alt="Approccio scientifico all'apprendimento"
           />
         </div>
-
-        <div class="backed-science__right hide-mobile">
-          <!-- Testo descrittivo -->
-          <h2>un approccio scientifico</h2>
-          <p>
-            Utilizziamo un metodo che unisce approccio scientifico e contenuti
-            divertenti per insegnare efficacemente le lingue tramite la lettura,
-            l'ascolto, la scrittura e la conversazione!
-          </p>
-        </div>
       </section>
-      <!-- Fine backed by science -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE MOTIVAZIONE -->
-      <!-- ========================= -->
-      <section class="stay-motivated">
-        <div class="stay-motivated__left">
-          <!-- Testo motivazionale -->
+      <!-- Sezione: motivazione -->
+      <section class="feature-section">
+        <div class="feature-section__content">
           <h2>motivante</h2>
           <p>
             Con un approccio ludico, sfide divertenti e i simpatici promemoria
@@ -260,22 +216,17 @@
           </p>
         </div>
 
-        <div class="stay-motivated__right">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
             src="./assets/pages/home/animations/stay-motivated.gif"
             alt="Sezione motivante"
           />
         </div>
       </section>
-      <!-- Fine stay motivated -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE APPRENDIMENTO PERSONALIZZATO -->
-      <!-- ========================= -->
-      <section class="personalized-learning">
-        <div class="personalized-learning__right hide-desktop">
-          <!-- Testo descrittivo -->
+      <!-- Sezione: apprendimento personalizzato -->
+      <section class="feature-section feature-section--reverse">
+        <div class="feature-section__content">
           <h2>apprendimento personalizzato</h2>
           <p>
             Combinando il meglio dell'intelligenza artificiale e delle scienze
@@ -284,119 +235,78 @@
           </p>
         </div>
 
-        <div class="personalized-learning__left">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
             src="./assets/pages/home/animations/personalized-learning.gif"
             alt="Apprendimento personalizzato"
           />
         </div>
-
-        <div class="personalized-learning__right hide-mobile">
-          <!-- Testo descrittivo -->
-          <h2>apprendimento personalizzato</h2>
-          <p>
-            Combinando il meglio dell'intelligenza artificiale e delle scienze
-            linguistiche, le nostre lezioni si adattano perfettamente al tuo
-            livello e ritmo di apprendimento.
-          </p>
-        </div>
       </section>
-      <!-- Fine personalized learning -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE DOWNLOAD APP -->
-      <!-- ========================= -->
+      <!-- Sezione download app -->
       <section class="learn">
-        <div class="learn__title">
-          <!-- Titolo della sezione -->
+        <div class="learn__content">
           <h2>impara quando e dove vuoi</h2>
-        </div>
 
-        <div class="learn__download-app">
-          <!-- Contenitore dei badge download -->
+          <div class="store-buttons">
+            <a
+              href="https://itunes.apple.com/it/app/duolingo-learn-spanish-french/id570060128?mt=8&at=1010lwpr"
+              class="store-button"
+            >
+              <img
+                src="./assets/global/icons/apple_logo.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="store-button__text">
+                <span class="store-button__label">Scarica su</span>
+                <span class="store-button__name">App Store</span>
+              </span>
+            </a>
 
-          <div class="learn__apple-store">
-            <!-- Badge App Store -->
-            <div>
-              <a
-                href="https://itunes.apple.com/it/app/duolingo-learn-spanish-french/id570060128?mt=8&at=1010lwpr"
-              >
-                <img
-                  src="./assets/global/icons/apple_logo.png"
-                  alt="Scarica su App Store"
-                />
-              </a>
-            </div>
-            <div class="learn__text">
-              <a
-                href="https://itunes.apple.com/it/app/duolingo-learn-spanish-french/id570060128?mt=8&at=1010lwpr"
-                ><span class="learn__text-top">Scarica su </span></a
-              >
-              <a
-                href="https://itunes.apple.com/it/app/duolingo-learn-spanish-french/id570060128?mt=8&at=1010lwpr"
-                ><span class="learn__text-bottom"> App Store</span></a
-              >
-            </div>
-          </div>
-
-          <div class="learn__google-play">
-            <!-- Badge Google Play -->
-            <div>
-              <a
-                href="https://play.google.com/store/apps/details?hl=it&id=com.duolingo&referrer=utm_source%3Dduolingo.com%26utm_medium%3Dduolingo_web%26utm_content%3Ddownload_button%26utm_campaign%3Dsplash"
-                ><img
-                  src="./assets/global/icons/google-play.png"
-                  alt="Disponibile su Google Play"
-              /></a>
-            </div>
-            <div class="learn__text">
-              <a
-                href="https://play.google.com/store/apps/details?hl=it&id=com.duolingo&referrer=utm_source%3Dduolingo.com%26utm_medium%3Dduolingo_web%26utm_content%3Ddownload_button%26utm_campaign%3Dsplash"
-                ><span class="learn__text-top">Disponibile su </span></a
-              >
-              <a
-                href="https://play.google.com/store/apps/details?hl=it&id=com.duolingo&referrer=utm_source%3Dduolingo.com%26utm_medium%3Dduolingo_web%26utm_content%3Ddownload_button%26utm_campaign%3Dsplash"
-                ><span class="learn__text-bottom"> Google Play</span></a
-              >
-            </div>
+            <a
+              href="https://play.google.com/store/apps/details?hl=it&id=com.duolingo&referrer=utm_source%3Dduolingo.com%26utm_medium%3Dduolingo_web%26utm_content%3Ddownload_button%26utm_campaign%3Dsplash"
+              class="store-button"
+            >
+              <img
+                src="./assets/global/icons/google-play.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span class="store-button__text">
+                <span class="store-button__label">Disponibile su</span>
+                <span class="store-button__name">Google Play</span>
+              </span>
+            </a>
           </div>
         </div>
       </section>
-      <!-- Fine learn whenever you want -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE PROVA GRATUITA -->
-      <!-- ========================= -->
-      <section class="prova-gratis">
-        <div class="prova-gratis__left">
-          <!-- Immagine promozionale -->
+      <!-- Sezione Super Duolingo -->
+      <section class="super-section">
+        <div class="super-section__media">
           <img
             src="./assets/pages/home/animations/prova-gratis.gif"
             alt="Prova gratuita di Super Duolingo"
           />
         </div>
 
-        <div class="prova-gratis__right">
-          <!-- Logo e pulsante CTA -->
+        <div class="super-section__content">
           <img
+            class="super-section__logo"
             src="./assets/pages/home/backgrounds/super-duolingo.svg"
-            alt="Logo Super Duolingo"
+            alt="Super Duolingo"
           />
 
-          <button type="button" class="prova-gratis__button">
-            PROVA 1 SETTIMANA GRATIS
+          <button type="button" class="button button--light">
+            Prova 1 settimana gratis
           </button>
         </div>
       </section>
-      <!-- Fine prova 1 settimana gratis -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE DUOLINGO ENGLISH TEST -->
-      <!-- ========================= -->
-      <section class="english-test">
-        <div class="english-test__left">
-          <!-- Testo descrittivo -->
+      <!-- Sezione English Test -->
+      <section class="feature-section">
+        <div class="feature-section__content">
           <h2>duolingo english test</h2>
           <p>
             Il nostro esame di inglese è pratico, veloce e conveniente. Grazie
@@ -405,77 +315,45 @@
             sostenere l'esame dove e quando si vuole.
           </p>
 
-          <div class="english-test__btn-certifica">
-            <!-- Pulsante CTA -->
-            <a href="./pages/applicants.html" class="english-test__btn">
-              CERTIFICA IL TUO INGLESE
-            </a>
-          </div>
+          <a href="./pages/applicants.html" class="button button--blue">
+            Certifica il tuo inglese
+          </a>
         </div>
 
-        <div class="english-test__right">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
-            src="./assets/pages/home/animations//english-test.gif"
-            alt="Duolingo English Test."
+            src="./assets/pages/home/animations/english-test.gif"
+            alt="Duolingo English Test"
           />
         </div>
       </section>
-      <!-- Fine duolingo english test -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE DUOLINGO FOR SCHOOLS -->
-      <!-- ========================= -->
-      <section class="for-schools">
-        <div class="for-schools__right hide-desktop">
-          <!-- Testo descrittivo -->
+      <!-- Sezione Schools -->
+      <section class="feature-section feature-section--reverse">
+        <div class="feature-section__content">
           <h2>duolingo for schools</h2>
           <p>
             Insegnanti, siamo qui per aiutarvi! I nostri strumenti gratuiti
             supportano i vostri studenti nell'apprendimento delle lingue
             attraverso l'app Duolingo, sia dentro che fuori dalla classe.
           </p>
-          <div class="for-schools__btn-imposta">
-            <!-- Pulsante CTA -->
-            <a href="./pages/schools.html" class="for-schools__btn">
-              IMPOSTA LA TUA CLASSE
-            </a>
-          </div>
+
+          <a href="./pages/schools.html" class="button button--blue">
+            Imposta la tua classe
+          </a>
         </div>
 
-        <div class="for-schools__left">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
             src="./assets/pages/home/animations/for-schools.gif"
             alt="Duolingo for Schools"
           />
         </div>
-
-        <div class="for-schools__right hide-mobile">
-          <!-- Testo descrittivo -->
-          <h2>duolingo for schools</h2>
-          <p>
-            Insegnanti, siamo qui per aiutarvi! I nostri strumenti gratuiti
-            supportano i vostri studenti nell'apprendimento delle lingue
-            attraverso l'app Duolingo, sia dentro che fuori dalla classe.
-          </p>
-
-          <div class="for-schools__btn-imposta">
-            <!-- Pulsante CTA -->
-            <a href="https://abc.duolingo.com/" class="for-schools__btn">
-              IMPOSTA LA TUA CLASSE
-            </a>
-          </div>
-        </div>
       </section>
-      <!-- Fine duolingo for schools -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE DUOLINGO ABC -->
-      <!-- ========================= -->
-      <section class="duolingo-abc">
-        <div class="duolingo-abc__left">
-          <!-- Testo descrittivo -->
+      <!-- Sezione ABC -->
+      <section class="feature-section">
+        <div class="feature-section__content">
           <h2>duolingo abc</h2>
           <p>
             Dalle lingue all'alfabetizzazione! Con lezioni di fonetica
@@ -483,55 +361,48 @@
             agli 8 anni a imparare a leggere e a scrivere. 100% gratis.
           </p>
 
-          <div class="duolingo-abc__btn-abc">
-            <!-- Pulsante CTA -->
-            <button type="button" class="duolingo-abc__btn">SCOPRI ABC</button>
-          </div>
+          <a href="#" class="button button--blue">Scopri ABC</a>
         </div>
 
-        <div class="duolingo-abc__right">
-          <!-- Immagine illustrativa -->
+        <div class="feature-section__media">
           <img
             src="./assets/pages/home/animations/abc.gif"
             alt="Duolingo ABC"
           />
         </div>
       </section>
-      <!-- Fine duolingo abc -->
 
-      <!-- ========================= -->
-      <!-- SEZIONE FINALE CTA -->
-      <!-- ========================= -->
-      <section class="impara-lingua">
-        <div class="impara-lingua__header">
-          <div class="impara-lingua__title">
-            <!-- Titolo finale con pulsante -->
+      <!-- CTA finale -->
+      <section class="final-cta">
+        <div class="final-cta__container">
+          <div class="final-cta__content">
             <h2>impara una lingua con duolingo</h2>
+<<<<<<< HEAD
             <a href="./pages/register.html" class="impara-lingua__header-btn">
               INIZIA
             </a>
+=======
+
+            <a href="./pages/register.html" class="button button--primary">
+              Inizia
+            </a>
+          </div>
+
+          <div class="final-cta__image">
+            <img
+              src="./assets/pages/home/animations/impara-lingua.gif"
+              alt="Impara una lingua con Duolingo"
+            />
+>>>>>>> refactor/index-responsive
           </div>
         </div>
-
-        <img
-          src="./assets/pages/home/animations/impara-lingua.gif"
-          alt="Impara una lingua con Duolingo"
-        />
-        <!-- Immagine finale -->
       </section>
-      <!-- Fine section learn language-->
     </main>
 
-    <!-- ========================= -->
-    <!-- FOOTER / PIÈ DI PAGINA -->
-    <!-- ========================= -->
-
-    <!-- Sezione principale del footer -->
+    <!-- Footer -->
     <footer class="footer">
       <div class="footer__header">
-        <!-- Parte superiore del footer con link organizzati per categoria -->
-
-        <div class="footer__section">
+        <section class="footer__section">
           <h2>Chi siamo</h2>
           <ul class="footer__section-nav">
             <li><a href="https://www.duolingo.com/courses">Corsi</a></li>
@@ -555,9 +426,9 @@
               <a href="https://about.duolingo.com/#contact">Contattaci</a>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="footer__section">
+        <section class="footer__section">
           <h2>Prodotti</h2>
           <ul class="footer__section-nav">
             <li><a href="https://it.duolingo.com/">Duolingo</a></li>
@@ -565,9 +436,9 @@
             <li><a href="./pages/applicants.html">Duolingo English Test</a></li>
             <li><a href="https://podcast.duolingo.com/">Podcast</a></li>
             <li>
-              <a href="https://it.duolingo.com/business"
-                >Duolingo for Business</a
-              >
+              <a href="https://it.duolingo.com/business">
+                Duolingo for Business
+              </a>
             </li>
             <li><a href="https://it.duolingo.com/gift">Super Duolingo</a></li>
             <li>
@@ -577,51 +448,53 @@
               <a href="https://blog.duolingo.com/duolingo-max/">Duolingo Max</a>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="footer__section">
+        <section class="footer__section">
           <h2>App</h2>
           <ul class="footer__section-nav">
             <li>
               <a
                 href="https://play.google.com/store/apps/details?hl=it&id=com.duolingo&referrer=utm_source%3Dduolingo.com%26utm_medium%3Dduolingo_web%26utm_content%3Ddownload_button%26utm_campaign%3Dsite_map"
-                >Duolingo per Android</a
               >
+                Duolingo per Android
+              </a>
             </li>
             <li>
               <a
                 href="https://itunes.apple.com/it/app/duolingo-learn-spanish-french/id570060128?mt=8&at=1010lwpr"
-                >Duolingo per iOS</a
               >
+                Duolingo per iOS
+              </a>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <div class="footer__section">
+        <section class="footer__section">
           <h2>Aiuto e supporto</h2>
           <ul class="footer__section-nav">
             <li><a href="https://it.duolingo.com/help">FAQ Duolingo</a></li>
             <li>
-              <a href="https://duolingoschools.zendesk.com/hc/en-us"
-                >FAQ Scuola</a
-              >
+              <a href="https://duolingoschools.zendesk.com/hc/en-us">
+                FAQ Scuola
+              </a>
             </li>
             <li>
-              <a href="https://englishtest.duolingo.com/faq"
-                >FAQ Duolingo English Test</a
-              >
+              <a href="https://englishtest.duolingo.com/faq">
+                FAQ Duolingo English Test
+              </a>
             </li>
             <li><a href="https://status.duolingo.com/">Status</a></li>
           </ul>
-        </div>
+        </section>
 
-        <div class="footer__section">
+        <section class="footer__section">
           <h2>Privacy e termini</h2>
           <ul class="footer__section-nav footer__section-privacy">
             <li>
-              <a href="https://it.duolingo.com/guidelines"
-                >Linee guida della community</a
-              >
+              <a href="https://it.duolingo.com/guidelines">
+                Linee guida della community
+              </a>
             </li>
             <li><a href="https://it.duolingo.com/terms">Termini</a></li>
             <li><a href="https://it.duolingo.com/privacy">Privacy</a></li>
@@ -638,21 +511,16 @@
               <a href="https://www.linkedin.com/company/duolingo">LinkedIn</a>
             </li>
           </ul>
-        </div>
+        </section>
       </div>
 
-      <!-- Fine sezione superiore del footer -->
-
       <hr class="footer__line" />
-      <!-- Linea divisoria del footer -->
 
-      <!-- ========================= -->
-      <!-- FOOTER INFERIORE / LINGUE -->
-      <!-- ========================= -->
       <div class="footer__languages">
         <h2>Lingua sito:</h2>
-        <nav class="footer__languages-nav">
-          <ul type="none">
+
+        <nav class="footer__languages-nav" aria-label="Lingue sito">
+          <ul>
             <li><a href="https://ar.duolingo.com/">العربية</a></li>
             <li><a href="https://bn.duolingo.com/">বাংলা</a></li>
             <li><a href="https://cs.duolingo.com/">Čeština</a></li>
@@ -685,6 +553,8 @@
         </nav>
       </div>
     </footer>
-    <!-- Fine del footer -->
+
+    <!-- JavaScript -->
+    <script type="module" src="./js/features/language-strip.js" defer></script>
   </body>
 </html>

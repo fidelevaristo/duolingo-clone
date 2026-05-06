@@ -40,4 +40,20 @@
   /* Border radius */
   --radius-md: 12px;
   --radius-lg: 16px;
+
+  /* Shadowns */
+  --shadow-green-button: #46a302;
+  --shadow-light-button: #e5e5e5;
+  --shadow-light-purple-button: #c7c7d8;
+
+  /* Colori del footer */
+  --color-footer-bg: #58cc02;
+  --color-footer-title: #d7ffb8;
+  --color-footer-link: #a5ed6e;
+  --color-footer-text: #fff;
+  --color-footer-line: #e5e5e5;
+
+  /* Layout */
+  --footer-container-width: 1200px;
+  --footer-padding: 20px;
 }
