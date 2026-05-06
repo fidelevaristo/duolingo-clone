@@ -383,6 +383,10 @@ button {
     width: 40px;
     height: 40px;
   }
+
+  .survey-option--path {
+    min-height: 90px;
+  }
 }
 
 /* Tablet */
