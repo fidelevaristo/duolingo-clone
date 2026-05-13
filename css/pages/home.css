@@ -627,6 +627,8 @@
   -webkit-text-fill-color: var(--color-gray-dark);
 
   margin-bottom: 32px;
+
+  filter: grayscale(0) brightness(0);
 }
 
 /* Container bottoni store */
