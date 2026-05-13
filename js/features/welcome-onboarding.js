@@ -158,7 +158,7 @@ on(backBtn, "click", function () {
 
 on(continueBtn, "click", function () {
   if (onboarding.isLastStep()) {
-    window.location.href = "../../index.html";
+    window.location.href = "../index.html";
     return;
   }
 
