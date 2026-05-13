@@ -2,14 +2,10 @@ import { Step } from "./Step.js";
 
 export function Onboarding(steps) {
   this.steps = steps.map(function (step) {
-    return new Step(
-      step.id,
-      step.question,
-      step.options,
-      {layout: step.layout, 
-        requiresSelection: step.requiresSelection
-      }
-    );
+    return new Step(step.id, step.question, step.options, {
+      layout: step.layout,
+      requiresSelection: step.requiresSelection,
+    });
   });
 
   this.currentStepIndex = 0;
@@ -22,6 +18,10 @@ Onboarding.prototype.getCurrentStep = function () {
 
 Onboarding.prototype.getCurrentStepId = function () {
   return this.getCurrentStep().id;
+};
+
+Onboarding.prototype.isLastStep = function () {
+  return this.currentStepIndex === this.steps.length - 1;
 };
 
 Onboarding.prototype.selectOption = function (optionId) {
