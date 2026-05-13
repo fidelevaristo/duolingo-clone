@@ -156,15 +156,5 @@ on(backBtn, "click", function () {
   window.location.href = "../pages/register.html";
 });
 
-on(continueBtn, "click", function () {
-  if (onboarding.isLastStep()) {
-    window.location.href = "../index.html";
-    return;
-  }
-
-  onboarding.next();
-  render();
-});
-
 // Primo render iniziale
 render();
