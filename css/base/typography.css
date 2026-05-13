@@ -1,0 +1,50 @@
+/* ========================= */
+/* FONT CUSTOM - DIN ROUNDED */
+/* ========================= */
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("../../assets/global/fonts/din-rounded-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("../../assets/global/fonts/din-rounded-medium.otf")
+    format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("../../assets/global/fonts/din-rounded-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("../../assets/global/fonts/din-rounded-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DIN Rounded";
+  src: url("../../assets/global/fonts/din-round-pro.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+/* ========================= */
+/* FONT CUSTOM - FEATHER */
+/* ========================= */
+
+@font-face {
+  font-family: "Feather";
+  src: url("../../assets/global/fonts/feather-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}

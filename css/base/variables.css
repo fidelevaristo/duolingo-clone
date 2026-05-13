@@ -1,0 +1,60 @@
+:root {
+  /* ========================= */
+  /* GLOBAL VARIABLES */
+  /* ========================= */
+
+  /* Base colors */
+  --color-white: #fff;
+  --color-transparent: transparent;
+
+  /* Gray scale */
+  --color-gray-light: #ddd;
+  --color-gray-medium: #afafaf;
+  --color-gray-text: #777777;
+  --color-gray-dark: #4b4b4b;
+  --color-gray-button-shadow: rgb(137, 136, 136);
+  --color-gray-hover: rgb(209, 206, 206);
+  --color-gray-text-dark: #484848;
+
+  /* Brand colors */
+  --color-green-primary: #58cc02;
+  --color-green-light: #9fed62;
+  --color-green-shadow: rgba(88, 167, 0, 0.85);
+
+  --color-blue-primary: #1cb0f6;
+  --color-blue-dark: #042c60;
+  --color-blue-deep: #0d1b3d;
+  --color-blue-bg-soft: #b6dced;
+
+  --color-purple-dark: #120e36;
+
+  /* Light shadow used on dark backgrounds */
+  --color-shadow-white: rgba(255, 255, 255, 0.4);
+
+  /* Layout variables */
+  --container-width: 1200px;
+  --container-padding: 20px;
+  --section-spacing: 72px;
+  --section-gap: 32px;
+
+  /* Border radius */
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Shadowns */
+  --shadow-green-button: #46a302;
+  --shadow-light-button: #e5e5e5;
+  --shadow-light-purple-button: #c7c7d8;
+
+  /* Colori del footer */
+  --color-footer-bg: #58cc02;
+  --color-footer-title: #d7ffb8;
+  --color-footer-link: #a5ed6e;
+  --color-footer-text: #fff;
+  --color-footer-line: #e5e5e5;
+
+  /* Layout */
+  --footer-container-width: 1200px;
+  --footer-padding: 20px;
+  --color-hare-always-light: 175, 175, 175;
+}
