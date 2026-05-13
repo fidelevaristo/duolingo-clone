@@ -923,7 +923,7 @@
   width: 100%;
   min-height: 160px;
   background-color: var(--color-footer-bg);
-  padding-bottom: 60px; 
+  padding-bottom: 60px;
 }
 
 /* immagine full width */
@@ -1001,6 +1001,100 @@
   }
 }
 
+
+
+/* Modal language */
+.header__language {
+  position: relative;
+}
+
+
+.language-modal {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 1000;
+
+
+  width: 420px;
+  padding: 24px 15px;
+  margin-top: 15px;
+  border: 2px solid var(--shadow-light-button);
+  border-radius: 12px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--color-white);
+  pointer-events: none;
+  transform: translateY(10px);
+
+}
+
+.language-modal::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 74px;
+
+  width: 16px;
+  height: 16px;
+  transform: rotate(45deg);
+  border-top: 2px solid var(--shadow-light-button);
+  border-left: 2px solid var(--shadow-light-button);
+}
+
+.language-modal::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  width: 100%;
+  height: 16px;
+}
+
+.header__language:hover .language-modal {
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.language-modal__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  column-gap: 10px;
+  row-gap: 5px;
+}
+
+.language-modal__list a{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-gray-text);
+  font-size: 12px;
+  text-decoration: none;
+  width: 100%;
+  max-width: 200px;
+  height: 20px;
+  padding: 20px 30px;
+  border-radius: 5px;
+}
+
+.language-modal__list a:hover{
+  background-color: var(--shadow-light-button);
+}
+
+.language-modal__list img{
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+}
+
+
 /* Footer mobile-first */
 .footer {
   --footer-padding-x: 35px;
@@ -1051,7 +1145,7 @@
 }
 
 /* Spaziatura verticale tra voci della lista */
-.footer__section-nav li + li {
+.footer__section-nav li+li {
   margin-top: 10px;
 }
 
@@ -1174,7 +1268,7 @@
     margin-bottom: 20px;
   }
 
-  .footer__section-nav li + li {
+  .footer__section-nav li+li {
     margin-top: 14px;
   }
 
